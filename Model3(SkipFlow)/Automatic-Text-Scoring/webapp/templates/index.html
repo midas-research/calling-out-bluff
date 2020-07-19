@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Automatic Text Scoring</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<style type="text/css">
+			.table th {
+   text-align: center;   }
+   .table {
+    border-radius: 5px;
+    width: 50%;
+  margin: auto;
+    float: none;
+}
+		</style>
+
+</head>
+<body>
+  		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+	<h1 class="text-center">Automatic Text Scoring</h1>	
+
+	<br>
+	<br>
+
+	<div class="text-center">
+
+	<p> <b>Enter your text below: </b> </p>
+
+  <textarea id="inputtext" placeholder="Enter text here" rows="8" cols="100"></textarea><br>
+  category : 
+
+  <select id="series">
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	  <option value="5">5</option>
+	  <option value="6">6</option>
+	  <option value="7">7</option>
+	  <option value="8">8</option>
+  </select><br>
+
+  <button  type="button" class="myButton btn btn-primary">Submit</button>
+
+  <p id="result" style="padding-top: 50px; font-size: 20px"> <b>Here is result !!! </b></p>
+
+<div class="container-fluid">
+	<h3> Scoring </h3>
+<table class="table table-hover text-centered table-bordered">
+<thead>
+    <tr>
+    <th>Category</th>
+    <th>Min Score</th>
+    <th>Max Score</th>
+    </tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>12</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>6</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0</td>
+<td>4</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0</td>
+<td>4</td>
+</tr>
+<tr>
+<td>7</td>
+<td>2</td>
+<td>24</td>
+</tr>
+<tr>
+<td>8</td>
+<td>10</td>
+<td>60</td>
+</tr>
+</tbody>    
+</table>
+</div>
+</body>
+
+  </div>
+
+
+  	    <script type="text/javascript">
+	   
+	   		$(".myButton").click(function(){
+	   			var box = document.getElementById("inputtext");
+	   			var your_selected_value = $('#series option:selected').val();
+	   			// alert(your_selected_value);
+	   			$.ajax({
+	   				type: "POST",
+	   				dataType: "json",
+	   				url:  "http://127.0.0.1:5000/predict/",
+	   				data: JSON.stringify({"box_val": String(box.value), "options": your_selected_value }),
+	   				success: function(data){
+	   					$('#result').text(' Predicted Output: '+data);
+	   				}
+	   			});
+	   		});
+	   
+	   </script>
+
+
+</body>
+</html>

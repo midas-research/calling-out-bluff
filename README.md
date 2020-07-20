@@ -1,6 +1,6 @@
 # calling-out-bluff
 
-Public Implementation of paper Calling Out Bluff: adversarial samples for NLP tasks.
+Public Implementation of paper Calling Out Bluff: Attacking the Robustness of Automatic Scoring Systems with Simple Adversarial Testing
 
 ### Generating testcases ###
 To generate our testcases, please view the file 'TestCaseSuite_CallingOutBluff.ipynb'

@@ -3,7 +3,7 @@
 Public Implementation of paper Calling Out Bluff: Attacking the Robustness of Automatic Scoring Systems with Simple Adversarial Testing. </br>
 [Arxiv Link](http://arxiv.org/abs/2007.06796) </br>
 Authors:
-[Yaman Kumar](https://sites.google.com/view/yaman-kumar/)*, Mehar Bhatia*, Anubha Kabra*, Jessy Junyi Li, Di Jin, Rajiv Ratn Shah
+Yaman Kumar*, Mehar Bhatia*, Anubha Kabra*, Jessy Junyi Li, Di Jin, Rajiv Ratn Shah
 </br>
 For any questions or issues, feel free to email us at [yamank@iiitd.ac.in](mailto:yamank@iiitd.ac.in), [mehar.bhatia@midas.center](mailto:mehar.bhatia@midas.center).
 

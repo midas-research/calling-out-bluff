@@ -1,9 +1,11 @@
 # calling-out-bluff
 
-Public Implementation of paper Calling Out Bluff: Attacking the Robustness of Automatic Scoring Systems with Simple Adversarial Testing.
-[Arxiv Link](http://arxiv.org/abs/2007.06796)
+Public Implementation of paper Calling Out Bluff: Attacking the Robustness of Automatic Scoring Systems with Simple Adversarial Testing. </br>
+[Arxiv Link](http://arxiv.org/abs/2007.06796) </br>
 Authors:
-Yaman Kumar*, Mehar Bhatia*, Anubha Kabra, Jessy Junyi Li, Di Jin, Rajiv Ratn Shah
+[Yaman Kumar](https://sites.google.com/view/yaman-kumar/)*, Mehar Bhatia*, Anubha Kabra*, Jessy Junyi Li, Di Jin, Rajiv Ratn Shah
+</br>
+For any questions or issues, feel free to email us at [yamank@iiitd.ac.in](mailto:yamank@iiitd.ac.in), [mehar.bhatia@midas.center](mailto:mehar.bhatia@midas.center).
 
 ### Generating testcases ###
 To generate our testcases, please view the file 'TestCaseSuite_CallingOutBluff.ipynb'
@@ -34,8 +36,8 @@ Sentence list for out testcases like songs, speech, wiki, universal false, unive
 
 4. BERT+Adversarial Evaluation (Two Stage Learning)
   * [Paper Link](https://arxiv.org/abs/1901.07744)
-  * Model4(BERT)
+  * Folder: Model4(BERT)
 
 5. MemoryNetworks
   * [Paper Link](https://par.nsf.gov/servlets/purl/10060135)
-  * Model5(MemoryNets)
+  * Folder: Model5(MemoryNets)

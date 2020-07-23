@@ -9,11 +9,19 @@ For any questions or issues, feel free to email us at [yamank@iiitd.ac.in](mailt
 
 ### Generating testcases ###
 To generate our testcases, please view the file 'TestCaseSuite_CallingOutBluff.ipynb'
+Working of this TestCaseSuite file :
+1. Download ASAP AES Dataset from [here.](https://www.kaggle.com/c/asap-aes)
+2. Save the training and test cases prompt wise.
+3. Change the prompt number and file to load in the first cell of the notebook.
+4. Download and load the supporting files for test cases, given below.
+5. The notebook has been commented well, find the specifc test case you want to simulate and run!
 
 ### Our testcases can be found here:
+To view all our simulated testcases, click below
 1. [ASAP-AES dataset](https://drive.google.com/open?id=1CIEpiDmzLmJ6LMCVSOmCKw_eOg4ocuS4)
 2. [ASAP-SAS dataset](https://drive.google.com/drive/folders/1oWP31zo02009skA24nC10tYlCGWqOAOx)
 
+### Some supporting files:
 Sentence list for out testcases like songs, speech, wiki, universal false, universal truths etc can be found [here](https://drive.google.com/open?id=1hYQ-GtuQVcMYIeGcvBCTB6wXUHxOC1aY)
 
 ### Models: 

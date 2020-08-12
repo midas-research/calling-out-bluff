@@ -6,6 +6,13 @@ import time
 import numpy as np
 from torch import optim
 import torch
+import os 
+import sys
+from captum.attr import IntegratedGradients
+
+# os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
+# os.environ["CUDA_VISIBLE_DEVICES"]="3"  # specify which GPU(s) to be used
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='MANN')
@@ -24,14 +31,16 @@ if __name__ == "__main__":
     parser.add_argument('--epsilon', type=float, default=0.1, help="Epsilon value for Adam Optimizer.")
     parser.add_argument('--max_grad_norm', type=float, default=10.0, help="Clip gradients to this norm.")
     parser.add_argument('--keep_prob', type=float, default=0.9, help="Keep probability for dropout.")
+    parser.add_argument('--mem', action='store_false', help='To Toggle Memory Embeddings')
     args = parser.parse_args()
+    os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
+    os.environ["CUDA_VISIBLE_DEVICES"]=str(args.gpu_id)  # specify which GPU(s) to be used
     bkp=0
     print(args)
-
     if torch.cuda.is_available():
-        print(f"Using GPU:{args.gpu_id}")
+        print(f"Using GPU:{0}")
         device = torch.device("cuda")
-        torch.cuda.set_device(args.gpu_id)
+        torch.cuda.set_device(0)
     else:
         print("!!! Using CPU")
         device = torch.device("cpu")
@@ -44,9 +53,9 @@ if __name__ == "__main__":
             f.write("\n")
 
     # read training, dev and test data
-    train_essay_contents, train_essay_scores, train_essay_ids = data.load_train_data(args.set_id)
-    dev_essay_contents, dev_essay_scores, dev_essay_ids = data.load_dev_data(args.set_id)
-    test_essay_contents, test_essay_ids = data.load_test_data(args.set_id)
+    train_essay_contents, train_essay_scores, train_essay_ids = data.load_data('train' ,args.set_id)
+    dev_essay_contents, dev_essay_scores, dev_essay_ids = data.load_data('dev', args.set_id)
+    test_essay_contents, _, test_essay_ids = data.load_data('test', args.set_id)
     min_score = min(train_essay_scores)
     max_score = max(train_essay_scores)
     if args.set_id == 7:
@@ -72,7 +81,7 @@ if __name__ == "__main__":
     # loading glove. Only select words which appear in vocabulary.
     print("Loading Glove.....")
     t1 = time.time()
-    word_to_index, word_to_vec = data.load_glove(w_vocab=all_vocab, token_num=args.token_num, dim=args.emb_size)
+    word_to_index, word_to_vec, index_to_word = data.load_glove(w_vocab=all_vocab, token_num=args.token_num, dim=args.emb_size)
     word_to_vec = np.array(word_to_vec, dtype=np.float32)
     t2 = time.time()
     print(f"Finished loading Glove!, time cost = {(t2-t1):.4f}s\n")
@@ -115,7 +124,7 @@ if __name__ == "__main__":
     # model
     model = MANM(word_to_vec=word_to_vec, max_sent_size=max_sent_size, memory_num=memory_size, embedding_size=args.emb_size,
                  feature_size=args.feature_size, score_range=len(score_range), hops=args.hops,
-                 l2_lambda=args.l2_lambda, keep_prob=args.keep_prob, device=device).to(device)
+                 l2_lambda=args.l2_lambda, keep_prob=args.keep_prob, device=device, mem_embedding=args.mem).to(device)
 
     optimizer = optim.Adam(model.parameters(), lr=args.lr, eps=args.epsilon)
     scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.95)
@@ -129,10 +138,13 @@ if __name__ == "__main__":
         np.random.shuffle(batches)
         for start, end in batches:
             contents = np.array(train_contents_idx[start:end], dtype=np.int64)
+            # contents = torch.from_numpy(contents).to(device)
             scores_index = np.array(train_scores_index[start:end], dtype=np.int64)
+            # scores_index = torch.from_numpy(scores_index).to(device)
             batched_memory_contents = np.array([memory_contents]*(end-start), dtype=np.int64)
+            # batched_memory_contents = torch.from_numpy(batched_memory_contents).to(device)
             optimizer.zero_grad()
-            loss = model(contents, batched_memory_contents, scores_index)
+            loss = model.forward(contents, batched_memory_contents, scores_index)
             total_loss += loss.item()
             loss.backward()
             optimizer.step()
@@ -165,5 +177,32 @@ if __name__ == "__main__":
                 f.write("------------------------------------\n")
             if dev_kappa_result>bkp:
                 bkp=dev_kappa_result
-                model.save_weights(f"../drive/My Drive/ADVML/save_one_{args.set_id}.pth")
+                if not os.path.isdir('../checkpoints'):
+                    os.mkdir('../checkpoints/')
+                model.save_weights(f"../checkpoints/save_one_{args.set_id}.pth")
     torch.cuda.empty_cache()
+    
+    # Begin IG part
+    ig = IntegratedGradients(model) 
+
+    # print(dev_contents_idx[0])
+    # for start, end in dev_batches:
+    #     print(start, end)
+    #     dev_contents = np.array(dev_contents_idx[start:end], dtype=np.int64)
+    #     batched_memory_contents = np.array([memory_contents]*dev_contents.shape[0], dtype=np.int64)
+    #     pred_scores = model.test(dev_contents, batched_memory_contents).cpu().numpy()
+    #     print(pred_scores.shape)
+    #     for idx, instance in enumerate(zip(dev_contents, batched_memory_contents)):
+    #         attributions, approximation_error = ig.attribute(instance, target=pred_scores[idx],
+    #                                 return_convergence_delta=True)
+    #         print(attributions)
+    dev_content = dev_contents_idx[0:2]
+    batched_memory_contents = [memory_contents] * 2
+    dev_content = np.array(dev_content)
+    batched_memory_contents = np.array(batched_memory_contents)
+    pred_score = model.test(dev_content, batched_memory_contents) 
+    attributions, approximation_error = ig.attribute((dev_content[0], batched_memory_contents[0]), target=pred_score[0], return_convergence_delta=True)
+    print(attributions)
+
+
+

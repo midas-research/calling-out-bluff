@@ -8,7 +8,7 @@ from torch import optim
 import torch
 import os 
 import sys
-from captum.attr import IntegratedGradients
+from captum.attr import LayerIntegratedGradients
 
 # os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
 # os.environ["CUDA_VISIBLE_DEVICES"]="3"  # specify which GPU(s) to be used
@@ -144,7 +144,7 @@ if __name__ == "__main__":
             batched_memory_contents = np.array([memory_contents]*(end-start), dtype=np.int64)
             # batched_memory_contents = torch.from_numpy(batched_memory_contents).to(device)
             optimizer.zero_grad()
-            loss = model.forward(contents, batched_memory_contents, scores_index)
+            loss = model.forward_with_loss(contents, batched_memory_contents, scores_index)
             total_loss += loss.item()
             loss.backward()
             optimizer.step()
@@ -183,7 +183,7 @@ if __name__ == "__main__":
     torch.cuda.empty_cache()
     
     # Begin IG part
-    ig = IntegratedGradients(model) 
+    lig = LayerIntegratedGradients(model, model.word_to_vec)
 
     # print(dev_contents_idx[0])
     # for start, end in dev_batches:
@@ -200,8 +200,12 @@ if __name__ == "__main__":
     batched_memory_contents = [memory_contents] * 2
     dev_content = np.array(dev_content)
     batched_memory_contents = np.array(batched_memory_contents)
+    dev_content = (torch.from_numpy(dev_content).to(device).requires_grad_(False))
+    batched_memory_contents = (torch.from_numpy(batched_memory_contents).to(device).requires_grad_(False))
     pred_score = model.test(dev_content, batched_memory_contents) 
-    attributions, approximation_error = ig.attribute((dev_content[0], batched_memory_contents[0]), target=pred_score[0], return_convergence_delta=True)
+    print(pred_score)
+    print(type(dev_content), type(batched_memory_contents), type(pred_score))
+    attributions, approximation_error = lig.attribute((dev_content, batched_memory_contents), target=pred_score.cpu().numpy(), return_convergence_delta=True)
     print(attributions)
 
 

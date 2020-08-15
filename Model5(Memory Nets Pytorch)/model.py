@@ -83,16 +83,12 @@ class MANM(nn.Module):
 	def forward_with_loss(
 		self, contents_idx: np.ndarray, memories_idx: np.ndarray, scores: np.ndarray
 	):
-		print(contents_idx)
-		print(memories_idx)
 		contents_idx = (
 			torch.from_numpy(contents_idx).to(self.device).requires_grad_(False)
 		)
 		memories_idx = (
 			torch.from_numpy(memories_idx).to(self.device).requires_grad_(False)
 		)
-		print(contents_idx)
-		print(memories_idx)
 		if self.mem_embedding:
 			# [batch_size, max_sent_size, embedding_size]
 			contents = self.word_to_vec["Input"](contents_idx)
@@ -141,18 +137,18 @@ class MANM(nn.Module):
 
 
 	def forward(
-			self, contents_idx: np.ndarray, memories_idx: np.ndarray
+			self, contents_idx, memories_idx
 		):
-			print(contents_idx)
-			print(memories_idx)
-			contents_idx = (
-				torch.from_numpy(contents_idx).to(self.device).requires_grad_(False)
-			)
-			memories_idx = (
-				torch.from_numpy(memories_idx).to(self.device).requires_grad_(False)
-			)
-			print(contents_idx)
-			print(memories_idx)
+			# print(contents_idx)
+			# print(memories_idx)
+			# contents_idx = (
+			# 	torch.from_numpy(contents_idx).to(self.device).requires_grad_(False)
+			# )
+			# memories_idx = (
+			# 	torch.from_numpy(memories_idx).to(self.device).requires_grad_(False)
+			# )
+			# print(contents_idx)
+			# print(memories_idx)
 			if self.mem_embedding:
 				# [batch_size, max_sent_size, embedding_size]
 				contents = self.word_to_vec["Input"](contents_idx)
@@ -274,12 +270,12 @@ class MANM(nn.Module):
 		return logits, distribution
 
 	def test(self, contents_idx, memories_idx):
-		contents_idx = (
-			torch.from_numpy(contents_idx).to(self.device).requires_grad_(False)
-		)
-		memories_idx = (
-			torch.from_numpy(memories_idx).to(self.device).requires_grad_(False)
-		)
+		# contents_idx = (
+		# 	torch.from_numpy(contents_idx).to(self.device).requires_grad_(False)
+		# )
+		# memories_idx = (
+		# 	torch.from_numpy(memories_idx).to(self.device).requires_grad_(False)
+		# )
 		if self.mem_embedding:
 			# [batch_size, max_sent_size, embedding_size]
 			contents = self.word_to_vec["Input"](contents_idx)

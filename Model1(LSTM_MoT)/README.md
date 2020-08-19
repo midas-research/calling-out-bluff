@@ -9,6 +9,7 @@ Set-Up:
 * Prepare data. We have used 5-fold cross validation on ASAP dataset to evaluate our system. This dataset (training_set_rel3.tsv) can be downloaded from [here](https://www.kaggle.com/c/asap-aes/data). After downloading the file, put it in the [data](data) directory and create training, development and test data using `preprocess_asap.py` script
 
 `cd data
+
 python preprocess_asap.py -i training_set_rel3.tsv`
 
 * Run script `train_nea.py`. You can see the list of available options by running `python train_nea.py -h`

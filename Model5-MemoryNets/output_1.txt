@@ -1,0 +1,385 @@
+/home/rajivratn/anaconda3/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/rajivratn/anaconda3/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/rajivratn/anaconda3/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:528: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/rajivratn/anaconda3/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:529: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/rajivratn/anaconda3/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:530: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/rajivratn/anaconda3/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:535: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+WARNING:tensorflow:From /home/rajivratn/anaconda3/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2020-03-25 18:47:31.124210: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2020-03-25 18:47:31.137245: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500005000 Hz
+2020-03-25 18:47:31.142250: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x563b466bb380 executing computations on platform Host. Devices:
+2020-03-25 18:47:31.142281: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+OMP: Info #154: KMP_AFFINITY: Initial OS proc set respected: 0-47
+OMP: Info #213: KMP_AFFINITY: decoding x2APIC ids.
+OMP: Info #276: KMP_AFFINITY: Affinity capable, using global cpuid leaf 11 info
+OMP: Info #156: KMP_AFFINITY: 48 available OS procs
+OMP: Info #157: KMP_AFFINITY: Uniform topology
+OMP: Info #191: KMP_AFFINITY: 2 sockets x 12 cores/socket x 2 threads/core (24 total cores)
+OMP: Info #215: KMP_AFFINITY: OS proc to physical thread map:
+OMP: Info #171: KMP_AFFINITY: OS proc 0 maps to socket 0 core 0 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 24 maps to socket 0 core 0 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 1 maps to socket 0 core 1 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 25 maps to socket 0 core 1 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 2 maps to socket 0 core 2 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 26 maps to socket 0 core 2 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 3 maps to socket 0 core 3 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 27 maps to socket 0 core 3 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 4 maps to socket 0 core 4 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 28 maps to socket 0 core 4 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 5 maps to socket 0 core 5 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 29 maps to socket 0 core 5 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 6 maps to socket 0 core 8 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 30 maps to socket 0 core 8 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 7 maps to socket 0 core 9 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 31 maps to socket 0 core 9 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 8 maps to socket 0 core 10 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 32 maps to socket 0 core 10 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 9 maps to socket 0 core 11 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 33 maps to socket 0 core 11 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 10 maps to socket 0 core 12 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 34 maps to socket 0 core 12 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 11 maps to socket 0 core 13 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 35 maps to socket 0 core 13 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 12 maps to socket 1 core 0 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 36 maps to socket 1 core 0 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 13 maps to socket 1 core 1 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 37 maps to socket 1 core 1 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 14 maps to socket 1 core 2 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 38 maps to socket 1 core 2 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 15 maps to socket 1 core 3 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 39 maps to socket 1 core 3 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 16 maps to socket 1 core 4 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 40 maps to socket 1 core 4 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 17 maps to socket 1 core 5 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 41 maps to socket 1 core 5 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 18 maps to socket 1 core 8 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 42 maps to socket 1 core 8 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 19 maps to socket 1 core 9 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 43 maps to socket 1 core 9 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 20 maps to socket 1 core 10 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 44 maps to socket 1 core 10 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 21 maps to socket 1 core 11 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 45 maps to socket 1 core 11 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 22 maps to socket 1 core 12 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 46 maps to socket 1 core 12 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 23 maps to socket 1 core 13 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 47 maps to socket 1 core 13 thread 1 
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43373 thread 0 bound to OS proc set 0
+2020-03-25 18:47:31.158402: I tensorflow/core/common_runtime/process_util.cc:71] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+WARNING:tensorflow:From /home/rajivratn/anaconda3/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43547 thread 1 bound to OS proc set 1
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43612 thread 3 bound to OS proc set 3
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43611 thread 2 bound to OS proc set 2
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43614 thread 5 bound to OS proc set 5
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43613 thread 4 bound to OS proc set 4
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43615 thread 6 bound to OS proc set 6
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43616 thread 7 bound to OS proc set 7
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43617 thread 8 bound to OS proc set 8
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43618 thread 9 bound to OS proc set 9
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43619 thread 10 bound to OS proc set 10
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43620 thread 11 bound to OS proc set 11
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43621 thread 12 bound to OS proc set 12
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43622 thread 13 bound to OS proc set 13
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43623 thread 14 bound to OS proc set 14
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43624 thread 15 bound to OS proc set 15
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43625 thread 16 bound to OS proc set 16
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43626 thread 17 bound to OS proc set 17
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43627 thread 18 bound to OS proc set 18
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43628 thread 19 bound to OS proc set 19
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43629 thread 20 bound to OS proc set 20
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43630 thread 21 bound to OS proc set 21
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43631 thread 22 bound to OS proc set 22
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43632 thread 23 bound to OS proc set 23
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43633 thread 24 bound to OS proc set 24
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43546 thread 25 bound to OS proc set 25
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43634 thread 26 bound to OS proc set 26
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43635 thread 27 bound to OS proc set 27
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43636 thread 28 bound to OS proc set 28
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43637 thread 29 bound to OS proc set 29
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43638 thread 30 bound to OS proc set 30
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43639 thread 31 bound to OS proc set 31
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43640 thread 32 bound to OS proc set 32
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43641 thread 33 bound to OS proc set 33
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43642 thread 34 bound to OS proc set 34
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43643 thread 35 bound to OS proc set 35
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43644 thread 36 bound to OS proc set 36
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43645 thread 37 bound to OS proc set 37
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43646 thread 38 bound to OS proc set 38
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43647 thread 39 bound to OS proc set 39
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43649 thread 40 bound to OS proc set 40
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43650 thread 41 bound to OS proc set 41
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43651 thread 42 bound to OS proc set 42
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43652 thread 43 bound to OS proc set 43
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43653 thread 44 bound to OS proc set 44
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43654 thread 45 bound to OS proc set 45
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43656 thread 46 bound to OS proc set 46
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43657 thread 47 bound to OS proc set 47
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43658 thread 48 bound to OS proc set 0
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43659 thread 49 bound to OS proc set 1
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43660 thread 50 bound to OS proc set 2
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43661 thread 51 bound to OS proc set 3
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43662 thread 52 bound to OS proc set 4
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43663 thread 53 bound to OS proc set 5
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43664 thread 54 bound to OS proc set 6
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43665 thread 55 bound to OS proc set 7
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43666 thread 56 bound to OS proc set 8
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43667 thread 57 bound to OS proc set 9
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43668 thread 58 bound to OS proc set 10
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43669 thread 59 bound to OS proc set 11
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43670 thread 60 bound to OS proc set 12
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43671 thread 61 bound to OS proc set 13
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43672 thread 62 bound to OS proc set 14
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43673 thread 63 bound to OS proc set 15
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43674 thread 64 bound to OS proc set 16
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43675 thread 65 bound to OS proc set 17
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43676 thread 66 bound to OS proc set 18
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43677 thread 67 bound to OS proc set 19
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43678 thread 68 bound to OS proc set 20
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43679 thread 69 bound to OS proc set 21
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43680 thread 70 bound to OS proc set 22
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43681 thread 71 bound to OS proc set 23
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43682 thread 72 bound to OS proc set 24
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43683 thread 73 bound to OS proc set 25
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43684 thread 74 bound to OS proc set 26
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43685 thread 75 bound to OS proc set 27
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43686 thread 76 bound to OS proc set 28
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43687 thread 77 bound to OS proc set 29
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43688 thread 78 bound to OS proc set 30
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43689 thread 79 bound to OS proc set 31
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43690 thread 80 bound to OS proc set 32
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43691 thread 81 bound to OS proc set 33
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43692 thread 82 bound to OS proc set 34
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43693 thread 83 bound to OS proc set 35
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43694 thread 84 bound to OS proc set 36
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43695 thread 85 bound to OS proc set 37
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43696 thread 86 bound to OS proc set 38
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43697 thread 87 bound to OS proc set 39
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43698 thread 88 bound to OS proc set 40
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43699 thread 89 bound to OS proc set 41
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43700 thread 90 bound to OS proc set 42
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43703 thread 92 bound to OS proc set 44
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43702 thread 91 bound to OS proc set 43
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43704 thread 93 bound to OS proc set 45
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43705 thread 94 bound to OS proc set 46
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43706 thread 95 bound to OS proc set 47
+OMP: Info #251: KMP_AFFINITY: pid 43373 tid 43707 thread 96 bound to OS proc set 0
+start to load flags
+
+Writing to /mnt/data/rajivratn/memory_networks/automated-essay-grading/runs/adversary_training/essay_set_1_cv_1_Mar_25_2020_18:44:11
+
+                                               names  essay_id
+0  8, "Dear local newspaper, I think effects comp...         1
+1  10, "Dear Local Newspaper, @CAPS1 I have found...         2
+2  9, "Dear reader, @ORGANIZATION1 has had a dram...         3
+3  10, "I agree that computers deffinately are an...         4
+4  8, "Dear local Newspaper, @CAPS1 in the societ...         5
+max_score is 12 	 min_score is 2
+
+==> glove is loaded
+max sentence size: 933 
+mean sentence size: 355
+
+The length of score range is 11
+max sentence size: 811 
+mean sentence size: 384
+
+357
+The size of training data: 1415
+The size of testing data: 357
+[(0, 15), (15, 30), (30, 45), (45, 60), (60, 75), (75, 90), (90, 105), (105, 120), (120, 135), (135, 150), (150, 165), (165, 180), (180, 195), (195, 210), (210, 225), (225, 240), (240, 255), (255, 270), (270, 285), (285, 300), (300, 315), (315, 330), (330, 345), (345, 360), (360, 375), (375, 390), (390, 405), (405, 420), (420, 435), (435, 450), (450, 465), (465, 480), (480, 495), (495, 510), (510, 525), (525, 540), (540, 555), (555, 570), (570, 585), (585, 600), (600, 615), (615, 630), (630, 645), (645, 660), (660, 675), (675, 690), (690, 705), (705, 720), (720, 735), (735, 750), (750, 765), (765, 780), (780, 795), (795, 810), (810, 825), (825, 840), (840, 855), (855, 870), (870, 885), (885, 900), (900, 915), (915, 930), (930, 945), (945, 960), (960, 975), (975, 990), (990, 1005), (1005, 1020), (1020, 1035), (1035, 1050), (1050, 1065), (1065, 1080), (1080, 1095), (1095, 1110), (1110, 1125), (1125, 1140), (1140, 1155), (1155, 1170), (1170, 1185), (1185, 1200), (1200, 1215), (1215, 1230), (1230, 1245), (1245, 1260), (1260, 1275), (1275, 1290), (1290, 1305), (1305, 1320), (1320, 1335), (1335, 1350), (1350, 1365), (1365, 1380), (1380, 1395), (1395, 1410)]
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+Finish epoch 1, total training cost is 271135.63262939453, time spent is 15.97437572479248
+Finish epoch 2, total training cost is 107356.17388916016, time spent is 7.690782308578491
+Finish epoch 3, total training cost is 57192.51022338867, time spent is 7.113345146179199
+Finish epoch 4, total training cost is 43766.37861633301, time spent is 6.987858772277832
+Finish epoch 5, total training cost is 41150.32124328613, time spent is 7.001091957092285
+Training kappa score = 0.15359797943218334
+Testing kappa score = 0.125468881573911
+Finish epoch 6, total training cost is 38759.75326538086, time spent is 6.966198444366455
+Finish epoch 7, total training cost is 36696.017517089844, time spent is 7.113712787628174
+Finish epoch 8, total training cost is 34303.61973571777, time spent is 7.029524087905884
+Finish epoch 9, total training cost is 32991.84275817871, time spent is 6.928814888000488
+Finish epoch 10, total training cost is 29123.545303344727, time spent is 7.0621583461761475
+Training kappa score = 0.25791978737587395
+Testing kappa score = -0.015509400735484569
+Finish epoch 11, total training cost is 28809.2865524292, time spent is 6.964402437210083
+Finish epoch 12, total training cost is 29278.214767456055, time spent is 7.11466121673584
+Finish epoch 13, total training cost is 30236.021781921387, time spent is 6.996498107910156
+Finish epoch 14, total training cost is 27865.79167175293, time spent is 7.023938894271851
+Finish epoch 15, total training cost is 26727.982887268066, time spent is 7.121213674545288
+Training kappa score = 0.08611600671188169
+Testing kappa score = -0.020557447345188162
+Finish epoch 16, total training cost is 25116.448440551758, time spent is 7.004876613616943
+Finish epoch 17, total training cost is 24662.9386138916, time spent is 7.229363203048706
+Finish epoch 18, total training cost is 24730.743438720703, time spent is 7.104186773300171
+Finish epoch 19, total training cost is 25469.634620666504, time spent is 7.0403759479522705
+Finish epoch 20, total training cost is 25041.65838623047, time spent is 7.088716745376587
+Training kappa score = 0.02391342836414112
+Testing kappa score = -0.011798110729202227
+Finish epoch 21, total training cost is 23548.46343231201, time spent is 6.935548782348633
+Finish epoch 22, total training cost is 23435.178230285645, time spent is 6.988486289978027
+Finish epoch 23, total training cost is 22911.10376739502, time spent is 7.112094879150391
+Finish epoch 24, total training cost is 21826.11594390869, time spent is 6.957805871963501
+Finish epoch 25, total training cost is 20442.00138092041, time spent is 6.97819709777832
+Training kappa score = 0.3319129647487665
+Testing kappa score = 0.06629857190302235
+Finish epoch 26, total training cost is 20698.764678955078, time spent is 7.020975589752197
+Finish epoch 27, total training cost is 21590.57186126709, time spent is 7.030013084411621
+Finish epoch 28, total training cost is 20994.779151916504, time spent is 7.036714315414429
+Finish epoch 29, total training cost is 22696.960235595703, time spent is 7.061186075210571
+Finish epoch 30, total training cost is 21605.33348083496, time spent is 6.9839935302734375
+Training kappa score = 0.2693202379334466
+Testing kappa score = 0.048424691908771966
+Finish epoch 31, total training cost is 21989.58676147461, time spent is 7.032616853713989
+Finish epoch 32, total training cost is 21380.66975402832, time spent is 7.064912557601929
+Finish epoch 33, total training cost is 20755.559127807617, time spent is 7.153496503829956
+Finish epoch 34, total training cost is 20324.83617401123, time spent is 6.995923757553101
+Finish epoch 35, total training cost is 20496.341247558594, time spent is 7.052084684371948
+Training kappa score = 0.33572244261651896
+Testing kappa score = 0.04239960439024071
+Finish epoch 36, total training cost is 19409.110847473145, time spent is 7.080150604248047
+Finish epoch 37, total training cost is 20763.22743988037, time spent is 7.1829211711883545
+Finish epoch 38, total training cost is 18596.095581054688, time spent is 7.101922988891602
+Finish epoch 39, total training cost is 18217.736541748047, time spent is 7.102735757827759
+Finish epoch 40, total training cost is 17495.88600921631, time spent is 7.102899074554443
+Training kappa score = 0.08385529196544617
+Testing kappa score = 0.05639135199760892
+Finish epoch 41, total training cost is 17649.663024902344, time spent is 7.003097295761108
+Finish epoch 42, total training cost is 15852.550666809082, time spent is 7.1329662799835205
+Finish epoch 43, total training cost is 17040.408248901367, time spent is 7.015260696411133
+Finish epoch 44, total training cost is 16315.835556030273, time spent is 7.022554159164429
+Finish epoch 45, total training cost is 16268.245361328125, time spent is 7.174370288848877
+Training kappa score = 0.27146656283475257
+Testing kappa score = 0.01812411847672768
+Finish epoch 46, total training cost is 16026.93811416626, time spent is 7.040062665939331
+Finish epoch 47, total training cost is 14705.246360778809, time spent is 7.249507904052734
+Finish epoch 48, total training cost is 15531.847137451172, time spent is 7.09109091758728
+Finish epoch 49, total training cost is 15312.591400146484, time spent is 7.167280197143555
+Finish epoch 50, total training cost is 15314.704177856445, time spent is 7.105890989303589
+Training kappa score = 0.23194911807803975
+Testing kappa score = 0.03919004966676576
+Finish epoch 51, total training cost is 15024.285488128662, time spent is 7.14974570274353
+Finish epoch 52, total training cost is 14214.832557678223, time spent is 7.005802631378174
+Finish epoch 53, total training cost is 13237.0629196167, time spent is 6.949037551879883
+Finish epoch 54, total training cost is 13071.383880615234, time spent is 7.131723403930664
+Finish epoch 55, total training cost is 12425.49630355835, time spent is 6.98063588142395
+Training kappa score = 0.2602552038229291
+Testing kappa score = -0.041269338820084656
+Finish epoch 56, total training cost is 12699.014915466309, time spent is 7.114703416824341
+Finish epoch 57, total training cost is 11601.262268066406, time spent is 6.99652886390686
+Finish epoch 58, total training cost is 10958.713829040527, time spent is 6.991572856903076
+Finish epoch 59, total training cost is 10902.937244415283, time spent is 7.140685081481934
+Finish epoch 60, total training cost is 10919.435787200928, time spent is 7.026276111602783
+Training kappa score = 0.30015258212808504
+Testing kappa score = 0.0711172576700897
+                                               names  essay_id
+0  8, "Dear local newspaper, I think effects comp...         1
+1  10, "Dear Local Newspaper, @CAPS1 I have found...         2
+2  9, "Dear reader, @ORGANIZATION1 has had a dram...         3
+3  10, "I agree that computers deffinately are an...         4
+4  8, "Dear local Newspaper, @CAPS1 in the societ...         5
+max_score is 12 	 min_score is 2
+
+==> glove is loaded
+max sentence size: 911 
+mean sentence size: 397
+
+The length of score range is 11
+max sentence size: 811 
+mean sentence size: 384
+
+357
+The size of training data: 1415
+The size of testing data: 357
+[(0, 15), (15, 30), (30, 45), (45, 60), (60, 75), (75, 90), (90, 105), (105, 120), (120, 135), (135, 150), (150, 165), (165, 180), (180, 195), (195, 210), (210, 225), (225, 240), (240, 255), (255, 270), (270, 285), (285, 300), (300, 315), (315, 330), (330, 345), (345, 360), (360, 375), (375, 390), (390, 405), (405, 420), (420, 435), (435, 450), (450, 465), (465, 480), (480, 495), (495, 510), (510, 525), (525, 540), (540, 555), (555, 570), (570, 585), (585, 600), (600, 615), (615, 630), (630, 645), (645, 660), (660, 675), (675, 690), (690, 705), (705, 720), (720, 735), (735, 750), (750, 765), (765, 780), (780, 795), (795, 810), (810, 825), (825, 840), (840, 855), (855, 870), (870, 885), (885, 900), (900, 915), (915, 930), (930, 945), (945, 960), (960, 975), (975, 990), (990, 1005), (1005, 1020), (1020, 1035), (1035, 1050), (1050, 1065), (1065, 1080), (1080, 1095), (1095, 1110), (1110, 1125), (1125, 1140), (1140, 1155), (1155, 1170), (1170, 1185), (1185, 1200), (1200, 1215), (1215, 1230), (1230, 1245), (1245, 1260), (1260, 1275), (1275, 1290), (1290, 1305), (1305, 1320), (1320, 1335), (1335, 1350), (1350, 1365), (1365, 1380), (1380, 1395), (1395, 1410)]
+Finish epoch 1, total training cost is 180599.47692871094, time spent is 10.901526689529419
+Finish epoch 2, total training cost is 95002.32208251953, time spent is 5.631460189819336
+Finish epoch 3, total training cost is 61620.561614990234, time spent is 5.636320352554321
+Finish epoch 4, total training cost is 44677.25302886963, time spent is 5.576300144195557
+Finish epoch 5, total training cost is 34367.18376159668, time spent is 5.632175445556641
+Training kappa score = 0.3055898197217106
+Testing kappa score = 0.020126160911945412
+Finish epoch 6, total training cost is 30079.690887451172, time spent is 5.595739841461182
+Finish epoch 7, total training cost is 29111.623069763184, time spent is 5.579952955245972
+Finish epoch 8, total training cost is 25102.4253616333, time spent is 5.615116119384766
+Finish epoch 9, total training cost is 21418.112144470215, time spent is 5.625168561935425
+Finish epoch 10, total training cost is 21954.31647491455, time spent is 5.609939813613892
+Training kappa score = 0.5237167108297249
+Testing kappa score = 0.03183660112515985
+Finish epoch 11, total training cost is 22379.91081237793, time spent is 5.622267484664917
+Finish epoch 12, total training cost is 21415.68145751953, time spent is 5.644012451171875
+Finish epoch 13, total training cost is 19427.420211791992, time spent is 5.593402147293091
+Finish epoch 14, total training cost is 19069.783935546875, time spent is 5.60155725479126
+Finish epoch 15, total training cost is 19110.418350219727, time spent is 5.595944404602051
+Training kappa score = 0.5592985948368736
+Testing kappa score = 0.08223847952334251
+Finish epoch 16, total training cost is 17735.336753845215, time spent is 5.65029764175415
+Finish epoch 17, total training cost is 17678.248085021973, time spent is 5.593108415603638
+Finish epoch 18, total training cost is 15997.9429397583, time spent is 5.592953443527222
+Finish epoch 19, total training cost is 15799.953590393066, time spent is 5.587242364883423
+Finish epoch 20, total training cost is 16686.089332580566, time spent is 5.662654876708984
+Training kappa score = 0.6102792746050779
+Testing kappa score = 0.04250733322020306
+Finish epoch 21, total training cost is 15115.314590454102, time spent is 5.600800514221191
+Finish epoch 22, total training cost is 15350.899105072021, time spent is 5.63581395149231
+Finish epoch 23, total training cost is 13142.53823852539, time spent is 5.646771669387817
+Finish epoch 24, total training cost is 12815.527057647705, time spent is 5.592746257781982
+Finish epoch 25, total training cost is 11932.665649414062, time spent is 5.598162412643433
+Training kappa score = 0.6101165534203719
+Testing kappa score = 0.08744480074390526
+Finish epoch 26, total training cost is 10960.776355743408, time spent is 5.6475443840026855
+Finish epoch 27, total training cost is 10143.17110824585, time spent is 5.638875722885132
+Finish epoch 28, total training cost is 10253.358707427979, time spent is 5.592772006988525
+Finish epoch 29, total training cost is 9337.506549835205, time spent is 5.582897901535034
+Finish epoch 30, total training cost is 8839.63981628418, time spent is 5.586071968078613
+Training kappa score = 0.6586450632378388
+Testing kappa score = 0.039427729622661056
+Finish epoch 31, total training cost is 8006.670379638672, time spent is 6.756523370742798
+Finish epoch 32, total training cost is 7710.263597488403, time spent is 6.788354158401489
+Finish epoch 33, total training cost is 7967.099060058594, time spent is 6.793830633163452
+Finish epoch 34, total training cost is 7794.5099086761475, time spent is 6.905572414398193
+Finish epoch 35, total training cost is 7448.500128746033, time spent is 6.8452911376953125
+Training kappa score = 0.7191437508636609
+Testing kappa score = 0.053111657394229295
+Finish epoch 36, total training cost is 6804.370527267456, time spent is 6.847972393035889
+Finish epoch 37, total training cost is 6840.469787597656, time spent is 6.847722291946411
+Finish epoch 38, total training cost is 6524.681316375732, time spent is 6.8260040283203125
+Finish epoch 39, total training cost is 6092.333698272705, time spent is 6.820187568664551
+Finish epoch 40, total training cost is 6083.557950973511, time spent is 6.8234899044036865
+Training kappa score = 0.6584462094762988
+Testing kappa score = 0.08498753822494809
+Finish epoch 41, total training cost is 6349.484243392944, time spent is 6.808314800262451
+Finish epoch 42, total training cost is 5877.517635345459, time spent is 6.8008058071136475
+Finish epoch 43, total training cost is 7082.673639297485, time spent is 6.8135974407196045
+Finish epoch 44, total training cost is 14987.49528503418, time spent is 6.838745594024658
+Finish epoch 45, total training cost is 12268.344379425049, time spent is 6.773891448974609
+Training kappa score = 0.6739871106093855
+Testing kappa score = 0.07598861559108694
+Finish epoch 46, total training cost is 12883.213066101074, time spent is 6.748970985412598
+Finish epoch 47, total training cost is 13268.500205993652, time spent is 6.788763523101807
+Finish epoch 48, total training cost is 11801.779571533203, time spent is 6.758734464645386
+Finish epoch 49, total training cost is 10939.33729171753, time spent is 6.749273300170898
+Finish epoch 50, total training cost is 10285.020442962646, time spent is 6.796483755111694
+Training kappa score = 0.5761773693849653
+Testing kappa score = -0.0018663328955728087
+Finish epoch 51, total training cost is 9983.472526550293, time spent is 6.815948009490967
+Finish epoch 52, total training cost is 8536.708652496338, time spent is 6.830610990524292
+Finish epoch 53, total training cost is 8712.361110687256, time spent is 6.843514680862427
+Finish epoch 54, total training cost is 8940.430969238281, time spent is 6.866057395935059
+Finish epoch 55, total training cost is 9191.409801483154, time spent is 6.866211175918579

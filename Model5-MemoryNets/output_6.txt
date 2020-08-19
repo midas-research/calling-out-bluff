@@ -1,0 +1,1587 @@
+/home/rajivratn/anaconda3/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/rajivratn/anaconda3/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/rajivratn/anaconda3/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:528: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/rajivratn/anaconda3/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:529: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/rajivratn/anaconda3/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:530: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/rajivratn/anaconda3/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:535: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/rajivratn/anaconda3/lib/python3.7/site-packages/sklearn/model_selection/_split.py:296: FutureWarning: Setting a random_state has no effect since shuffle is False. This will raise an error in 0.24. You should leave random_state to its default (None), or set shuffle=True.
+  FutureWarning
+WARNING:tensorflow:From /home/rajivratn/anaconda3/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2020-03-26 03:59:23.723056: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2020-03-26 03:59:23.747825: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500005000 Hz
+2020-03-26 03:59:23.753114: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55ef27323850 executing computations on platform Host. Devices:
+2020-03-26 03:59:23.753183: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+OMP: Info #154: KMP_AFFINITY: Initial OS proc set respected: 0-47
+OMP: Info #213: KMP_AFFINITY: decoding x2APIC ids.
+OMP: Info #276: KMP_AFFINITY: Affinity capable, using global cpuid leaf 11 info
+OMP: Info #156: KMP_AFFINITY: 48 available OS procs
+OMP: Info #157: KMP_AFFINITY: Uniform topology
+OMP: Info #191: KMP_AFFINITY: 2 sockets x 12 cores/socket x 2 threads/core (24 total cores)
+OMP: Info #215: KMP_AFFINITY: OS proc to physical thread map:
+OMP: Info #171: KMP_AFFINITY: OS proc 0 maps to socket 0 core 0 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 24 maps to socket 0 core 0 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 1 maps to socket 0 core 1 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 25 maps to socket 0 core 1 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 2 maps to socket 0 core 2 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 26 maps to socket 0 core 2 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 3 maps to socket 0 core 3 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 27 maps to socket 0 core 3 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 4 maps to socket 0 core 4 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 28 maps to socket 0 core 4 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 5 maps to socket 0 core 5 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 29 maps to socket 0 core 5 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 6 maps to socket 0 core 8 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 30 maps to socket 0 core 8 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 7 maps to socket 0 core 9 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 31 maps to socket 0 core 9 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 8 maps to socket 0 core 10 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 32 maps to socket 0 core 10 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 9 maps to socket 0 core 11 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 33 maps to socket 0 core 11 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 10 maps to socket 0 core 12 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 34 maps to socket 0 core 12 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 11 maps to socket 0 core 13 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 35 maps to socket 0 core 13 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 12 maps to socket 1 core 0 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 36 maps to socket 1 core 0 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 13 maps to socket 1 core 1 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 37 maps to socket 1 core 1 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 14 maps to socket 1 core 2 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 38 maps to socket 1 core 2 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 15 maps to socket 1 core 3 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 39 maps to socket 1 core 3 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 16 maps to socket 1 core 4 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 40 maps to socket 1 core 4 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 17 maps to socket 1 core 5 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 41 maps to socket 1 core 5 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 18 maps to socket 1 core 8 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 42 maps to socket 1 core 8 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 19 maps to socket 1 core 9 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 43 maps to socket 1 core 9 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 20 maps to socket 1 core 10 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 44 maps to socket 1 core 10 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 21 maps to socket 1 core 11 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 45 maps to socket 1 core 11 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 22 maps to socket 1 core 12 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 46 maps to socket 1 core 12 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 23 maps to socket 1 core 13 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 47 maps to socket 1 core 13 thread 1 
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 6137 thread 0 bound to OS proc set 0
+2020-03-26 03:59:23.767406: I tensorflow/core/common_runtime/process_util.cc:71] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+WARNING:tensorflow:From /home/rajivratn/anaconda3/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 6827 thread 1 bound to OS proc set 1
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7596 thread 2 bound to OS proc set 2
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7598 thread 4 bound to OS proc set 4
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7599 thread 5 bound to OS proc set 5
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7600 thread 6 bound to OS proc set 6
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7597 thread 3 bound to OS proc set 3
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7601 thread 7 bound to OS proc set 7
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7603 thread 9 bound to OS proc set 9
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7604 thread 10 bound to OS proc set 10
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7606 thread 12 bound to OS proc set 12
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7605 thread 11 bound to OS proc set 11
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7612 thread 18 bound to OS proc set 18
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7610 thread 16 bound to OS proc set 16
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7611 thread 17 bound to OS proc set 17
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7602 thread 8 bound to OS proc set 8
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7613 thread 19 bound to OS proc set 19
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7614 thread 20 bound to OS proc set 20
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7609 thread 15 bound to OS proc set 15
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7607 thread 13 bound to OS proc set 13
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7608 thread 14 bound to OS proc set 14
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7615 thread 21 bound to OS proc set 21
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7617 thread 23 bound to OS proc set 23
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7616 thread 22 bound to OS proc set 22
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7618 thread 24 bound to OS proc set 24
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 6826 thread 25 bound to OS proc set 25
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7619 thread 26 bound to OS proc set 26
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7620 thread 27 bound to OS proc set 27
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7621 thread 28 bound to OS proc set 28
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7622 thread 29 bound to OS proc set 29
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7623 thread 30 bound to OS proc set 30
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7624 thread 31 bound to OS proc set 31
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7625 thread 32 bound to OS proc set 32
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7626 thread 33 bound to OS proc set 33
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7627 thread 34 bound to OS proc set 34
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7628 thread 35 bound to OS proc set 35
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7629 thread 36 bound to OS proc set 36
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7630 thread 37 bound to OS proc set 37
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7631 thread 38 bound to OS proc set 38
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7632 thread 39 bound to OS proc set 39
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7633 thread 40 bound to OS proc set 40
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7634 thread 41 bound to OS proc set 41
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7635 thread 42 bound to OS proc set 42
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7636 thread 43 bound to OS proc set 43
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7637 thread 44 bound to OS proc set 44
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7638 thread 45 bound to OS proc set 45
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7639 thread 46 bound to OS proc set 46
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7640 thread 47 bound to OS proc set 47
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7641 thread 48 bound to OS proc set 0
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7642 thread 49 bound to OS proc set 1
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7643 thread 50 bound to OS proc set 2
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7644 thread 51 bound to OS proc set 3
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7645 thread 52 bound to OS proc set 4
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7646 thread 53 bound to OS proc set 5
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7647 thread 54 bound to OS proc set 6
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7648 thread 55 bound to OS proc set 7
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7649 thread 56 bound to OS proc set 8
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7650 thread 57 bound to OS proc set 9
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7651 thread 58 bound to OS proc set 10
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7652 thread 59 bound to OS proc set 11
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7653 thread 60 bound to OS proc set 12
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7654 thread 61 bound to OS proc set 13
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7655 thread 62 bound to OS proc set 14
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7656 thread 63 bound to OS proc set 15
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7657 thread 64 bound to OS proc set 16
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7658 thread 65 bound to OS proc set 17
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7659 thread 66 bound to OS proc set 18
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7660 thread 67 bound to OS proc set 19
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7661 thread 68 bound to OS proc set 20
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7662 thread 69 bound to OS proc set 21
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7663 thread 70 bound to OS proc set 22
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7664 thread 71 bound to OS proc set 23
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7665 thread 72 bound to OS proc set 24
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7666 thread 73 bound to OS proc set 25
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7667 thread 74 bound to OS proc set 26
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7668 thread 75 bound to OS proc set 27
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7669 thread 76 bound to OS proc set 28
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7670 thread 77 bound to OS proc set 29
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7672 thread 79 bound to OS proc set 31
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7671 thread 78 bound to OS proc set 30
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7673 thread 80 bound to OS proc set 32
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7674 thread 81 bound to OS proc set 33
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7675 thread 82 bound to OS proc set 34
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7676 thread 83 bound to OS proc set 35
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7677 thread 84 bound to OS proc set 36
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7678 thread 85 bound to OS proc set 37
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7679 thread 86 bound to OS proc set 38
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7680 thread 87 bound to OS proc set 39
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7681 thread 88 bound to OS proc set 40
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7682 thread 89 bound to OS proc set 41
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7683 thread 90 bound to OS proc set 42
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7684 thread 91 bound to OS proc set 43
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7685 thread 92 bound to OS proc set 44
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7686 thread 93 bound to OS proc set 45
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7687 thread 94 bound to OS proc set 46
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7688 thread 95 bound to OS proc set 47
+OMP: Info #251: KMP_AFFINITY: pid 6137 tid 7689 thread 96 bound to OS proc set 0
+WARNING:tensorflow:From /home/rajivratn/anaconda3/lib/python3.7/site-packages/tensorflow/python/training/saver.py:966: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+start to load flags
+
+Writing to /mnt/data/rajivratn/memory_networks/automated-essay-grading/runs/essay_set_6_cv_1_Mar_26_2020_03:56:24
+
+
+Parameters:
+allow_soft_placement=True
+batch_size=15
+embedding_size=300
+epochs=200
+epsilon=0.1
+essay_set_id=6
+evaluation_interval=5
+feature_size=100
+gated_addressing=False
+hops=3
+is_regression=False
+keep_prob=0.9
+l2_lambda=0.3
+learning_rate=0.0001
+log_device_placement=False
+max_grad_norm=10.0
+num_samples=1
+token_num=42
+
+max_score is 4 	 min_score is 0
+
+==> glove is loaded
+max sentence size: 489 
+mean sentence size: 161
+
+The length of score range is 5
+The size of training data: 1435
+The size of testing data: 360
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+Finish epoch 1, total training cost is 88230.76094055176, time spent is 19.339343547821045
+Finish epoch 2, total training cost is 27170.770332336426, time spent is 5.601852178573608
+Finish epoch 3, total training cost is 18761.669761657715, time spent is 5.173307657241821
+Finish epoch 4, total training cost is 15972.664863586426, time spent is 5.573939561843872
+Finish epoch 5, total training cost is 13126.484169006348, time spent is 5.543660402297974
+Training kappa score = 0.47755323529751337
+Testing kappa score = 0.4249518039107685
+Finish epoch 6, total training cost is 12960.999858856201, time spent is 6.503643751144409
+Finish epoch 7, total training cost is 11211.326177597046, time spent is 5.871504068374634
+Finish epoch 8, total training cost is 10721.216579437256, time spent is 5.744937896728516
+Finish epoch 9, total training cost is 10399.942169189453, time spent is 5.716839790344238
+Finish epoch 10, total training cost is 9725.10029220581, time spent is 5.130406379699707
+Training kappa score = 0.5584716167172628
+Testing kappa score = 0.5526192802821088
+Finish epoch 11, total training cost is 10031.174263000488, time spent is 4.3539793491363525
+Finish epoch 12, total training cost is 9604.571960449219, time spent is 3.8751187324523926
+Finish epoch 13, total training cost is 8864.069244384766, time spent is 2.273089647293091
+Finish epoch 14, total training cost is 8567.456972122192, time spent is 2.4987308979034424
+Finish epoch 15, total training cost is 8626.66556930542, time spent is 1.5062742233276367
+Training kappa score = 0.4751164793024065
+Testing kappa score = 0.4410407049937054
+Finish epoch 16, total training cost is 8514.570190429688, time spent is 1.5730745792388916
+Finish epoch 17, total training cost is 8477.17137336731, time spent is 1.5560541152954102
+Finish epoch 18, total training cost is 8119.273773193359, time spent is 1.6823768615722656
+Finish epoch 19, total training cost is 7761.310441970825, time spent is 1.4109747409820557
+Finish epoch 20, total training cost is 7852.294780731201, time spent is 2.2785332202911377
+Training kappa score = 0.604614605166359
+Testing kappa score = 0.5774436841316617
+Finish epoch 21, total training cost is 7316.022994995117, time spent is 6.643248558044434
+Finish epoch 22, total training cost is 7406.022571563721, time spent is 6.2758238315582275
+Finish epoch 23, total training cost is 7084.654588699341, time spent is 6.2674949169158936
+Finish epoch 24, total training cost is 7217.999137878418, time spent is 6.103775501251221
+Finish epoch 25, total training cost is 6596.3473262786865, time spent is 6.3030431270599365
+Training kappa score = 0.5216796746009238
+Testing kappa score = 0.5217642686049392
+Finish epoch 26, total training cost is 6610.770059585571, time spent is 7.0289146900177
+Finish epoch 27, total training cost is 6904.450531005859, time spent is 6.167600870132446
+Finish epoch 28, total training cost is 6332.022975921631, time spent is 5.472685813903809
+Finish epoch 29, total training cost is 6481.601030349731, time spent is 5.907433271408081
+Finish epoch 30, total training cost is 6122.045068740845, time spent is 6.12536096572876
+Training kappa score = 0.38921532865733555
+Testing kappa score = 0.38921300154780336
+Finish epoch 31, total training cost is 6317.164165496826, time spent is 5.23088526725769
+Finish epoch 32, total training cost is 6079.272253036499, time spent is 5.426708936691284
+Finish epoch 33, total training cost is 6017.2355308532715, time spent is 4.90134859085083
+Finish epoch 34, total training cost is 6046.228649139404, time spent is 4.778373718261719
+Finish epoch 35, total training cost is 5823.921924591064, time spent is 4.5254130363464355
+Training kappa score = 0.6303380352849083
+Testing kappa score = 0.5856697139615561
+Finish epoch 36, total training cost is 5618.911393165588, time spent is 4.166199207305908
+Finish epoch 37, total training cost is 5684.131336212158, time spent is 4.335186004638672
+Finish epoch 38, total training cost is 5587.545467376709, time spent is 4.380946636199951
+Finish epoch 39, total training cost is 5384.925006866455, time spent is 5.077336311340332
+Finish epoch 40, total training cost is 5299.171380996704, time spent is 5.192861795425415
+Training kappa score = 0.6054873265250866
+Testing kappa score = 0.5730100158144439
+Finish epoch 41, total training cost is 5387.781102180481, time spent is 5.0665061473846436
+Finish epoch 42, total training cost is 5432.143005371094, time spent is 6.347215890884399
+Finish epoch 43, total training cost is 5277.7337646484375, time spent is 6.526617050170898
+Finish epoch 44, total training cost is 5269.378149032593, time spent is 5.94550633430481
+Finish epoch 45, total training cost is 4927.746147155762, time spent is 5.5778584480285645
+Training kappa score = 0.4884482112843328
+Testing kappa score = 0.4593278129566488
+Finish epoch 46, total training cost is 5177.082538604736, time spent is 5.447051286697388
+Finish epoch 47, total training cost is 5162.038455963135, time spent is 5.499441623687744
+Finish epoch 48, total training cost is 4836.030589580536, time spent is 5.388244152069092
+Finish epoch 49, total training cost is 4942.1070728302, time spent is 6.210765600204468
+Finish epoch 50, total training cost is 5153.2102699279785, time spent is 5.920030117034912
+Training kappa score = 0.6673173798079002
+Testing kappa score = 0.6530180509697701
+Finish epoch 51, total training cost is 4767.976603507996, time spent is 6.258137941360474
+Finish epoch 52, total training cost is 4675.828353881836, time spent is 6.224271059036255
+Finish epoch 53, total training cost is 4662.3320417404175, time spent is 5.934847831726074
+Finish epoch 54, total training cost is 4534.830722808838, time spent is 5.39793586730957
+Finish epoch 55, total training cost is 4757.906244277954, time spent is 5.704362630844116
+Training kappa score = 0.471862889580263
+Testing kappa score = 0.46624542733621543
+Finish epoch 56, total training cost is 4346.178134918213, time spent is 6.127203702926636
+Finish epoch 57, total training cost is 4144.804705619812, time spent is 6.2415690422058105
+Finish epoch 58, total training cost is 4267.93781375885, time spent is 6.33827805519104
+Finish epoch 59, total training cost is 4738.05380153656, time spent is 5.944272994995117
+Finish epoch 60, total training cost is 4294.5351638793945, time spent is 5.963996410369873
+Training kappa score = 0.6277764495881855
+Testing kappa score = 0.6171107292413954
+Finish epoch 61, total training cost is 4296.349527359009, time spent is 5.311039686203003
+Finish epoch 62, total training cost is 4201.890563964844, time spent is 5.113792896270752
+Finish epoch 63, total training cost is 4128.3745470047, time spent is 5.264641046524048
+Finish epoch 64, total training cost is 3732.338599205017, time spent is 5.2470619678497314
+Finish epoch 65, total training cost is 4026.637845993042, time spent is 5.5662291049957275
+Training kappa score = 0.7236575373275845
+Testing kappa score = 0.6970065709418349
+Finish epoch 66, total training cost is 3832.980746269226, time spent is 4.941298723220825
+Finish epoch 67, total training cost is 3957.738528251648, time spent is 5.0702714920043945
+Finish epoch 68, total training cost is 3798.412760734558, time spent is 5.5816497802734375
+Finish epoch 69, total training cost is 3841.292580604553, time spent is 4.490966081619263
+Finish epoch 70, total training cost is 4006.457781791687, time spent is 4.906744718551636
+Training kappa score = 0.7003564289416071
+Testing kappa score = 0.6539407055659445
+Finish epoch 71, total training cost is 3627.9100303649902, time spent is 5.2834930419921875
+Finish epoch 72, total training cost is 3810.152856826782, time spent is 6.110941648483276
+Finish epoch 73, total training cost is 3812.4697399139404, time spent is 5.79561185836792
+Finish epoch 74, total training cost is 3800.4228229522705, time spent is 5.4666688442230225
+Finish epoch 75, total training cost is 3662.5256581306458, time spent is 5.543993234634399
+Training kappa score = 0.6131234246605567
+Testing kappa score = 0.5999420835444871
+Finish epoch 76, total training cost is 3620.150007724762, time spent is 5.707653284072876
+Finish epoch 77, total training cost is 3422.376024246216, time spent is 6.061516761779785
+Finish epoch 78, total training cost is 3442.6134643554688, time spent is 5.880643844604492
+Finish epoch 79, total training cost is 3588.9980726242065, time spent is 6.134237289428711
+Finish epoch 80, total training cost is 3393.3812112808228, time spent is 6.246120929718018
+Training kappa score = 0.5936537020071625
+Testing kappa score = 0.5568432220680649
+Finish epoch 81, total training cost is 3508.0102224349976, time spent is 6.144710540771484
+Finish epoch 82, total training cost is 3642.918161392212, time spent is 4.646491050720215
+Finish epoch 83, total training cost is 3096.3931608200073, time spent is 4.4905548095703125
+Finish epoch 84, total training cost is 3438.4813117980957, time spent is 4.896422386169434
+Finish epoch 85, total training cost is 3278.1221132278442, time spent is 4.787629842758179
+Training kappa score = 0.6689208701245719
+Testing kappa score = 0.6286988754162217
+Finish epoch 86, total training cost is 3449.4159812927246, time spent is 4.006869554519653
+Finish epoch 87, total training cost is 3266.3444452285767, time spent is 3.697038173675537
+Finish epoch 88, total training cost is 3215.095375061035, time spent is 3.829359531402588
+Finish epoch 89, total training cost is 3383.4911460876465, time spent is 3.7026848793029785
+Finish epoch 90, total training cost is 3119.587610244751, time spent is 3.909428596496582
+Training kappa score = 0.690032236673648
+Testing kappa score = 0.6581060485430268
+Finish epoch 91, total training cost is 3253.753698348999, time spent is 3.8645031452178955
+Finish epoch 92, total training cost is 3021.5084552764893, time spent is 3.799285411834717
+Finish epoch 93, total training cost is 3352.0559968948364, time spent is 3.683286190032959
+Finish epoch 94, total training cost is 3222.660982131958, time spent is 3.6733973026275635
+Finish epoch 95, total training cost is 3166.1381452083588, time spent is 3.617906093597412
+Training kappa score = 0.6988628794580378
+Testing kappa score = 0.6921833219327156
+Finish epoch 96, total training cost is 3127.9436016082764, time spent is 3.844980001449585
+Finish epoch 97, total training cost is 2973.844323158264, time spent is 3.8816535472869873
+Finish epoch 98, total training cost is 2879.2062673568726, time spent is 3.9116218090057373
+Finish epoch 99, total training cost is 3121.922737121582, time spent is 3.7151997089385986
+Finish epoch 100, total training cost is 3185.046266555786, time spent is 3.594298839569092
+Training kappa score = 0.5155030355594102
+Testing kappa score = 0.46968073709020786
+Finish epoch 101, total training cost is 3024.732484817505, time spent is 3.6872901916503906
+Finish epoch 102, total training cost is 3107.3330841064453, time spent is 3.8202221393585205
+Finish epoch 103, total training cost is 2841.168179512024, time spent is 3.8524892330169678
+Finish epoch 104, total training cost is 2994.8773016929626, time spent is 3.6313769817352295
+Finish epoch 105, total training cost is 3011.0233192443848, time spent is 3.414706230163574
+Training kappa score = 0.5163896728935402
+Testing kappa score = 0.4729241877256317
+Finish epoch 106, total training cost is 3012.34809589386, time spent is 3.758800983428955
+Finish epoch 107, total training cost is 2956.622320175171, time spent is 3.8333137035369873
+Finish epoch 108, total training cost is 2783.359468460083, time spent is 3.9765920639038086
+Finish epoch 109, total training cost is 2875.5356464385986, time spent is 3.843132734298706
+Finish epoch 110, total training cost is 2824.0058431625366, time spent is 3.8297088146209717
+Training kappa score = 0.7550263712866131
+Testing kappa score = 0.7574215436810857
+Finish epoch 111, total training cost is 2976.0396542549133, time spent is 3.034337282180786
+Finish epoch 112, total training cost is 2824.7913646698, time spent is 3.56438946723938
+Finish epoch 113, total training cost is 2832.707100868225, time spent is 3.6798458099365234
+Finish epoch 114, total training cost is 2628.0370597839355, time spent is 3.6857686042785645
+Finish epoch 115, total training cost is 2812.1562604904175, time spent is 3.6400930881500244
+Training kappa score = 0.6836348584309296
+Testing kappa score = 0.6525971301502057
+Finish epoch 116, total training cost is 2660.7319650650024, time spent is 3.6314337253570557
+Finish epoch 117, total training cost is 2814.7515954971313, time spent is 3.3466310501098633
+Finish epoch 118, total training cost is 2776.0004453659058, time spent is 3.380014657974243
+Finish epoch 119, total training cost is 2616.0369443893433, time spent is 3.7577619552612305
+Finish epoch 120, total training cost is 2734.8594150543213, time spent is 3.7579469680786133
+Training kappa score = 0.5775811794576796
+Testing kappa score = 0.5573155481450605
+Finish epoch 121, total training cost is 2664.0498085021973, time spent is 3.8175230026245117
+Finish epoch 122, total training cost is 2887.115732192993, time spent is 3.5613889694213867
+Finish epoch 123, total training cost is 2567.713087081909, time spent is 3.883624792098999
+Finish epoch 124, total training cost is 2603.705243587494, time spent is 3.7435944080352783
+Finish epoch 125, total training cost is 2539.7814512252808, time spent is 3.8527770042419434
+Training kappa score = 0.7054816123131269
+Testing kappa score = 0.6938384998086491
+Finish epoch 126, total training cost is 2782.860382080078, time spent is 3.8022820949554443
+Finish epoch 127, total training cost is 2440.170512199402, time spent is 3.7986180782318115
+Finish epoch 128, total training cost is 2502.848907470703, time spent is 3.6800827980041504
+Finish epoch 129, total training cost is 2459.245759487152, time spent is 3.3345887660980225
+Finish epoch 130, total training cost is 2384.2047357559204, time spent is 3.71501088142395
+Training kappa score = 0.5901917188768115
+Testing kappa score = 0.5139911634756995
+Finish epoch 131, total training cost is 2497.669048309326, time spent is 3.235550880432129
+Finish epoch 132, total training cost is 2571.1541481018066, time spent is 3.1278655529022217
+Finish epoch 133, total training cost is 2540.3146891593933, time spent is 3.2607176303863525
+Finish epoch 134, total training cost is 2497.3175916671753, time spent is 2.9547483921051025
+Finish epoch 135, total training cost is 2465.0935044288635, time spent is 3.155273675918579
+Training kappa score = 0.6874488165255316
+Testing kappa score = 0.6601108440825936
+Finish epoch 136, total training cost is 2322.623133659363, time spent is 3.4626944065093994
+Finish epoch 137, total training cost is 2497.5103735923767, time spent is 3.3780746459960938
+Finish epoch 138, total training cost is 2403.692307472229, time spent is 3.218621015548706
+Finish epoch 139, total training cost is 2387.401205062866, time spent is 2.869833469390869
+Finish epoch 140, total training cost is 2560.2686738967896, time spent is 2.7913384437561035
+Training kappa score = 0.7422223307636158
+Testing kappa score = 0.7174954567982819
+Finish epoch 141, total training cost is 2415.639657974243, time spent is 2.567518472671509
+Finish epoch 142, total training cost is 2475.6265168190002, time spent is 2.553570508956909
+Finish epoch 143, total training cost is 2423.916178703308, time spent is 2.491713047027588
+Finish epoch 144, total training cost is 2319.574746131897, time spent is 2.5877199172973633
+Finish epoch 145, total training cost is 2418.758990764618, time spent is 2.5364952087402344
+Training kappa score = 0.5606107415264419
+Testing kappa score = 0.5227995758218452
+Finish epoch 146, total training cost is 2442.2059001922607, time spent is 2.5802366733551025
+Finish epoch 147, total training cost is 2325.2778282165527, time spent is 3.243168592453003
+Finish epoch 148, total training cost is 2317.3650693893433, time spent is 3.316016435623169
+Finish epoch 149, total training cost is 2194.9531841278076, time spent is 3.183117389678955
+Finish epoch 150, total training cost is 2365.717562675476, time spent is 3.1858201026916504
+Training kappa score = 0.6891308896350394
+Testing kappa score = 0.6218564899264207
+Finish epoch 151, total training cost is 2209.364077568054, time spent is 3.147602081298828
+Finish epoch 152, total training cost is 2396.238045692444, time spent is 3.121516227722168
+Finish epoch 153, total training cost is 2361.938018798828, time spent is 2.9785373210906982
+Finish epoch 154, total training cost is 2215.094219684601, time spent is 2.7360706329345703
+Finish epoch 155, total training cost is 2290.4336738586426, time spent is 2.5621464252471924
+Training kappa score = 0.6971008684852138
+Testing kappa score = 0.675417260756521
+Finish epoch 156, total training cost is 2182.871642112732, time spent is 2.473872184753418
+Finish epoch 157, total training cost is 2247.6178312301636, time spent is 2.534252405166626
+Finish epoch 158, total training cost is 2177.6026706695557, time spent is 2.569631576538086
+Finish epoch 159, total training cost is 2316.885859489441, time spent is 3.1754648685455322
+Finish epoch 160, total training cost is 2111.4824306964874, time spent is 3.332653760910034
+Training kappa score = 0.7686294993890438
+Testing kappa score = 0.7380293989230098
+Finish epoch 161, total training cost is 2092.21221780777, time spent is 3.5525102615356445
+Finish epoch 162, total training cost is 2184.6142020225525, time spent is 3.424931049346924
+Finish epoch 163, total training cost is 2171.406747817993, time spent is 3.6111245155334473
+Finish epoch 164, total training cost is 2100.9830284118652, time spent is 3.1978602409362793
+Finish epoch 165, total training cost is 2199.3861980438232, time spent is 2.996208429336548
+Training kappa score = 0.7890837892929943
+Testing kappa score = 0.7733411197897656
+Finish epoch 166, total training cost is 2297.1918992996216, time spent is 3.6925811767578125
+Finish epoch 167, total training cost is 2064.5054092407227, time spent is 3.6107304096221924
+Finish epoch 168, total training cost is 2199.6781797409058, time spent is 3.2205252647399902
+Finish epoch 169, total training cost is 2180.2082529067993, time spent is 3.2348697185516357
+Finish epoch 170, total training cost is 2092.3997020721436, time spent is 3.0763065814971924
+Training kappa score = 0.6491556613281835
+Testing kappa score = 0.6206298041160427
+Finish epoch 171, total training cost is 2062.253107070923, time spent is 3.4591047763824463
+Finish epoch 172, total training cost is 2032.9791440963745, time spent is 3.446807861328125
+Finish epoch 173, total training cost is 2061.0282039642334, time spent is 3.738116502761841
+Finish epoch 174, total training cost is 2040.18967628479, time spent is 3.837247133255005
+Finish epoch 175, total training cost is 2100.535970211029, time spent is 3.620105028152466
+Training kappa score = 0.7095364862201765
+Testing kappa score = 0.6800922765471624
+Finish epoch 176, total training cost is 2031.8543972969055, time spent is 3.5477776527404785
+Finish epoch 177, total training cost is 2033.4011611938477, time spent is 3.650899648666382
+Finish epoch 178, total training cost is 2066.503315925598, time spent is 3.301220178604126
+Finish epoch 179, total training cost is 2077.0212631225586, time spent is 3.1838133335113525
+Finish epoch 180, total training cost is 2056.1753640174866, time spent is 3.204256057739258
+Training kappa score = 0.5407541285048587
+Testing kappa score = 0.4704749679075737
+Finish epoch 181, total training cost is 2030.6882410049438, time spent is 3.275508403778076
+Finish epoch 182, total training cost is 2069.781167984009, time spent is 3.350144147872925
+Finish epoch 183, total training cost is 2164.9224791526794, time spent is 3.449589252471924
+Finish epoch 184, total training cost is 1994.7138328552246, time spent is 3.2547740936279297
+Finish epoch 185, total training cost is 2029.339744567871, time spent is 3.2278778553009033
+Training kappa score = 0.7242705297948487
+Testing kappa score = 0.7280966767371602
+Finish epoch 186, total training cost is 2134.6563329696655, time spent is 3.663226842880249
+Finish epoch 187, total training cost is 1943.1074905395508, time spent is 3.665886402130127
+Finish epoch 188, total training cost is 2115.4878149032593, time spent is 3.766305923461914
+Finish epoch 189, total training cost is 2080.38907289505, time spent is 3.6551430225372314
+Finish epoch 190, total training cost is 1991.0179843902588, time spent is 3.261059045791626
+Training kappa score = 0.7708801134541035
+Testing kappa score = 0.7234461118246703
+Finish epoch 191, total training cost is 1946.383740901947, time spent is 3.373776912689209
+Finish epoch 192, total training cost is 2029.761456489563, time spent is 3.1509270668029785
+Finish epoch 193, total training cost is 1988.05601644516, time spent is 3.4073727130889893
+Finish epoch 194, total training cost is 1965.0209021568298, time spent is 3.4941673278808594
+Finish epoch 195, total training cost is 1949.802827835083, time spent is 3.742800235748291
+Training kappa score = 0.7664632374309794
+Testing kappa score = 0.7170943590329772
+Finish epoch 196, total training cost is 1968.498517036438, time spent is 3.9114890098571777
+Finish epoch 197, total training cost is 1965.9175877571106, time spent is 3.8087692260742188
+Finish epoch 198, total training cost is 1914.9019412994385, time spent is 3.6402246952056885
+Finish epoch 199, total training cost is 1920.8055973052979, time spent is 3.7000515460968018
+Finish epoch 200, total training cost is 1910.2433743476868, time spent is 3.8540875911712646
+Training kappa score = 0.7779492152404769
+Testing kappa score = 0.7525508645445103
+The size of training data: 1435
+The size of testing data: 360
+Finish epoch 1, total training cost is 94992.50521850586, time spent is 11.917506456375122
+Finish epoch 2, total training cost is 25300.940689086914, time spent is 4.409106254577637
+Finish epoch 3, total training cost is 16103.87873840332, time spent is 4.485351324081421
+Finish epoch 4, total training cost is 13125.554233551025, time spent is 4.398313283920288
+Finish epoch 5, total training cost is 13079.380867004395, time spent is 4.536323308944702
+Training kappa score = 0.4419095299582003
+Testing kappa score = 0.3784368403221182
+Finish epoch 6, total training cost is 11781.385579109192, time spent is 4.516599178314209
+Finish epoch 7, total training cost is 10410.069410324097, time spent is 4.206923484802246
+Finish epoch 8, total training cost is 10632.055641174316, time spent is 4.699110746383667
+Finish epoch 9, total training cost is 8942.725107192993, time spent is 5.437485694885254
+Finish epoch 10, total training cost is 8586.51480102539, time spent is 5.373818397521973
+Training kappa score = 0.5862112582462904
+Testing kappa score = 0.5702765791893613
+Finish epoch 11, total training cost is 7717.645246505737, time spent is 5.224504232406616
+Finish epoch 12, total training cost is 8301.100162506104, time spent is 5.198435544967651
+Finish epoch 13, total training cost is 7948.264963150024, time spent is 5.076768398284912
+Finish epoch 14, total training cost is 7768.842994689941, time spent is 4.960811376571655
+Finish epoch 15, total training cost is 7218.552953720093, time spent is 4.531115293502808
+Training kappa score = 0.6263070001511837
+Testing kappa score = 0.6040807243970491
+Finish epoch 16, total training cost is 7307.95906162262, time spent is 3.4377989768981934
+Finish epoch 17, total training cost is 6581.078396558762, time spent is 3.760401725769043
+Finish epoch 18, total training cost is 6618.584415435791, time spent is 3.756944179534912
+Finish epoch 19, total training cost is 6540.597305297852, time spent is 3.9448800086975098
+Finish epoch 20, total training cost is 6109.745338439941, time spent is 3.981372594833374
+Training kappa score = 0.6189361497968211
+Testing kappa score = 0.5770919279048733
+Finish epoch 21, total training cost is 6025.747678756714, time spent is 5.245713949203491
+Finish epoch 22, total training cost is 5951.681029319763, time spent is 4.979323387145996
+Finish epoch 23, total training cost is 5487.8239278793335, time spent is 3.510024309158325
+Finish epoch 24, total training cost is 5469.380645751953, time spent is 4.191115140914917
+Finish epoch 25, total training cost is 5450.884489059448, time spent is 4.042730808258057
+Training kappa score = 0.6796912389296417
+Testing kappa score = 0.6753964127891864
+Finish epoch 26, total training cost is 5179.936644554138, time spent is 5.916725158691406
+Finish epoch 27, total training cost is 5236.8586711883545, time spent is 6.109662294387817
+Finish epoch 28, total training cost is 4940.115739822388, time spent is 6.318149089813232
+Finish epoch 29, total training cost is 4998.261159896851, time spent is 6.046185731887817
+Finish epoch 30, total training cost is 4601.616025924683, time spent is 6.419266939163208
+Training kappa score = 0.5420495003248829
+Testing kappa score = 0.5006630761319657
+Finish epoch 31, total training cost is 4559.638101577759, time spent is 6.32784366607666
+Finish epoch 32, total training cost is 4419.305155754089, time spent is 6.219294548034668
+Finish epoch 33, total training cost is 4240.823771476746, time spent is 6.168651342391968
+Finish epoch 34, total training cost is 4420.6412353515625, time spent is 6.1158835887908936
+Finish epoch 35, total training cost is 4017.722384929657, time spent is 5.398341655731201
+Training kappa score = 0.5931110362527294
+Testing kappa score = 0.533013648100332
+Finish epoch 36, total training cost is 3988.346405029297, time spent is 5.366125822067261
+Finish epoch 37, total training cost is 4029.817710876465, time spent is 5.905827522277832
+Finish epoch 38, total training cost is 4141.211801528931, time spent is 5.278307914733887
+Finish epoch 39, total training cost is 3725.700831413269, time spent is 4.994974851608276
+Finish epoch 40, total training cost is 3764.769094467163, time spent is 5.4564642906188965
+Training kappa score = 0.6678892661810829
+Testing kappa score = 0.6457450904890258
+Finish epoch 41, total training cost is 3615.435459136963, time spent is 5.707867622375488
+Finish epoch 42, total training cost is 3300.2735300064087, time spent is 5.38042688369751
+Finish epoch 43, total training cost is 3482.4937086105347, time spent is 6.021755695343018
+Finish epoch 44, total training cost is 3531.6390314102173, time spent is 6.275602340698242
+Finish epoch 45, total training cost is 3488.167890548706, time spent is 6.234438419342041
+Training kappa score = 0.7333936206703633
+Testing kappa score = 0.677021419760009
+Finish epoch 46, total training cost is 3192.6925621032715, time spent is 4.85365891456604
+Finish epoch 47, total training cost is 3493.362060546875, time spent is 4.914315938949585
+Finish epoch 48, total training cost is 3147.14391374588, time spent is 4.815609693527222
+Finish epoch 49, total training cost is 3108.4045610427856, time spent is 4.700500249862671
+Finish epoch 50, total training cost is 3107.17098903656, time spent is 4.86848258972168
+Training kappa score = 0.7027939637044105
+Testing kappa score = 0.6609336609336609
+Finish epoch 51, total training cost is 3149.879636287689, time spent is 4.620570659637451
+Finish epoch 52, total training cost is 2982.8149728775024, time spent is 4.432697772979736
+Finish epoch 53, total training cost is 3176.5330805778503, time spent is 5.018212556838989
+Finish epoch 54, total training cost is 2913.0975008010864, time spent is 5.169922828674316
+Finish epoch 55, total training cost is 2951.6226048469543, time spent is 4.834638833999634
+Training kappa score = 0.6612849926828116
+Testing kappa score = 0.6193451002077386
+Finish epoch 56, total training cost is 2828.564498901367, time spent is 4.679803848266602
+Finish epoch 57, total training cost is 2815.42094707489, time spent is 4.995004892349243
+Finish epoch 58, total training cost is 2787.805342197418, time spent is 4.957622051239014
+Finish epoch 59, total training cost is 2726.3149275779724, time spent is 5.00267219543457
+Finish epoch 60, total training cost is 2974.4111557006836, time spent is 4.7637693881988525
+Training kappa score = 0.7380811910729652
+Testing kappa score = 0.6977190521886765
+Finish epoch 61, total training cost is 2654.793014526367, time spent is 4.675428152084351
+Finish epoch 62, total training cost is 2528.6689558029175, time spent is 4.95705246925354
+Finish epoch 63, total training cost is 2752.4376397132874, time spent is 4.895596265792847
+Finish epoch 64, total training cost is 2726.3035163879395, time spent is 4.848912000656128
+Finish epoch 65, total training cost is 2703.384645462036, time spent is 4.075265884399414
+Training kappa score = 0.6619838782958518
+Testing kappa score = 0.653666146645866
+Finish epoch 66, total training cost is 2595.7532892227173, time spent is 4.989258050918579
+Finish epoch 67, total training cost is 2583.5199251174927, time spent is 4.967454433441162
+Finish epoch 68, total training cost is 2463.8681354522705, time spent is 4.871806859970093
+Finish epoch 69, total training cost is 2421.1796593666077, time spent is 4.618864059448242
+Finish epoch 70, total training cost is 2457.953682899475, time spent is 4.902559518814087
+Training kappa score = 0.6819919170042197
+Testing kappa score = 0.6482811878407788
+Finish epoch 71, total training cost is 2421.2574071884155, time spent is 4.978698968887329
+Finish epoch 72, total training cost is 2362.7752413749695, time spent is 3.71962308883667
+Finish epoch 73, total training cost is 2398.852843761444, time spent is 4.050084352493286
+Finish epoch 74, total training cost is 2426.759925365448, time spent is 4.14414644241333
+Finish epoch 75, total training cost is 2265.5166635513306, time spent is 4.374056100845337
+Training kappa score = 0.7540271929736411
+Testing kappa score = 0.7043435941112057
+Finish epoch 76, total training cost is 2399.1744112968445, time spent is 5.8592529296875
+Finish epoch 77, total training cost is 2265.911838531494, time spent is 5.469460487365723
+Finish epoch 78, total training cost is 2334.642951488495, time spent is 4.769259214401245
+Finish epoch 79, total training cost is 2190.906418800354, time spent is 4.893635034561157
+Finish epoch 80, total training cost is 2273.4028120040894, time spent is 4.2148215770721436
+Training kappa score = 0.7489623633191369
+Testing kappa score = 0.7041016151344748
+Finish epoch 81, total training cost is 2219.0628547668457, time spent is 4.40221095085144
+Finish epoch 82, total training cost is 2106.997129917145, time spent is 4.275059938430786
+Finish epoch 83, total training cost is 2308.375141143799, time spent is 4.249118328094482
+Finish epoch 84, total training cost is 2262.748412132263, time spent is 4.287041902542114
+Finish epoch 85, total training cost is 2159.8719215393066, time spent is 5.850352764129639
+Training kappa score = 0.6854159794627619
+Testing kappa score = 0.6326173583438623
+Finish epoch 86, total training cost is 2154.5390129089355, time spent is 5.61823034286499
+Finish epoch 87, total training cost is 2084.00710105896, time spent is 6.053469181060791
+Finish epoch 88, total training cost is 2039.1794261932373, time spent is 6.570818901062012
+Finish epoch 89, total training cost is 2117.3457713127136, time spent is 6.268635511398315
+Finish epoch 90, total training cost is 2016.7864890098572, time spent is 6.103846788406372
+Training kappa score = 0.6077434867186651
+Testing kappa score = 0.5874513128957897
+Finish epoch 91, total training cost is 2103.665943145752, time spent is 6.227036952972412
+Finish epoch 92, total training cost is 1999.6230096817017, time spent is 5.138251304626465
+Finish epoch 93, total training cost is 2112.844778060913, time spent is 4.53686261177063
+Finish epoch 94, total training cost is 2119.4775671958923, time spent is 4.795634746551514
+Finish epoch 95, total training cost is 1928.2142090797424, time spent is 4.641773462295532
+Training kappa score = 0.761547036301071
+Testing kappa score = 0.7222890117816784
+Finish epoch 96, total training cost is 1956.0423784255981, time spent is 3.5160820484161377
+Finish epoch 97, total training cost is 2051.4357538223267, time spent is 3.4685444831848145
+Finish epoch 98, total training cost is 1938.145248889923, time spent is 3.424237012863159
+Finish epoch 99, total training cost is 1872.0650906562805, time spent is 3.6722517013549805
+Finish epoch 100, total training cost is 1950.9899673461914, time spent is 4.004806756973267
+Training kappa score = 0.5822734234534195
+Testing kappa score = 0.5587407903549899
+Finish epoch 101, total training cost is 1983.1264038085938, time spent is 4.988924026489258
+Finish epoch 102, total training cost is 1860.1522364616394, time spent is 4.543356418609619
+Finish epoch 103, total training cost is 1939.856113433838, time spent is 5.5255231857299805
+Finish epoch 104, total training cost is 1961.5426054000854, time spent is 5.833444356918335
+Finish epoch 105, total training cost is 1828.642017841339, time spent is 5.645790100097656
+Training kappa score = 0.7421949064549622
+Testing kappa score = 0.6909738615391219
+Finish epoch 106, total training cost is 1902.0606155395508, time spent is 6.510749816894531
+Finish epoch 107, total training cost is 2023.321002483368, time spent is 5.959422826766968
+Finish epoch 108, total training cost is 1980.9704675674438, time spent is 5.432358503341675
+Finish epoch 109, total training cost is 1856.426085948944, time spent is 5.448456048965454
+Finish epoch 110, total training cost is 1990.9221587181091, time spent is 5.46017861366272
+Training kappa score = 0.6460354617475502
+Testing kappa score = 0.6369922212618843
+Finish epoch 111, total training cost is 1838.0125541687012, time spent is 5.716789960861206
+Finish epoch 112, total training cost is 1897.1220722198486, time spent is 5.433415412902832
+Finish epoch 113, total training cost is 1811.430022239685, time spent is 6.39751672744751
+Finish epoch 114, total training cost is 1745.6651797294617, time spent is 6.504607200622559
+Finish epoch 115, total training cost is 1712.0647277832031, time spent is 6.542661905288696
+Training kappa score = 0.7430478752553181
+Testing kappa score = 0.7144546260715341
+Finish epoch 116, total training cost is 1955.8360357284546, time spent is 6.121216058731079
+Finish epoch 117, total training cost is 1748.2990183830261, time spent is 6.185462236404419
+Finish epoch 118, total training cost is 1662.2451620101929, time spent is 6.409384489059448
+Finish epoch 119, total training cost is 1701.1136264801025, time spent is 6.289488792419434
+Finish epoch 120, total training cost is 1770.2236094474792, time spent is 6.218663692474365
+Training kappa score = 0.7447699330908657
+Testing kappa score = 0.705329826633031
+Finish epoch 121, total training cost is 1834.1251544952393, time spent is 6.498976230621338
+Finish epoch 122, total training cost is 1839.7406640052795, time spent is 5.817140102386475
+Finish epoch 123, total training cost is 1789.6735277175903, time spent is 5.921347618103027
+Finish epoch 124, total training cost is 1774.8355412483215, time spent is 5.993996858596802
+Finish epoch 125, total training cost is 1683.4601788520813, time spent is 5.627254009246826
+Training kappa score = 0.7243664105940715
+Testing kappa score = 0.6613541042540443
+Finish epoch 126, total training cost is 1662.1430163383484, time spent is 6.476483583450317
+Finish epoch 127, total training cost is 1650.339415550232, time spent is 6.349199533462524
+Finish epoch 128, total training cost is 1683.0060844421387, time spent is 6.518151044845581
+Finish epoch 129, total training cost is 1728.8629794120789, time spent is 6.558733701705933
+Finish epoch 130, total training cost is 1710.4798421859741, time spent is 6.267049312591553
+Training kappa score = 0.7516584943755408
+Testing kappa score = 0.7370305152963487
+Finish epoch 131, total training cost is 1667.9467387199402, time spent is 6.241830587387085
+Finish epoch 132, total training cost is 1753.8557305335999, time spent is 6.299345970153809
+Finish epoch 133, total training cost is 1725.958862543106, time spent is 6.069416046142578
+Finish epoch 134, total training cost is 1690.4279217720032, time spent is 6.382714509963989
+Finish epoch 135, total training cost is 1659.535427570343, time spent is 6.086706161499023
+Training kappa score = 0.7196907058292699
+Testing kappa score = 0.657505285412262
+Finish epoch 136, total training cost is 1629.792848110199, time spent is 5.687247276306152
+Finish epoch 137, total training cost is 1668.6468195915222, time spent is 6.14961051940918
+Finish epoch 138, total training cost is 1579.6461567878723, time spent is 5.952289819717407
+Finish epoch 139, total training cost is 1601.9013557434082, time spent is 6.160288333892822
+Finish epoch 140, total training cost is 1783.9732418060303, time spent is 6.029623031616211
+Training kappa score = 0.7509379535113904
+Testing kappa score = 0.709495203084372
+Finish epoch 141, total training cost is 1598.3103399276733, time spent is 6.180586338043213
+Finish epoch 142, total training cost is 1552.625099182129, time spent is 6.252267360687256
+Finish epoch 143, total training cost is 1561.646312713623, time spent is 6.108621597290039
+Finish epoch 144, total training cost is 1580.6422762870789, time spent is 6.036161422729492
+Finish epoch 145, total training cost is 1641.0963950157166, time spent is 5.469770431518555
+Training kappa score = 0.7592111514318349
+Testing kappa score = 0.7213286150876628
+Finish epoch 146, total training cost is 1578.7298035621643, time spent is 6.126363754272461
+Finish epoch 147, total training cost is 1568.5046377182007, time spent is 4.83898401260376
+Finish epoch 148, total training cost is 1514.7301812171936, time spent is 4.737514019012451
+Finish epoch 149, total training cost is 1636.1081347465515, time spent is 4.830306529998779
+Finish epoch 150, total training cost is 1714.6689920425415, time spent is 5.027389049530029
+Training kappa score = 0.7977066622564017
+Testing kappa score = 0.7705494505494506
+Finish epoch 151, total training cost is 1589.5597972869873, time spent is 5.248480319976807
+Finish epoch 152, total training cost is 1643.9075169563293, time spent is 4.728571653366089
+Finish epoch 153, total training cost is 1575.1152200698853, time spent is 4.582336902618408
+Finish epoch 154, total training cost is 1490.654402256012, time spent is 4.740106821060181
+Finish epoch 155, total training cost is 1512.3745975494385, time spent is 4.695258378982544
+Training kappa score = 0.8034827536380009
+Testing kappa score = 0.7625492547541546
+Finish epoch 156, total training cost is 1592.0282187461853, time spent is 4.551811218261719
+Finish epoch 157, total training cost is 1567.4043078422546, time spent is 4.3104681968688965
+Finish epoch 158, total training cost is 1487.6742243766785, time spent is 4.514471530914307
+Finish epoch 159, total training cost is 1452.1725716590881, time spent is 4.946526288986206
+Finish epoch 160, total training cost is 1556.0425472259521, time spent is 4.693819761276245
+Training kappa score = 0.7622092785721011
+Testing kappa score = 0.7205019117884646
+Finish epoch 161, total training cost is 1595.1870346069336, time spent is 4.698793888092041
+Finish epoch 162, total training cost is 1478.7497954368591, time spent is 4.481605529785156
+Finish epoch 163, total training cost is 1537.452733039856, time spent is 4.696638107299805
+Finish epoch 164, total training cost is 1493.4524211883545, time spent is 4.822264194488525
+Finish epoch 165, total training cost is 1523.6714143753052, time spent is 4.755499362945557
+Training kappa score = 0.7500027548917695
+Testing kappa score = 0.7083265439139645
+Finish epoch 166, total training cost is 1453.0807514190674, time spent is 4.137864828109741
+Finish epoch 167, total training cost is 1594.9482116699219, time spent is 4.4349541664123535
+Finish epoch 168, total training cost is 1500.5333428382874, time spent is 4.849858283996582
+Finish epoch 169, total training cost is 1410.5529284477234, time spent is 4.793429374694824
+Finish epoch 170, total training cost is 1500.8586144447327, time spent is 4.62590217590332
+Training kappa score = 0.7518509730289242
+Testing kappa score = 0.7234042553191489
+Finish epoch 171, total training cost is 1531.7995553016663, time spent is 4.604572296142578
+Finish epoch 172, total training cost is 1421.5608196258545, time spent is 3.92126202583313
+Finish epoch 173, total training cost is 1496.0488748550415, time spent is 3.7966439723968506
+Finish epoch 174, total training cost is 1461.3593907356262, time spent is 3.711416244506836
+Finish epoch 175, total training cost is 1522.8896284103394, time spent is 3.6057817935943604
+Training kappa score = 0.7115655191820655
+Testing kappa score = 0.6803915922833286
+Finish epoch 176, total training cost is 1538.3851299285889, time spent is 3.620814561843872
+Finish epoch 177, total training cost is 1595.6511816978455, time spent is 3.784837484359741
+Finish epoch 178, total training cost is 1506.2646923065186, time spent is 3.9380125999450684
+Finish epoch 179, total training cost is 1502.8961572647095, time spent is 3.8615481853485107
+Finish epoch 180, total training cost is 1919.577534198761, time spent is 3.65262508392334
+Training kappa score = 0.7603870872631162
+Testing kappa score = 0.7352157791201713
+Finish epoch 181, total training cost is 1536.4964838027954, time spent is 3.5680625438690186
+Finish epoch 182, total training cost is 1474.3017983436584, time spent is 2.984339714050293
+Finish epoch 183, total training cost is 1470.2141947746277, time spent is 3.1501009464263916
+Finish epoch 184, total training cost is 1707.122040271759, time spent is 3.1193864345550537
+Finish epoch 185, total training cost is 2040.9685111045837, time spent is 3.198090076446533
+Training kappa score = 0.7391620879424841
+Testing kappa score = 0.7143229846073571
+Finish epoch 186, total training cost is 1990.214361190796, time spent is 3.0180752277374268
+Finish epoch 187, total training cost is 1865.0274124145508, time spent is 3.2109251022338867
+Finish epoch 188, total training cost is 1651.9114365577698, time spent is 3.1043360233306885
+Finish epoch 189, total training cost is 1530.2308583259583, time spent is 2.964118719100952
+Finish epoch 190, total training cost is 1451.1429414749146, time spent is 3.153311252593994
+Training kappa score = 0.7675586367759493
+Testing kappa score = 0.741561075523605
+Finish epoch 191, total training cost is 1366.7200922966003, time spent is 2.9040517807006836
+Finish epoch 192, total training cost is 1557.1712818145752, time spent is 2.9319660663604736
+Finish epoch 193, total training cost is 1482.4508328437805, time spent is 2.843366861343384
+Finish epoch 194, total training cost is 1512.8683881759644, time spent is 2.7793736457824707
+Finish epoch 195, total training cost is 1440.5854597091675, time spent is 3.1942782402038574
+Training kappa score = 0.7722913133194629
+Testing kappa score = 0.7554597642444176
+Finish epoch 196, total training cost is 1392.0412664413452, time spent is 3.054229497909546
+Finish epoch 197, total training cost is 1416.867087841034, time spent is 3.2142493724823
+Finish epoch 198, total training cost is 1347.9029049873352, time spent is 3.037388324737549
+Finish epoch 199, total training cost is 1445.5191383361816, time spent is 2.8792378902435303
+Finish epoch 200, total training cost is 1414.9023423194885, time spent is 2.612863063812256
+Training kappa score = 0.7992429165286186
+Testing kappa score = 0.7586688216279753
+The size of training data: 1435
+The size of testing data: 360
+Finish epoch 1, total training cost is 176060.4630126953, time spent is 23.415120124816895
+Finish epoch 2, total training cost is 29205.45785522461, time spent is 4.291855812072754
+Finish epoch 3, total training cost is 20390.993267059326, time spent is 3.9739034175872803
+Finish epoch 4, total training cost is 17110.82520675659, time spent is 3.9880220890045166
+Finish epoch 5, total training cost is 15984.875144958496, time spent is 4.066161155700684
+Training kappa score = 0.4963409183854832
+Testing kappa score = 0.46333922261484095
+Finish epoch 6, total training cost is 13706.721378326416, time spent is 3.409278631210327
+Finish epoch 7, total training cost is 13151.871567726135, time spent is 3.6392195224761963
+Finish epoch 8, total training cost is 12516.055530548096, time spent is 4.192283391952515
+Finish epoch 9, total training cost is 11628.199394226074, time spent is 3.680349588394165
+Finish epoch 10, total training cost is 11777.921829223633, time spent is 3.461646318435669
+Training kappa score = 0.5711668730368489
+Testing kappa score = 0.5349479331019249
+Finish epoch 11, total training cost is 11278.54379272461, time spent is 3.3159008026123047
+Finish epoch 12, total training cost is 10559.70809173584, time spent is 2.987426280975342
+Finish epoch 13, total training cost is 10044.166492462158, time spent is 2.995483875274658
+Finish epoch 14, total training cost is 9680.697301864624, time spent is 3.009000539779663
+Finish epoch 15, total training cost is 9635.725666046143, time spent is 3.097445011138916
+Training kappa score = 0.6129022589443606
+Testing kappa score = 0.5952109464082098
+Finish epoch 16, total training cost is 9812.729875564575, time spent is 2.608677387237549
+Finish epoch 17, total training cost is 9568.771186828613, time spent is 2.3719823360443115
+Finish epoch 18, total training cost is 8413.35956954956, time spent is 1.9524304866790771
+Finish epoch 19, total training cost is 8699.468744277954, time spent is 2.0166730880737305
+Finish epoch 20, total training cost is 7974.199590682983, time spent is 2.021376609802246
+Training kappa score = 0.6463702638874629
+Testing kappa score = 0.6380877567051959
+Finish epoch 21, total training cost is 7854.79323387146, time spent is 3.9124462604522705
+Finish epoch 22, total training cost is 8107.637762069702, time spent is 3.8021888732910156
+Finish epoch 23, total training cost is 7697.368919372559, time spent is 4.014628648757935
+Finish epoch 24, total training cost is 7867.079723358154, time spent is 3.795853853225708
+Finish epoch 25, total training cost is 7935.639440536499, time spent is 3.3571906089782715
+Training kappa score = 0.5457846436978222
+Testing kappa score = 0.5123419626730885
+Finish epoch 26, total training cost is 7386.390392303467, time spent is 4.160664081573486
+Finish epoch 27, total training cost is 7470.725610733032, time spent is 3.9229888916015625
+Finish epoch 28, total training cost is 7168.813846588135, time spent is 3.2956902980804443
+Finish epoch 29, total training cost is 6758.334983348846, time spent is 2.9371395111083984
+Finish epoch 30, total training cost is 6680.23530960083, time spent is 3.1198654174804688
+Training kappa score = 0.5927720395533729
+Testing kappa score = 0.5786412572701398
+Finish epoch 31, total training cost is 6348.347108840942, time spent is 3.0076327323913574
+Finish epoch 32, total training cost is 6431.457284927368, time spent is 3.1222035884857178
+Finish epoch 33, total training cost is 6653.029302597046, time spent is 3.177612543106079
+Finish epoch 34, total training cost is 6624.62505531311, time spent is 2.9423482418060303
+Finish epoch 35, total training cost is 6098.51251411438, time spent is 3.632558584213257
+Training kappa score = 0.6959573527912167
+Testing kappa score = 0.6874307248947018
+Finish epoch 36, total training cost is 6007.572671413422, time spent is 4.129060745239258
+Finish epoch 37, total training cost is 5941.609544754028, time spent is 3.5898215770721436
+Finish epoch 38, total training cost is 5945.815582275391, time spent is 3.753978729248047
+Finish epoch 39, total training cost is 6062.963697433472, time spent is 3.643280029296875
+Finish epoch 40, total training cost is 5515.876913070679, time spent is 3.7634661197662354
+Training kappa score = 0.5886147714051085
+Testing kappa score = 0.5761011774967291
+Finish epoch 41, total training cost is 5332.80318069458, time spent is 4.143392324447632
+Finish epoch 42, total training cost is 5568.37785243988, time spent is 3.934565782546997
+Finish epoch 43, total training cost is 5399.41872215271, time spent is 3.7422749996185303
+Finish epoch 44, total training cost is 5377.118646621704, time spent is 4.007789373397827
+Finish epoch 45, total training cost is 5065.917512893677, time spent is 3.9148647785186768
+Training kappa score = 0.6675778688421619
+Testing kappa score = 0.6670776818742292
+Finish epoch 46, total training cost is 5208.033609390259, time spent is 4.890363931655884
+Finish epoch 47, total training cost is 5207.954294204712, time spent is 4.828064918518066
+Finish epoch 48, total training cost is 5167.123501777649, time spent is 5.147089958190918
+Finish epoch 49, total training cost is 5025.722291946411, time spent is 5.040329456329346
+Finish epoch 50, total training cost is 5073.83503818512, time spent is 5.471881151199341
+Training kappa score = 0.6161073320008423
+Testing kappa score = 0.6199653529666522
+Finish epoch 51, total training cost is 4603.251401901245, time spent is 5.130762338638306
+Finish epoch 52, total training cost is 4878.657257080078, time spent is 4.9512038230896
+Finish epoch 53, total training cost is 5034.384576797485, time spent is 5.039109468460083
+Finish epoch 54, total training cost is 4944.538867950439, time spent is 4.815171003341675
+Finish epoch 55, total training cost is 4699.850355148315, time spent is 4.849468469619751
+Training kappa score = 0.5837084072586922
+Testing kappa score = 0.523638817426511
+Finish epoch 56, total training cost is 4673.6611795425415, time spent is 5.824984312057495
+Finish epoch 57, total training cost is 4621.93075466156, time spent is 5.542846918106079
+Finish epoch 58, total training cost is 4647.171152114868, time spent is 5.574192047119141
+Finish epoch 59, total training cost is 4532.2543177604675, time spent is 5.781188249588013
+Finish epoch 60, total training cost is 4558.474942684174, time spent is 5.840369462966919
+Training kappa score = 0.6859178030313577
+Testing kappa score = 0.6904074430542189
+Finish epoch 61, total training cost is 4487.722982406616, time spent is 4.773364543914795
+Finish epoch 62, total training cost is 4680.114683151245, time spent is 5.209949016571045
+Finish epoch 63, total training cost is 4370.69277381897, time spent is 5.057384729385376
+Finish epoch 64, total training cost is 4291.918405532837, time spent is 5.3420915603637695
+Finish epoch 65, total training cost is 4095.1523957252502, time spent is 5.981209754943848
+Training kappa score = 0.6649969669675189
+Testing kappa score = 0.6122076168539772
+Finish epoch 66, total training cost is 4387.310095787048, time spent is 5.7846410274505615
+Finish epoch 67, total training cost is 4073.258113861084, time spent is 6.123177766799927
+Finish epoch 68, total training cost is 4058.435369491577, time spent is 5.768507242202759
+Finish epoch 69, total training cost is 4345.07878780365, time spent is 6.008647203445435
+Finish epoch 70, total training cost is 3862.9860496520996, time spent is 5.844293832778931
+Training kappa score = 0.7025898210244335
+Testing kappa score = 0.6367984455571333
+Finish epoch 71, total training cost is 4024.8668336868286, time spent is 5.669036149978638
+Finish epoch 72, total training cost is 3665.386300086975, time spent is 5.102982044219971
+Finish epoch 73, total training cost is 3755.6547594070435, time spent is 5.015394449234009
+Finish epoch 74, total training cost is 3639.2936182022095, time spent is 5.964468240737915
+Finish epoch 75, total training cost is 3585.063052177429, time spent is 5.503093957901001
+Training kappa score = 0.5944039488735671
+Testing kappa score = 0.5881366589813457
+Finish epoch 76, total training cost is 3681.470503807068, time spent is 4.5312888622283936
+Finish epoch 77, total training cost is 3721.660924911499, time spent is 4.607306718826294
+Finish epoch 78, total training cost is 3679.2446269989014, time spent is 4.648004055023193
+Finish epoch 79, total training cost is 3548.5876359939575, time spent is 4.761568546295166
+Finish epoch 80, total training cost is 3614.128726005554, time spent is 3.953456401824951
+Training kappa score = 0.7455526805207406
+Testing kappa score = 0.7304587224227092
+Finish epoch 81, total training cost is 3582.563193321228, time spent is 3.7340524196624756
+Finish epoch 82, total training cost is 3778.1723651885986, time spent is 3.951404571533203
+Finish epoch 83, total training cost is 3261.084988117218, time spent is 3.8238961696624756
+Finish epoch 84, total training cost is 3317.6612119674683, time spent is 3.90822696685791
+Finish epoch 85, total training cost is 3234.145860671997, time spent is 2.9895248413085938
+Training kappa score = 0.7074736717874677
+Testing kappa score = 0.6523020551218736
+Finish epoch 86, total training cost is 3003.0493812561035, time spent is 2.3958282470703125
+Finish epoch 87, total training cost is 3396.548741340637, time spent is 3.2178735733032227
+Finish epoch 88, total training cost is 3242.827082157135, time spent is 3.15267276763916
+Finish epoch 89, total training cost is 3528.9358587265015, time spent is 3.0759437084198
+Finish epoch 90, total training cost is 3289.3809123039246, time spent is 3.183161497116089
+Training kappa score = 0.727276381101666
+Testing kappa score = 0.6976726921792064
+Finish epoch 91, total training cost is 3383.06791973114, time spent is 3.54508638381958
+Finish epoch 92, total training cost is 2784.9133729934692, time spent is 3.5036227703094482
+Finish epoch 93, total training cost is 3297.1056637763977, time spent is 3.566906690597534
+Finish epoch 94, total training cost is 3146.9707412719727, time spent is 3.3812592029571533
+Finish epoch 95, total training cost is 3007.388710975647, time spent is 3.515728712081909
+Training kappa score = 0.7116097710157117
+Testing kappa score = 0.6688291304802761
+Finish epoch 96, total training cost is 3108.8864765167236, time spent is 3.4699580669403076
+Finish epoch 97, total training cost is 3063.8706369400024, time spent is 3.4817352294921875
+Finish epoch 98, total training cost is 2928.19660282135, time spent is 3.4969303607940674
+Finish epoch 99, total training cost is 2922.1104488372803, time spent is 3.534099578857422
+Finish epoch 100, total training cost is 2962.2881755828857, time spent is 3.38342022895813
+Training kappa score = 0.7610019811289077
+Testing kappa score = 0.7342260686509561
+Finish epoch 101, total training cost is 2937.9300785064697, time spent is 2.949803590774536
+Finish epoch 102, total training cost is 2859.959924697876, time spent is 2.832674264907837
+Finish epoch 103, total training cost is 2899.268858909607, time spent is 2.802432060241699
+Finish epoch 104, total training cost is 2860.1529569625854, time spent is 3.298957347869873
+Finish epoch 105, total training cost is 2983.824564933777, time spent is 4.244888782501221
+Training kappa score = 0.7338817326303143
+Testing kappa score = 0.7188302832313109
+Finish epoch 106, total training cost is 2899.921922683716, time spent is 3.618424892425537
+Finish epoch 107, total training cost is 2734.2919368743896, time spent is 3.998727321624756
+Finish epoch 108, total training cost is 2687.379175186157, time spent is 3.8265678882598877
+Finish epoch 109, total training cost is 2796.7820739746094, time spent is 3.992704153060913
+Finish epoch 110, total training cost is 2771.3170466423035, time spent is 3.8287527561187744
+Training kappa score = 0.7302741797082499
+Testing kappa score = 0.7003914483589281
+Finish epoch 111, total training cost is 2835.3140048980713, time spent is 3.5037412643432617
+Finish epoch 112, total training cost is 2757.774603843689, time spent is 3.094571113586426
+Finish epoch 113, total training cost is 2617.9669904708862, time spent is 3.2465932369232178
+Finish epoch 114, total training cost is 2553.0492963790894, time spent is 3.8855693340301514
+Finish epoch 115, total training cost is 2646.422553062439, time spent is 3.7940821647644043
+Training kappa score = 0.6558679894161161
+Testing kappa score = 0.63273603372986
+Finish epoch 116, total training cost is 2509.89808177948, time spent is 4.07485294342041
+Finish epoch 117, total training cost is 2550.6842041015625, time spent is 4.37042498588562
+Finish epoch 118, total training cost is 2599.2909030914307, time spent is 4.268792390823364
+Finish epoch 119, total training cost is 2586.6087617874146, time spent is 4.029823303222656
+Finish epoch 120, total training cost is 2761.608826637268, time spent is 4.3509509563446045
+Training kappa score = 0.7149716491053341
+Testing kappa score = 0.7051934267832961
+Finish epoch 121, total training cost is 2521.654191493988, time spent is 4.244382619857788
+Finish epoch 122, total training cost is 2643.3201866149902, time spent is 4.04034423828125
+Finish epoch 123, total training cost is 2594.6064586639404, time spent is 4.370758295059204
+Finish epoch 124, total training cost is 2483.8000860214233, time spent is 4.305203437805176
+Finish epoch 125, total training cost is 2482.9798498153687, time spent is 4.40563178062439
+Training kappa score = 0.7764075474566288
+Testing kappa score = 0.7611572101368019
+Finish epoch 126, total training cost is 2563.2063570022583, time spent is 4.4166579246521
+Finish epoch 127, total training cost is 2425.6661496162415, time spent is 4.082879304885864
+Finish epoch 128, total training cost is 2412.9650774002075, time spent is 4.205053091049194
+Finish epoch 129, total training cost is 2422.9218978881836, time spent is 4.247544050216675
+Finish epoch 130, total training cost is 2417.3710927963257, time spent is 5.219571590423584
+Training kappa score = 0.7055119097040002
+Testing kappa score = 0.6647875981477753
+Finish epoch 131, total training cost is 2441.905786514282, time spent is 5.593148231506348
+Finish epoch 132, total training cost is 2569.4280371665955, time spent is 5.851688623428345
+Finish epoch 133, total training cost is 2319.3433566093445, time spent is 6.015654802322388
+Finish epoch 134, total training cost is 2433.378324985504, time spent is 5.790534496307373
+Finish epoch 135, total training cost is 2334.158046245575, time spent is 5.641716480255127
+Training kappa score = 0.7551940293982684
+Testing kappa score = 0.7219181468272184
+Finish epoch 136, total training cost is 2327.1238594055176, time spent is 5.090371370315552
+Finish epoch 137, total training cost is 2383.8918781280518, time spent is 5.438167572021484
+Finish epoch 138, total training cost is 2269.56085395813, time spent is 4.585388660430908
+Finish epoch 139, total training cost is 2338.024730205536, time spent is 4.97634482383728
+Finish epoch 140, total training cost is 2157.7993698120117, time spent is 4.677379131317139
+Training kappa score = 0.7858813003363514
+Testing kappa score = 0.7615321691503362
+Finish epoch 141, total training cost is 2225.3822164535522, time spent is 4.425219774246216
+Finish epoch 142, total training cost is 2155.0110483169556, time spent is 5.064327239990234
+Finish epoch 143, total training cost is 2255.8709230422974, time spent is 5.0828917026519775
+Finish epoch 144, total training cost is 2116.169774055481, time spent is 5.206630706787109
+Finish epoch 145, total training cost is 2315.8122305870056, time spent is 5.642443895339966
+Training kappa score = 0.7590894514196498
+Testing kappa score = 0.7526896046364454
+Finish epoch 146, total training cost is 2214.3986558914185, time spent is 5.230167388916016
+Finish epoch 147, total training cost is 2287.4448461532593, time spent is 5.705865859985352
+Finish epoch 148, total training cost is 2243.0775146484375, time spent is 5.691024541854858
+Finish epoch 149, total training cost is 2181.7221174240112, time spent is 4.307111501693726
+Finish epoch 150, total training cost is 2168.9814715385437, time spent is 4.1805338859558105
+Training kappa score = 0.7458121513205627
+Testing kappa score = 0.7284445989068276
+Finish epoch 151, total training cost is 2289.1259541511536, time spent is 3.3484368324279785
+Finish epoch 152, total training cost is 2305.731509208679, time spent is 3.0484213829040527
+Finish epoch 153, total training cost is 2172.4661469459534, time spent is 2.908224105834961
+Finish epoch 154, total training cost is 2238.0189657211304, time spent is 2.970160961151123
+Finish epoch 155, total training cost is 2262.815454483032, time spent is 3.1771962642669678
+Training kappa score = 0.7006310389390369
+Testing kappa score = 0.6875664187035069
+Finish epoch 156, total training cost is 2310.060730457306, time spent is 3.2426562309265137
+Finish epoch 157, total training cost is 2281.5758228302, time spent is 3.0011138916015625
+Finish epoch 158, total training cost is 2019.6622614860535, time spent is 2.891732692718506
+Finish epoch 159, total training cost is 2146.3134508132935, time spent is 2.968175172805786
+Finish epoch 160, total training cost is 2171.6046257019043, time spent is 3.455899715423584
+Training kappa score = 0.7954356905731612
+Testing kappa score = 0.760918234370301
+Finish epoch 161, total training cost is 2063.371512413025, time spent is 3.635979175567627
+Finish epoch 162, total training cost is 2124.9096240997314, time spent is 3.6662580966949463
+Finish epoch 163, total training cost is 2180.801284790039, time spent is 3.7074344158172607
+Finish epoch 164, total training cost is 2061.5107040405273, time spent is 3.643336057662964
+Finish epoch 165, total training cost is 2023.7124872207642, time spent is 2.865530252456665
+Training kappa score = 0.7405125763367457
+Testing kappa score = 0.7099531854264197
+Finish epoch 166, total training cost is 1972.5828742980957, time spent is 2.8961126804351807
+Finish epoch 167, total training cost is 1980.8906788825989, time spent is 3.1031460762023926
+Finish epoch 168, total training cost is 1996.1029205322266, time spent is 3.0958950519561768
+Finish epoch 169, total training cost is 2083.458071708679, time spent is 3.1494619846343994
+Finish epoch 170, total training cost is 2030.0465195178986, time spent is 2.8252100944519043
+Training kappa score = 0.7532772999082356
+Testing kappa score = 0.7333267851880955
+Finish epoch 171, total training cost is 1960.732503414154, time spent is 3.2779245376586914
+Finish epoch 172, total training cost is 2020.395793914795, time spent is 3.143188714981079
+Finish epoch 173, total training cost is 1877.775734424591, time spent is 3.113996744155884
+Finish epoch 174, total training cost is 1915.2559452056885, time spent is 2.8830018043518066
+Finish epoch 175, total training cost is 1985.383987903595, time spent is 3.0533831119537354
+Training kappa score = 0.7555669352882517
+Testing kappa score = 0.7465758186748245
+Finish epoch 176, total training cost is 1953.9373450279236, time spent is 3.265441417694092
+Finish epoch 177, total training cost is 1854.2244210243225, time spent is 3.328913450241089
+Finish epoch 178, total training cost is 1931.2542605400085, time spent is 3.251555919647217
+Finish epoch 179, total training cost is 2006.7550067901611, time spent is 3.8115110397338867
+Finish epoch 180, total training cost is 1873.2993717193604, time spent is 3.6270456314086914
+Training kappa score = 0.7209177393799684
+Testing kappa score = 0.6860878339841179
+Finish epoch 181, total training cost is 1926.0192670822144, time spent is 3.454292058944702
+Finish epoch 182, total training cost is 1918.7434301376343, time spent is 3.7902276515960693
+Finish epoch 183, total training cost is 1881.914294242859, time spent is 3.620717763900757
+Finish epoch 184, total training cost is 2057.6868300437927, time spent is 3.764157295227051
+Finish epoch 185, total training cost is 1889.7783555984497, time spent is 3.675351142883301
+Training kappa score = 0.7829192148626781
+Testing kappa score = 0.771682046108655
+Finish epoch 186, total training cost is 1933.9718861579895, time spent is 2.89717173576355
+Finish epoch 187, total training cost is 1774.8894543647766, time spent is 3.2925262451171875
+Finish epoch 188, total training cost is 1792.910020828247, time spent is 3.163055896759033
+Finish epoch 189, total training cost is 1905.3724398612976, time spent is 3.2328531742095947
+Finish epoch 190, total training cost is 1823.7320942878723, time spent is 3.210371971130371
+Training kappa score = 0.7937667174847773
+Testing kappa score = 0.7659890592287432
+Finish epoch 191, total training cost is 1804.7287511825562, time spent is 3.6866354942321777
+Finish epoch 192, total training cost is 1852.9659872055054, time spent is 3.591081380844116
+Finish epoch 193, total training cost is 1790.5505375862122, time spent is 3.741973876953125
+Finish epoch 194, total training cost is 1752.4733476638794, time spent is 3.662241220474243
+Finish epoch 195, total training cost is 1740.1456575393677, time spent is 3.559528112411499
+Training kappa score = 0.7519534053854515
+Testing kappa score = 0.74264568459612
+Finish epoch 196, total training cost is 1750.7396731376648, time spent is 3.8075268268585205
+Finish epoch 197, total training cost is 1815.6391797065735, time spent is 3.558281183242798
+Finish epoch 198, total training cost is 1756.1856861114502, time spent is 3.4091055393218994
+Finish epoch 199, total training cost is 1985.3843517303467, time spent is 3.626835823059082
+Finish epoch 200, total training cost is 1681.6297755241394, time spent is 3.6866085529327393
+Training kappa score = 0.6858012867212135
+Testing kappa score = 0.661005341734009
+The size of training data: 1435
+The size of testing data: 360
+Finish epoch 1, total training cost is 86597.96839141846, time spent is 19.741498470306396
+Finish epoch 2, total training cost is 22965.791580200195, time spent is 3.3785548210144043
+Finish epoch 3, total training cost is 19334.434425354004, time spent is 3.4709246158599854
+Finish epoch 4, total training cost is 17594.380165100098, time spent is 2.7610416412353516
+Finish epoch 5, total training cost is 15049.444923400879, time spent is 2.7053816318511963
+Training kappa score = 0.5225145223846546
+Testing kappa score = 0.49833395038874484
+Finish epoch 6, total training cost is 14334.815238952637, time spent is 2.737076759338379
+Finish epoch 7, total training cost is 12690.320541381836, time spent is 2.818152666091919
+Finish epoch 8, total training cost is 12980.133766174316, time spent is 3.0865767002105713
+Finish epoch 9, total training cost is 11640.84478187561, time spent is 2.8211417198181152
+Finish epoch 10, total training cost is 11579.160121917725, time spent is 2.572612762451172
+Training kappa score = 0.4976251721083136
+Testing kappa score = 0.5079620683485419
+Finish epoch 11, total training cost is 10726.413677215576, time spent is 3.0524790287017822
+Finish epoch 12, total training cost is 9426.081954956055, time spent is 3.3578057289123535
+Finish epoch 13, total training cost is 8914.721244812012, time spent is 3.356184482574463
+Finish epoch 14, total training cost is 9305.920406341553, time spent is 3.1230592727661133
+Finish epoch 15, total training cost is 8835.528124809265, time spent is 3.1320056915283203
+Training kappa score = 0.6121937206727605
+Testing kappa score = 0.5688375395339831
+Finish epoch 16, total training cost is 9168.14527130127, time spent is 2.565159797668457
+Finish epoch 17, total training cost is 9163.66556930542, time spent is 2.6139395236968994
+Finish epoch 18, total training cost is 8389.698250770569, time spent is 2.620964765548706
+Finish epoch 19, total training cost is 8390.23501777649, time spent is 2.6650681495666504
+Finish epoch 20, total training cost is 8341.162174224854, time spent is 2.474177837371826
+Training kappa score = 0.5547061591332781
+Testing kappa score = 0.5296912114014252
+Finish epoch 21, total training cost is 8034.681423187256, time spent is 2.4136831760406494
+Finish epoch 22, total training cost is 7615.110082626343, time spent is 2.492082118988037
+Finish epoch 23, total training cost is 7611.420604705811, time spent is 2.348768711090088
+Finish epoch 24, total training cost is 7208.56720161438, time spent is 2.0142436027526855
+Finish epoch 25, total training cost is 7203.0705642700195, time spent is 2.0134854316711426
+Training kappa score = 0.44576115555811757
+Testing kappa score = 0.4394309374668224
+Finish epoch 26, total training cost is 6835.667427062988, time spent is 2.032566785812378
+Finish epoch 27, total training cost is 7005.222187042236, time spent is 1.9768707752227783
+Finish epoch 28, total training cost is 6747.262229919434, time spent is 1.9867687225341797
+Finish epoch 29, total training cost is 7073.888219833374, time spent is 1.9676904678344727
+Finish epoch 30, total training cost is 6572.131881713867, time spent is 2.0014238357543945
+Training kappa score = 0.5525727135867147
+Testing kappa score = 0.5497481108312343
+Finish epoch 31, total training cost is 7255.372179031372, time spent is 2.1947524547576904
+Finish epoch 32, total training cost is 6332.620862007141, time spent is 2.5416438579559326
+Finish epoch 33, total training cost is 6224.875185012817, time spent is 2.5118494033813477
+Finish epoch 34, total training cost is 6166.086456298828, time spent is 2.9466946125030518
+Finish epoch 35, total training cost is 6333.306979179382, time spent is 3.160924196243286
+Training kappa score = 0.5459546074998517
+Testing kappa score = 0.5792207792207791
+Finish epoch 36, total training cost is 5874.776630401611, time spent is 2.154226064682007
+Finish epoch 37, total training cost is 6310.073165893555, time spent is 2.147470712661743
+Finish epoch 38, total training cost is 5910.986333847046, time spent is 2.212641477584839
+Finish epoch 39, total training cost is 6111.890670776367, time spent is 2.1856679916381836
+Finish epoch 40, total training cost is 5886.316643714905, time spent is 2.213672161102295
+Training kappa score = 0.5217068593675602
+Testing kappa score = 0.5493599859722953
+Finish epoch 41, total training cost is 5391.624339103699, time spent is 2.0833945274353027
+Finish epoch 42, total training cost is 5521.751262664795, time spent is 2.005084276199341
+Finish epoch 43, total training cost is 5598.982629776001, time spent is 2.109858274459839
+Finish epoch 44, total training cost is 5848.890205383301, time spent is 2.8264148235321045
+Finish epoch 45, total training cost is 5753.973123550415, time spent is 2.7640161514282227
+Training kappa score = 0.5923661381360452
+Testing kappa score = 0.5619223659889094
+Finish epoch 46, total training cost is 5479.483583450317, time spent is 3.1239771842956543
+Finish epoch 47, total training cost is 5701.5424728393555, time spent is 3.1874475479125977
+Finish epoch 48, total training cost is 5343.691905975342, time spent is 3.242182493209839
+Finish epoch 49, total training cost is 5157.928897857666, time spent is 3.1225104331970215
+Finish epoch 50, total training cost is 5333.369288444519, time spent is 3.081037759780884
+Training kappa score = 0.652455896347266
+Testing kappa score = 0.6483171865374924
+Finish epoch 51, total training cost is 5601.849559783936, time spent is 3.92431378364563
+Finish epoch 52, total training cost is 5045.7842445373535, time spent is 3.901845932006836
+Finish epoch 53, total training cost is 5275.158716201782, time spent is 3.5926899909973145
+Finish epoch 54, total training cost is 4988.23390007019, time spent is 3.816397190093994
+Finish epoch 55, total training cost is 4947.273700714111, time spent is 3.8414878845214844
+Training kappa score = 0.6070590991319287
+Testing kappa score = 0.5804864717135829
+Finish epoch 56, total training cost is 4833.02644443512, time spent is 3.398113489151001
+Finish epoch 57, total training cost is 4959.038425445557, time spent is 3.2045958042144775
+Finish epoch 58, total training cost is 4457.871466636658, time spent is 3.4769227504730225
+Finish epoch 59, total training cost is 4776.24374628067, time spent is 3.6707396507263184
+Finish epoch 60, total training cost is 4990.333791732788, time spent is 3.7638018131256104
+Training kappa score = 0.6365152757084611
+Testing kappa score = 0.6311184677228658
+Finish epoch 61, total training cost is 4356.260886192322, time spent is 3.068523645401001
+Finish epoch 62, total training cost is 4671.755241394043, time spent is 3.626554012298584
+Finish epoch 63, total training cost is 4602.818473815918, time spent is 3.3807997703552246
+Finish epoch 64, total training cost is 4266.248125076294, time spent is 3.119595527648926
+Finish epoch 65, total training cost is 4288.602244377136, time spent is 3.0805838108062744
+Training kappa score = 0.5669094565006354
+Testing kappa score = 0.5663848831427152
+Finish epoch 66, total training cost is 4463.625464439392, time spent is 2.9565670490264893
+Finish epoch 67, total training cost is 4579.660591125488, time spent is 3.405184030532837
+Finish epoch 68, total training cost is 4330.1841106414795, time spent is 3.3638415336608887
+Finish epoch 69, total training cost is 4381.753731966019, time spent is 3.65340256690979
+Finish epoch 70, total training cost is 4477.002004623413, time spent is 4.472297668457031
+Training kappa score = 0.6137658322443995
+Testing kappa score = 0.5927572652877118
+Finish epoch 71, total training cost is 4005.719717979431, time spent is 4.866443872451782
+Finish epoch 72, total training cost is 3870.002746105194, time spent is 4.9229021072387695
+Finish epoch 73, total training cost is 4253.592565536499, time spent is 4.712553024291992
+Finish epoch 74, total training cost is 4305.027821063995, time spent is 4.768273830413818
+Finish epoch 75, total training cost is 4048.1130332946777, time spent is 5.196615695953369
+Training kappa score = 0.6849931949749437
+Testing kappa score = 0.6614025695931478
+Finish epoch 76, total training cost is 3998.662607192993, time spent is 3.200198173522949
+Finish epoch 77, total training cost is 3923.8303365707397, time spent is 3.199873685836792
+Finish epoch 78, total training cost is 3946.3970556259155, time spent is 3.343317747116089
+Finish epoch 79, total training cost is 3853.3603658676147, time spent is 3.198188543319702
+Finish epoch 80, total training cost is 3879.9505891799927, time spent is 3.254819869995117
+Training kappa score = 0.6660451629819153
+Testing kappa score = 0.6640757616367373
+Finish epoch 81, total training cost is 3929.073348045349, time spent is 4.477243185043335
+Finish epoch 82, total training cost is 3946.816186904907, time spent is 4.650281667709351
+Finish epoch 83, total training cost is 3913.648373603821, time spent is 4.866703033447266
+Finish epoch 84, total training cost is 3874.8968143463135, time spent is 5.5305750370025635
+Finish epoch 85, total training cost is 3528.5221252441406, time spent is 5.053650617599487
+Training kappa score = 0.7154413270530412
+Testing kappa score = 0.7102370210332337
+Finish epoch 86, total training cost is 3357.715196609497, time spent is 4.840193748474121
+Finish epoch 87, total training cost is 3615.002173423767, time spent is 5.225502014160156
+Finish epoch 88, total training cost is 3926.25652217865, time spent is 4.666826248168945
+Finish epoch 89, total training cost is 3817.8823223114014, time spent is 5.057982444763184
+Finish epoch 90, total training cost is 4051.435583114624, time spent is 5.167108058929443
+Training kappa score = 0.6400802608477552
+Testing kappa score = 0.6321139616900628
+Finish epoch 91, total training cost is 4076.545608520508, time spent is 5.019988775253296
+Finish epoch 92, total training cost is 3834.9026012420654, time spent is 4.792287588119507
+Finish epoch 93, total training cost is 3841.499087333679, time spent is 4.778179407119751
+Finish epoch 94, total training cost is 3456.5929431915283, time spent is 4.345281600952148
+Finish epoch 95, total training cost is 3428.7061805725098, time spent is 4.387456655502319
+Training kappa score = 0.6241641530507829
+Testing kappa score = 0.6032918337201942
+Finish epoch 96, total training cost is 3531.519820213318, time spent is 4.410433530807495
+Finish epoch 97, total training cost is 3389.279143810272, time spent is 4.451969861984253
+Finish epoch 98, total training cost is 3312.0156977176666, time spent is 4.482327938079834
+Finish epoch 99, total training cost is 3207.869990348816, time spent is 4.066892385482788
+Finish epoch 100, total training cost is 3366.114775657654, time spent is 4.598753452301025
+Training kappa score = 0.7185100078611598
+Testing kappa score = 0.7012370652765891
+Finish epoch 101, total training cost is 3512.9865169525146, time spent is 4.544929504394531
+Finish epoch 102, total training cost is 3171.7684535980225, time spent is 4.597041368484497
+Finish epoch 103, total training cost is 3151.959201812744, time spent is 5.021543979644775
+Finish epoch 104, total training cost is 3203.034532546997, time spent is 4.72461462020874
+Finish epoch 105, total training cost is 3254.113941192627, time spent is 4.654394865036011
+Training kappa score = 0.6728563023974115
+Testing kappa score = 0.6631748589846898
+Finish epoch 106, total training cost is 3211.921823501587, time spent is 5.068696975708008
+Finish epoch 107, total training cost is 3199.2876625061035, time spent is 4.315040826797485
+Finish epoch 108, total training cost is 3182.735918045044, time spent is 4.46637225151062
+Finish epoch 109, total training cost is 3154.9654593467712, time spent is 4.783319473266602
+Finish epoch 110, total training cost is 3085.080801963806, time spent is 4.803179025650024
+Training kappa score = 0.654753461154272
+Testing kappa score = 0.6288552012545741
+Finish epoch 111, total training cost is 3113.3516116142273, time spent is 5.253615856170654
+Finish epoch 112, total training cost is 3061.9309043884277, time spent is 4.77112340927124
+Finish epoch 113, total training cost is 2968.265669822693, time spent is 4.96148157119751
+Finish epoch 114, total training cost is 2994.59583568573, time spent is 5.378033399581909
+Finish epoch 115, total training cost is 2976.378652572632, time spent is 5.1680567264556885
+Training kappa score = 0.5726137418264328
+Testing kappa score = 0.5643674951130969
+Finish epoch 116, total training cost is 2861.060869693756, time spent is 4.818180322647095
+Finish epoch 117, total training cost is 2906.5558376312256, time spent is 4.633856296539307
+Finish epoch 118, total training cost is 2959.393111228943, time spent is 4.247079849243164
+Finish epoch 119, total training cost is 2938.914897441864, time spent is 4.188969850540161
+Finish epoch 120, total training cost is 2794.9693174362183, time spent is 4.066246747970581
+Training kappa score = 0.5828823891406778
+Testing kappa score = 0.5835323335562137
+Finish epoch 121, total training cost is 2952.8678693771362, time spent is 3.0780866146087646
+Finish epoch 122, total training cost is 3032.708827018738, time spent is 3.2085678577423096
+Finish epoch 123, total training cost is 2924.636435985565, time spent is 3.078293561935425
+Finish epoch 124, total training cost is 2797.6876401901245, time spent is 3.1911492347717285
+Finish epoch 125, total training cost is 2736.9853801727295, time spent is 3.1852455139160156
+Training kappa score = 0.743935911192297
+Testing kappa score = 0.7393452748610254
+Finish epoch 126, total training cost is 2692.492199420929, time spent is 4.671661615371704
+Finish epoch 127, total training cost is 2735.931612968445, time spent is 4.264646768569946
+Finish epoch 128, total training cost is 2709.6901297569275, time spent is 4.30521035194397
+Finish epoch 129, total training cost is 2691.5965971946716, time spent is 4.3587987422943115
+Finish epoch 130, total training cost is 2656.132088661194, time spent is 4.850139617919922
+Training kappa score = 0.66659507795035
+Testing kappa score = 0.6363945289270239
+Finish epoch 131, total training cost is 2879.0895829200745, time spent is 4.701786756515503
+Finish epoch 132, total training cost is 2838.532229423523, time spent is 4.32448935508728
+Finish epoch 133, total training cost is 2660.939040184021, time spent is 4.354265928268433
+Finish epoch 134, total training cost is 2734.39359998703, time spent is 4.28913950920105
+Finish epoch 135, total training cost is 2669.8211431503296, time spent is 4.798968076705933
+Training kappa score = 0.6211481192050183
+Testing kappa score = 0.5905251560778553
+Finish epoch 136, total training cost is 2608.49507522583, time spent is 4.545624256134033
+Finish epoch 137, total training cost is 2768.7121868133545, time spent is 3.8875551223754883
+Finish epoch 138, total training cost is 2784.728539466858, time spent is 3.8763866424560547
+Finish epoch 139, total training cost is 2590.72235250473, time spent is 4.331233024597168
+Finish epoch 140, total training cost is 2700.40953540802, time spent is 4.469763517379761
+Training kappa score = 0.42294378177864456
+Testing kappa score = 0.4499211356466877
+Finish epoch 141, total training cost is 2657.8506870269775, time spent is 4.717036962509155
+Finish epoch 142, total training cost is 2760.94771194458, time spent is 5.036806344985962
+Finish epoch 143, total training cost is 2600.510241508484, time spent is 4.7490394115448
+Finish epoch 144, total training cost is 2564.0154814720154, time spent is 4.894880771636963
+Finish epoch 145, total training cost is 2791.9270458221436, time spent is 4.9658942222595215
+Training kappa score = 0.70648365800063
+Testing kappa score = 0.7283402094573153
+Finish epoch 146, total training cost is 2525.911558151245, time spent is 5.017670392990112
+Finish epoch 147, total training cost is 2452.053750038147, time spent is 5.208758115768433
+Finish epoch 148, total training cost is 2628.7837314605713, time spent is 5.013057470321655
+Finish epoch 149, total training cost is 2707.335202217102, time spent is 5.0949180126190186
+Finish epoch 150, total training cost is 2557.5187187194824, time spent is 4.719144105911255
+Training kappa score = 0.5806580678814032
+Testing kappa score = 0.6119902617163724
+Finish epoch 151, total training cost is 2424.9495663642883, time spent is 4.346805572509766
+Finish epoch 152, total training cost is 2305.7760457992554, time spent is 4.3112475872039795
+Finish epoch 153, total training cost is 2281.1132946014404, time spent is 4.83212947845459
+Finish epoch 154, total training cost is 2335.0454864501953, time spent is 4.539226055145264
+Finish epoch 155, total training cost is 2298.123219013214, time spent is 4.46237325668335
+Training kappa score = 0.6655655858197039
+Testing kappa score = 0.6726905092885127
+Finish epoch 156, total training cost is 2256.894413948059, time spent is 5.156162738800049
+Finish epoch 157, total training cost is 2257.556721687317, time spent is 4.776449918746948
+Finish epoch 158, total training cost is 2509.945065975189, time spent is 4.856454372406006
+Finish epoch 159, total training cost is 2362.5320501327515, time spent is 5.065243482589722
+Finish epoch 160, total training cost is 2477.7912373542786, time spent is 5.1155078411102295
+Training kappa score = 0.6487519864265829
+Testing kappa score = 0.624175625621104
+Finish epoch 161, total training cost is 2269.7763872146606, time spent is 4.9541003704071045
+Finish epoch 162, total training cost is 2275.5316457748413, time spent is 4.935260772705078
+Finish epoch 163, total training cost is 2411.4038829803467, time spent is 5.043410778045654
+Finish epoch 164, total training cost is 2242.3419046401978, time spent is 4.671337842941284
+Finish epoch 165, total training cost is 2396.690544128418, time spent is 4.963674783706665
+Training kappa score = 0.7009751615947959
+Testing kappa score = 0.7126547367070746
+Finish epoch 166, total training cost is 2373.762152194977, time spent is 4.589409112930298
+Finish epoch 167, total training cost is 2246.1011238098145, time spent is 4.529861688613892
+Finish epoch 168, total training cost is 2350.018944978714, time spent is 4.902930498123169
+Finish epoch 169, total training cost is 2289.383479118347, time spent is 4.717653036117554
+Finish epoch 170, total training cost is 2082.869771003723, time spent is 5.326024055480957
+Training kappa score = 0.5035067440389256
+Testing kappa score = 0.5169751558942888
+Finish epoch 171, total training cost is 2237.3405537605286, time spent is 5.000019073486328
+Finish epoch 172, total training cost is 2378.101629257202, time spent is 4.211964130401611
+Finish epoch 173, total training cost is 2390.524443626404, time spent is 4.283995866775513
+Finish epoch 174, total training cost is 2078.3860816955566, time spent is 4.526216983795166
+Finish epoch 175, total training cost is 2149.703779220581, time spent is 4.383425235748291
+Training kappa score = 0.6752087702267109
+Testing kappa score = 0.6631812713981678
+Finish epoch 176, total training cost is 2342.8899397850037, time spent is 4.951913833618164
+Finish epoch 177, total training cost is 2207.4003903865814, time spent is 4.605105876922607
+Finish epoch 178, total training cost is 2136.8497018814087, time spent is 4.375267028808594
+Finish epoch 179, total training cost is 2377.041681289673, time spent is 5.185096502304077
+Finish epoch 180, total training cost is 2172.801423549652, time spent is 4.886175155639648
+Training kappa score = 0.7257884771608305
+Testing kappa score = 0.7313084112149533
+The size of training data: 1435
+The size of testing data: 360
+Finish epoch 1, total training cost is 149866.90908813477, time spent is 8.117278337478638
+Finish epoch 2, total training cost is 35162.94985961914, time spent is 1.9728858470916748
+Finish epoch 3, total training cost is 22600.208534240723, time spent is 1.9143426418304443
+Finish epoch 4, total training cost is 18339.039138793945, time spent is 1.862471103668213
+Finish epoch 5, total training cost is 15397.754745483398, time spent is 1.9173550605773926
+Training kappa score = 0.5452060365082235
+Testing kappa score = 0.6290473017988009
+Finish epoch 6, total training cost is 13400.105365753174, time spent is 2.512025833129883
+Finish epoch 7, total training cost is 12033.287021636963, time spent is 2.6045711040496826
+Finish epoch 8, total training cost is 12262.079193115234, time spent is 2.4821882247924805
+Finish epoch 9, total training cost is 11522.602787017822, time spent is 2.468534469604492
+Finish epoch 10, total training cost is 11020.574851989746, time spent is 2.0300090312957764
+Training kappa score = 0.6126759230160503
+Testing kappa score = 0.6613876377428901
+Finish epoch 11, total training cost is 9753.835262298584, time spent is 2.1487362384796143
+Finish epoch 12, total training cost is 8770.899209976196, time spent is 2.4733805656433105
+Finish epoch 13, total training cost is 9083.240097045898, time spent is 2.3960611820220947
+Finish epoch 14, total training cost is 7906.552778244019, time spent is 2.4908506870269775
+Finish epoch 15, total training cost is 6988.167785644531, time spent is 2.6116878986358643
+Training kappa score = 0.5233698141195638
+Testing kappa score = 0.5762299074525085
+Finish epoch 16, total training cost is 7032.660390853882, time spent is 2.360417127609253
+Finish epoch 17, total training cost is 6969.9431800842285, time spent is 2.262821674346924
+Finish epoch 18, total training cost is 6559.5007247924805, time spent is 2.5605740547180176
+Finish epoch 19, total training cost is 6452.920997619629, time spent is 2.5346317291259766
+Finish epoch 20, total training cost is 6418.0289478302, time spent is 2.6037070751190186
+Training kappa score = 0.4021969932901107
+Testing kappa score = 0.45643594934971343
+Finish epoch 21, total training cost is 6335.15376663208, time spent is 2.034203052520752
+Finish epoch 22, total training cost is 6390.417770385742, time spent is 2.0971877574920654
+Finish epoch 23, total training cost is 6365.837531089783, time spent is 2.2479493618011475
+Finish epoch 24, total training cost is 5613.650350570679, time spent is 2.324037790298462
+Finish epoch 25, total training cost is 5496.304805755615, time spent is 2.191953659057617
+Training kappa score = 0.5350190124763783
+Testing kappa score = 0.578502591428512
+Finish epoch 26, total training cost is 5172.007106781006, time spent is 2.1027493476867676
+Finish epoch 27, total training cost is 4856.476675033569, time spent is 2.195284843444824
+Finish epoch 28, total training cost is 4625.654194831848, time spent is 2.211970090866089
+Finish epoch 29, total training cost is 4495.703203201294, time spent is 2.169685125350952
+Finish epoch 30, total training cost is 4586.371097564697, time spent is 2.145874500274658
+Training kappa score = 0.5954834466125851
+Testing kappa score = 0.6524801629397039
+Finish epoch 31, total training cost is 4507.353584766388, time spent is 2.1519415378570557
+Finish epoch 32, total training cost is 4524.991485595703, time spent is 2.220022678375244
+Finish epoch 33, total training cost is 4200.206559181213, time spent is 2.266296148300171
+Finish epoch 34, total training cost is 4064.785806655884, time spent is 2.208296060562134
+Finish epoch 35, total training cost is 3595.9196949005127, time spent is 2.098231554031372
+Training kappa score = 0.5113951175474145
+Testing kappa score = 0.6110615867602031
+Finish epoch 36, total training cost is 4123.671268463135, time spent is 2.2496602535247803
+Finish epoch 37, total training cost is 3702.985785484314, time spent is 2.1703572273254395
+Finish epoch 38, total training cost is 3812.617428779602, time spent is 2.1942451000213623
+Finish epoch 39, total training cost is 3903.0238819122314, time spent is 2.150993824005127
+Finish epoch 40, total training cost is 3771.3696126937866, time spent is 2.4110682010650635
+Training kappa score = 0.6311739745403111
+Testing kappa score = 0.701068804275217
+Finish epoch 41, total training cost is 3510.650915145874, time spent is 2.902716875076294
+Finish epoch 42, total training cost is 3642.2426357269287, time spent is 3.039915084838867
+Finish epoch 43, total training cost is 3468.4536027908325, time spent is 2.9942965507507324
+Finish epoch 44, total training cost is 3399.9289226531982, time spent is 3.16440486907959
+Finish epoch 45, total training cost is 3401.6453523635864, time spent is 3.311966896057129
+Training kappa score = 0.6513159097975383
+Testing kappa score = 0.6615538371630147
+Finish epoch 46, total training cost is 3317.0301580429077, time spent is 4.175905704498291
+Finish epoch 47, total training cost is 3247.381586074829, time spent is 4.414076566696167
+Finish epoch 48, total training cost is 3368.1188497543335, time spent is 4.028465986251831
+Finish epoch 49, total training cost is 3248.9073429107666, time spent is 3.949476718902588
+Finish epoch 50, total training cost is 3014.980209827423, time spent is 4.220935106277466
+Training kappa score = 0.5616633160945117
+Testing kappa score = 0.6416015928818093
+Finish epoch 51, total training cost is 2903.120241165161, time spent is 3.5847432613372803
+Finish epoch 52, total training cost is 2966.61412525177, time spent is 3.785529136657715
+Finish epoch 53, total training cost is 3167.498239517212, time spent is 3.5891189575195312
+Finish epoch 54, total training cost is 2908.40505695343, time spent is 2.698024034500122
+Finish epoch 55, total training cost is 3289.8293714523315, time spent is 2.9287359714508057
+Training kappa score = 0.6802587933296662
+Testing kappa score = 0.7131543364883137
+Finish epoch 56, total training cost is 3088.1331610679626, time spent is 3.7483980655670166
+Finish epoch 57, total training cost is 2885.1688318252563, time spent is 3.5607364177703857
+Finish epoch 58, total training cost is 2961.088634490967, time spent is 3.6946537494659424
+Finish epoch 59, total training cost is 2984.793848991394, time spent is 3.3913097381591797
+Finish epoch 60, total training cost is 2788.926691532135, time spent is 3.187852621078491
+Training kappa score = 0.7194036956586425
+Testing kappa score = 0.7236301459491055
+Finish epoch 61, total training cost is 2741.3706498146057, time spent is 3.412297010421753
+Finish epoch 62, total training cost is 2901.2915992736816, time spent is 3.671013355255127
+Finish epoch 63, total training cost is 2663.770966529846, time spent is 3.783632755279541
+Finish epoch 64, total training cost is 2570.6791191101074, time spent is 3.810190439224243
+Finish epoch 65, total training cost is 2651.630862236023, time spent is 3.8841946125030518
+Training kappa score = 0.5947557435020112
+Testing kappa score = 0.6608268838355057
+Finish epoch 66, total training cost is 2701.8011560440063, time spent is 3.849790096282959
+Finish epoch 67, total training cost is 2658.4425740242004, time spent is 3.826582670211792
+Finish epoch 68, total training cost is 2788.2035722732544, time spent is 3.686957359313965
+Finish epoch 69, total training cost is 2717.8453540802, time spent is 3.529123544692993
+Finish epoch 70, total training cost is 2626.895236968994, time spent is 3.6243155002593994
+Training kappa score = 0.6973636752531056
+Testing kappa score = 0.7259967663146306
+Finish epoch 71, total training cost is 2838.5537157058716, time spent is 2.6502933502197266
+Finish epoch 72, total training cost is 2428.6886587142944, time spent is 2.7584009170532227
+Finish epoch 73, total training cost is 2453.3286390304565, time spent is 2.8172388076782227
+Finish epoch 74, total training cost is 2313.763692855835, time spent is 2.8070240020751953
+Finish epoch 75, total training cost is 2449.263048171997, time spent is 2.498757839202881
+Training kappa score = 0.7228174134058399
+Testing kappa score = 0.7358400210092146
+Finish epoch 76, total training cost is 2335.5332441329956, time spent is 1.9208903312683105
+Finish epoch 77, total training cost is 2207.4580478668213, time spent is 2.0187933444976807
+Finish epoch 78, total training cost is 2342.283122062683, time spent is 2.193952798843384
+Finish epoch 79, total training cost is 2176.311044692993, time spent is 2.1281447410583496
+Finish epoch 80, total training cost is 2285.818254470825, time spent is 2.2657833099365234
+Training kappa score = 0.7068461658354114
+Testing kappa score = 0.73765987921633
+Finish epoch 81, total training cost is 2160.6027002334595, time spent is 3.1353490352630615
+Finish epoch 82, total training cost is 2243.251522541046, time spent is 3.0472402572631836
+Finish epoch 83, total training cost is 2442.578064918518, time spent is 3.0838706493377686
+Finish epoch 84, total training cost is 2235.9742136001587, time spent is 3.168271541595459
+Finish epoch 85, total training cost is 2373.8411178588867, time spent is 3.365683078765869
+Training kappa score = 0.6335067169716008
+Testing kappa score = 0.6874721102123275
+Finish epoch 86, total training cost is 2211.945352077484, time spent is 2.916210889816284
+Finish epoch 87, total training cost is 2264.764636039734, time spent is 2.379601001739502
+Finish epoch 88, total training cost is 2336.620946407318, time spent is 2.253843069076538
+Finish epoch 89, total training cost is 2209.796175479889, time spent is 2.577247381210327
+Finish epoch 90, total training cost is 2235.8615894317627, time spent is 2.7203993797302246
+Training kappa score = 0.7517841420916946
+Testing kappa score = 0.7627805161347967
+Finish epoch 91, total training cost is 2174.9367909431458, time spent is 3.147836685180664
+Finish epoch 92, total training cost is 2373.716534614563, time spent is 3.1895439624786377
+Finish epoch 93, total training cost is 2272.8506417274475, time spent is 3.0396032333374023
+Finish epoch 94, total training cost is 2300.8875551223755, time spent is 3.006199836730957
+Finish epoch 95, total training cost is 2182.539786338806, time spent is 2.9854772090911865
+Training kappa score = 0.698507516885758
+Testing kappa score = 0.7092955785076014
+Finish epoch 96, total training cost is 2078.9974822998047, time spent is 3.08587908744812
+Finish epoch 97, total training cost is 2021.1026468276978, time spent is 3.1149966716766357
+Finish epoch 98, total training cost is 2057.8296933174133, time spent is 3.1277923583984375
+Finish epoch 99, total training cost is 1990.6882104873657, time spent is 3.3060076236724854
+Finish epoch 100, total training cost is 2023.5804138183594, time spent is 3.1444108486175537
+Training kappa score = 0.7351298970975035
+Testing kappa score = 0.7494491981349594
+Finish epoch 101, total training cost is 2027.364990234375, time spent is 3.1971564292907715
+Finish epoch 102, total training cost is 1887.4986338615417, time spent is 3.1585090160369873
+Finish epoch 103, total training cost is 1833.9177689552307, time spent is 3.119856834411621
+Finish epoch 104, total training cost is 1954.8053159713745, time spent is 3.0778310298919678
+Finish epoch 105, total training cost is 2012.1139488220215, time spent is 2.986025810241699
+Training kappa score = 0.7657915901919944
+Testing kappa score = 0.7799360497922473
+Finish epoch 106, total training cost is 1864.2270016670227, time spent is 3.1099815368652344
+Finish epoch 107, total training cost is 1852.2505626678467, time spent is 3.1567931175231934
+Finish epoch 108, total training cost is 1787.4611525535583, time spent is 3.117459774017334
+Finish epoch 109, total training cost is 1813.0433650016785, time spent is 3.066551446914673
+Finish epoch 110, total training cost is 1814.546953678131, time spent is 3.1768109798431396
+Training kappa score = 0.7596925415997972
+Testing kappa score = 0.7507359473253322
+Finish epoch 111, total training cost is 1836.9667146205902, time spent is 3.0988876819610596
+Finish epoch 112, total training cost is 1664.3288822174072, time spent is 3.1324374675750732
+Finish epoch 113, total training cost is 1771.9183621406555, time spent is 3.1329872608184814
+Finish epoch 114, total training cost is 1800.3776817321777, time spent is 2.952702283859253
+Finish epoch 115, total training cost is 1733.7413387298584, time spent is 3.015456438064575
+Training kappa score = 0.7756256533234951
+Testing kappa score = 0.7974493623405852
+Finish epoch 116, total training cost is 1712.8695182800293, time spent is 3.105585813522339
+Finish epoch 117, total training cost is 1780.409396648407, time spent is 3.093446969985962
+Finish epoch 118, total training cost is 1774.934534072876, time spent is 3.0398917198181152
+Finish epoch 119, total training cost is 1779.7869973182678, time spent is 3.184966564178467
+Finish epoch 120, total training cost is 1798.3345398902893, time spent is 3.1952197551727295
+Training kappa score = 0.7644504248545484
+Testing kappa score = 0.7579763701660334
+Finish epoch 121, total training cost is 1726.4267377853394, time spent is 2.975562334060669
+Finish epoch 122, total training cost is 1767.2537001371384, time spent is 3.0609381198883057
+Finish epoch 123, total training cost is 1746.3486080169678, time spent is 3.0783920288085938
+Finish epoch 124, total training cost is 1726.5432543754578, time spent is 3.2339274883270264
+Finish epoch 125, total training cost is 1713.642231464386, time spent is 3.073789119720459
+Training kappa score = 0.7387619557442051
+Testing kappa score = 0.7471443269053208
+Finish epoch 126, total training cost is 1817.3938212394714, time spent is 2.8836488723754883
+Finish epoch 127, total training cost is 1721.5820808410645, time spent is 2.0872952938079834
+Finish epoch 128, total training cost is 1712.8545293807983, time spent is 2.1174252033233643
+Finish epoch 129, total training cost is 1670.561764717102, time spent is 2.090477466583252
+Finish epoch 130, total training cost is 1744.5868558883667, time spent is 2.0221571922302246
+Training kappa score = 0.7312631144366272
+Testing kappa score = 0.7712694199051308
+Finish epoch 131, total training cost is 1714.0703344345093, time spent is 2.235792398452759
+Finish epoch 132, total training cost is 1613.435366153717, time spent is 2.28031325340271
+Finish epoch 133, total training cost is 1849.2056150436401, time spent is 2.1555063724517822
+Finish epoch 134, total training cost is 1923.7732367515564, time spent is 2.1785800457000732
+Finish epoch 135, total training cost is 1716.6303753852844, time spent is 2.382200241088867
+Training kappa score = 0.7662821785044696
+Testing kappa score = 0.8055089428232309
+Finish epoch 136, total training cost is 1774.1084241867065, time spent is 2.2584433555603027
+Finish epoch 137, total training cost is 1921.453770160675, time spent is 2.3103177547454834
+Finish epoch 138, total training cost is 1709.2403936386108, time spent is 2.229773759841919
+Finish epoch 139, total training cost is 1633.8318138122559, time spent is 2.260345458984375
+Finish epoch 140, total training cost is 1755.0952529907227, time spent is 2.2738301753997803
+Training kappa score = 0.7723575136223949
+Testing kappa score = 0.7915477578976102
+Finish epoch 141, total training cost is 1700.17249917984, time spent is 2.107032537460327
+Finish epoch 142, total training cost is 1631.6335744857788, time spent is 2.239131212234497
+Finish epoch 143, total training cost is 1640.1168184280396, time spent is 2.1802978515625
+Finish epoch 144, total training cost is 1662.6399521827698, time spent is 2.210503101348877
+Finish epoch 145, total training cost is 1650.1662793159485, time spent is 2.073853015899658
+Training kappa score = 0.7134976094152263
+Testing kappa score = 0.7171865526987679
+Finish epoch 146, total training cost is 1613.761113166809, time spent is 2.1914010047912598
+Finish epoch 147, total training cost is 1568.474407196045, time spent is 2.2118661403656006
+Finish epoch 148, total training cost is 1607.322494983673, time spent is 2.1700098514556885
+Finish epoch 149, total training cost is 1641.8965334892273, time spent is 2.2035574913024902
+Finish epoch 150, total training cost is 1606.4421787261963, time spent is 2.234257221221924
+Training kappa score = 0.7700773608535058
+Testing kappa score = 0.7766302989922546
+Finish epoch 151, total training cost is 1584.3580312728882, time spent is 2.1198325157165527
+Finish epoch 152, total training cost is 1558.4929966926575, time spent is 2.088700532913208
+Finish epoch 153, total training cost is 1626.302466392517, time spent is 2.221644639968872
+Finish epoch 154, total training cost is 1569.6621623039246, time spent is 2.1717333793640137
+Finish epoch 155, total training cost is 1616.0481224060059, time spent is 2.097395420074463
+Training kappa score = 0.6993028587638176
+Testing kappa score = 0.6834137291280149
+Finish epoch 156, total training cost is 1605.205843448639, time spent is 2.1486895084381104
+Finish epoch 157, total training cost is 1694.523030757904, time spent is 2.225473403930664
+Finish epoch 158, total training cost is 1557.8101420402527, time spent is 2.1864724159240723
+Finish epoch 159, total training cost is 1580.2643041610718, time spent is 2.2488486766815186
+Finish epoch 160, total training cost is 1612.0564379692078, time spent is 2.143494129180908
+Training kappa score = 0.7007716580414596
+Testing kappa score = 0.6990021565115685
+Finish epoch 161, total training cost is 1603.0906009674072, time spent is 2.172698974609375
+Finish epoch 162, total training cost is 1618.5293893814087, time spent is 2.0484704971313477
+Finish epoch 163, total training cost is 1700.1476006507874, time spent is 2.0545618534088135
+Finish epoch 164, total training cost is 1604.4761972427368, time spent is 1.9800136089324951
+Finish epoch 165, total training cost is 1600.5701222419739, time spent is 2.0606322288513184
+Training kappa score = 0.6836735136166027
+Testing kappa score = 0.7087403979155973
+Finish epoch 166, total training cost is 1528.726155281067, time spent is 1.9966208934783936
+Finish epoch 167, total training cost is 1557.6344103813171, time spent is 2.266326904296875
+Finish epoch 168, total training cost is 1593.1150574684143, time spent is 2.1000757217407227
+Finish epoch 169, total training cost is 1597.4050006866455, time spent is 2.1319289207458496
+Finish epoch 170, total training cost is 1538.0284056663513, time spent is 2.1702723503112793
+Training kappa score = 0.7088369208088563
+Testing kappa score = 0.729267572092357
+Finish epoch 171, total training cost is 1533.6518001556396, time spent is 2.1807548999786377
+Finish epoch 172, total training cost is 1591.1662497520447, time spent is 2.12076735496521
+Finish epoch 173, total training cost is 1495.9851169586182, time spent is 2.1865882873535156
+Finish epoch 174, total training cost is 1486.3692259788513, time spent is 2.084017515182495
+Finish epoch 175, total training cost is 1550.409945011139, time spent is 2.144318103790283
+Training kappa score = 0.7648046726167036
+Testing kappa score = 0.7505323445186871
+Finish epoch 176, total training cost is 1600.0531129837036, time spent is 2.139662504196167
+Finish epoch 177, total training cost is 1422.0411868095398, time spent is 2.11834454536438
+Finish epoch 178, total training cost is 1482.2892861366272, time spent is 2.127551317214966
+Finish epoch 179, total training cost is 1460.8102955818176, time spent is 2.114668369293213
+Finish epoch 180, total training cost is 1471.89696931839, time spent is 2.2031075954437256
+Training kappa score = 0.7374245134846844
+Testing kappa score = 0.737144383598237
+Finish epoch 181, total training cost is 1792.9842262268066, time spent is 2.1627697944641113
+Finish epoch 182, total training cost is 1686.2702383995056, time spent is 2.170689821243286
+Finish epoch 183, total training cost is 1815.563123703003, time spent is 2.0741047859191895
+Finish epoch 184, total training cost is 1895.0976810455322, time spent is 2.075833320617676
+Finish epoch 185, total training cost is 1906.6972291469574, time spent is 2.065065383911133
+Training kappa score = 0.7675774076617218
+Testing kappa score = 0.7732524336975805
+Finish epoch 186, total training cost is 1746.2440252304077, time spent is 2.0790719985961914
+Finish epoch 187, total training cost is 1672.220265865326, time spent is 2.0954887866973877
+Finish epoch 188, total training cost is 1836.6247448921204, time spent is 2.0971570014953613
+Finish epoch 189, total training cost is 1754.332314491272, time spent is 2.0595269203186035
+Finish epoch 190, total training cost is 1557.7691097259521, time spent is 2.114043712615967
+Training kappa score = 0.7388972272219001
+Testing kappa score = 0.7749927417013452

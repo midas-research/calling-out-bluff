@@ -1,51 +1,18 @@
-# calling-out-bluff
+### Model 1: LSTM with MoT layer
 
-Public Implementation of paper Calling Out Bluff: Attacking the Robustness of Automatic Scoring Systems with Simple Adversarial Testing. </br>
-[Arxiv Link](http://arxiv.org/abs/2007.06796) </br>
-Authors:
-Yaman Kumar*, Mehar Bhatia*, Anubha Kabra*, Jessy Junyi Li, Di Jin, Rajiv Ratn Shah
-</br>
-For any questions or issues, feel free to email us at [yamank@iiitd.ac.in](mailto:yamank@iiitd.ac.in), [mehar.bhatia@midas.center](mailto:mehar.bhatia@midas.center).
+* [Paper Link](https://www.aclweb.org/anthology/D16-1193/)
+* Folder: Model1(LSTM_MoT)
+* Weights uploaded
 
-### Generating Adversarial Samples ###
-To generate our adversarial samples, please view the file 'TestCaseSuite_CallingOutBluff.ipynb'
-Working of this TestCaseSuite file :
-1. Download ASAP AES Dataset from [here.](https://www.kaggle.com/c/asap-aes)
-2. Save the training and test cases prompt wise.
-3. Change the prompt number and file to load in the first cell of the notebook.
-4. Download and load the supporting files for test cases, given below.
-5. The notebook has been commented well, find the specifc test case you want to simulate and run!
+Set-Up:
+* Install keras with Theano backend
+* Prepare data. We have used 5-fold cross validation on ASAP dataset to evaluate our system. This dataset (training_set_rel3.tsv) can be downloaded from [here](https://www.kaggle.com/c/asap-aes/data). After downloading the file, put it in the [data](data) directory and create training, development and test data using `preprocess_asap.py` script
+`cd data
+python preprocess_asap.py -i training_set_rel3.tsv`
 
-### Our Adversarial testcases can be found here:
-To view all our simulated adversarial testcases, click below
-1. [ASAP-AES dataset](https://drive.google.com/open?id=1CIEpiDmzLmJ6LMCVSOmCKw_eOg4ocuS4)
-2. [ASAP-SAS dataset](https://drive.google.com/drive/folders/1oWP31zo02009skA24nC10tYlCGWqOAOx)
+* Run script `train_nea.py`. You can see the list of available options by running `python train_nea.py -h`
 
-### Some supporting files:
-Sentence list for out testcases like songs, speech, wikipedia, universal false, universal truths etc can be found [here](https://drive.google.com/open?id=1hYQ-GtuQVcMYIeGcvBCTB6wXUHxOC1aY)
-
-### Models: 
-
-1. LSTM with MoT layer 
-  * [Paper Link](https://www.aclweb.org/anthology/D16-1193/)
-  * Folder: Model1(LSTM_MoT)
-  * Weights uploaded
-
-
-2. EASE
-  * [Implementation Link](https://github.com/edx/ease/)
-  * Folder: Model2(EASE)
-
-3. Skipflow
-  * [Paper Link](https://arxiv.org/abs/1711.04981)
-  * Folder: Model3(SkipFlow)
-  * Please download glove.6B.300d embeddings and save in main folder. (Too large to add)
-  * Weights uploaded
-
-4. BERT+Adversarial Evaluation (Two Stage Learning)
-  * [Paper Link](https://arxiv.org/abs/1901.07744)
-  * Folder: Model4(BERT)
-
-5. MemoryNetworks
-  * [Paper Link](https://par.nsf.gov/servlets/purl/10060135)
-  * Folder: Model5(MemoryNets)
+* Training:
+Though the weights are given of each prompt are given in the [output](output) directory, following command trains a model for prompt 1 in the ASAP dataset, using the training and development data from fold 0 and evaluates it.
+`python train_nea.py -tr data/fold0/train.tsv -tu data/fold_0/dev.tsv -ts data/fold_0/test.tsv -p 1	# Prompt ID --emb embeddings.w2v.txt -o output_dir #Output Dir`
+Here `--emb` option is to initialize the lookup table with pretrained embeddinings which is in simple Word2Vec format. To replicate our results use file `embeddings.w2v.txt` 

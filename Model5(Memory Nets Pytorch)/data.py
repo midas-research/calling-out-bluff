@@ -1,6 +1,7 @@
 import re
 import pandas as pd
 import sys
+from nltk.tokenize import word_tokenize 
 
 def load_data(path: str, set_id: int):
     """
@@ -13,7 +14,7 @@ def load_data(path: str, set_id: int):
         essay_scores = all_data[all_data["essay_set"] == set_id]["domain1_score"].values
     else:
         essay_scores = [-1] * len(essay_ids)
-    essay_contents = contents.apply(lambda x: tokenize(clean_str(x))).tolist()
+    essay_contents = contents.apply(lambda x: tokenize_nltk(clean_str(x))).tolist()
     return essay_contents, list(essay_scores), list(essay_ids)
 
 
@@ -37,6 +38,13 @@ def tokenize(sent):
         ['I', 'don', '\'', 'know']
     """
     return [x.strip() for x in re.split("(\W+)", sent) if x.strip()]
+
+def tokenize_nltk(sent):
+    return word_tokenize(sent)
+
+
+
+
 
 
 def clean_str(string):

@@ -168,19 +168,19 @@ def main(args, set_id):
 			if dev_kappa_result>bkp:
 				bkp=dev_kappa_result
 				# model.save_weights(f"../checkpoints/save_one_{args.set_id}.ckpt")
-				torch.save(model.state_dict(), f"checkpoints/save_one_{set_id}.ckpt")
+				torch.save(model.state_dict(), f"checkpoints/nltk_tokenize/save_one_{set_id}.ckpt")
 	# torch.cuda.empty_cache()
 
-	model.load_state_dict(torch.load(f"checkpoints/save_one_{set_id}.ckpt"))
+	model.load_state_dict(torch.load(f"checkpoints/nltk_tokenize/save_one_{set_id}.ckpt"))
 	ig = IntegratedGradients(model.forward_ig)
 	for start in range(n_test):
 		word_wise_attributions = get_attributes(test_contents_idx[start:start+1], [memory_contents], ig, model)
 		save_str = f"{set_id}/attributions_{set_id}_{start}_testset_on_predicted"
 		
-		if not os.path.isdir(f'checkpoints/{set_id}'):
-			os.mkdir(f'checkpoints/{set_id}')
+		if not os.path.isdir(f'checkpoints/nltk_tokenize/{set_id}'):
+			os.mkdir(f'checkpoints/nltk_tokenize/{set_id}')
 
-		np.save(f"checkpoints/{save_str}", word_wise_attributions)
+		np.save(f"checkpoints/nltk_tokenize/{save_str}", word_wise_attributions)
 
 
 
@@ -205,8 +205,8 @@ if __name__ == "__main__":
 	args = parser.parse_args()
 	# bkp=0
 	print(args)
-
-	main(args, 1)
-	main(args, 8)	
+	for i in range(7,9):
+			print(f'Current Set ID: {i}')
+			main(args, i) 	
 
 	

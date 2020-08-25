@@ -207,9 +207,9 @@ if __name__ == "__main__":
 	print(args)
 
 
-
-	for set_id in range(1,9):
-		main(args, set_id)
+	main(args, 8)
+	# for set_id in range(1,9):
+	# 	main(args, set_id)
 	# if torch.cuda.is_available():
 	# 	print(f"Using GPU:{args.gpu_id}")
 	# 	device = torch.device("cuda")

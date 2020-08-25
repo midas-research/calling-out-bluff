@@ -2,6 +2,7 @@ from captum.attr import visualization
 import numpy as np 
 from os.path import isfile, join
 from os import listdir
+import os
 import argparse
 import data
 from heatmap import generate 
@@ -36,9 +37,10 @@ if __name__ == '__main__':
 	parser.add_argument('--epsilon', type=float, default=0.1, help="Epsilon value for Adam Optimizer.")
 	parser.add_argument('--max_grad_norm', type=float, default=10.0, help="Clip gradients to this norm.")
 	parser.add_argument('--keep_prob', type=float, default=0.9, help="Keep probability for dropout.")
+	parser.add_argument('--model_path', type=str, required=True, help='Path to the checkpoints directory.')
 	args = parser.parse_args() 
 
-	checkpoints_dir = 'checkpoints/'
+	checkpoints_dir = args.model_path
 	attr_npy_dir = join(checkpoints_dir, str(args.set_id)) 
 	_attributes_files_ = listdir(attr_npy_dir)
 
@@ -53,7 +55,9 @@ if __name__ == '__main__':
 	word_to_index, word_to_vec, index_to_word = load_glove(args)
 
 	test_contents_idx = data.vectorize_data(test_essay_contents, word_to_index, max_sent_size)
-
+	attr_format = 'attributions_{}_testset_on_predicted.npy'
+	_attributes_files_ = ['1_222', '1_327', '1_203', '1_218', '1_84']
+	_attributes_files_ = [attr_format.format(x) for x in _attributes_files_]
 	np.random.shuffle(_attributes_files_)
 	for attr_file in _attributes_files_[:5]:
 		sent = []
@@ -74,7 +78,10 @@ if __name__ == '__main__':
 		print(len(extra_sent))
 		sent += extra_sent
 		print('calling generate')
-		generate(sent, attr, str(datetime.now()) + '_' + attr_file.split('.')[0]  + '.tex', rescale_value=True)
+		latex_dir = join(checkpoints_dir, 'latex')
+		if not os.path.isdir(latex_dir):
+			os.mkdir(latex_dir)
+		generate(sent, attr, join(latex_dir, str(datetime.now()) + '_' + attr_file.split('.')[0]  + '.tex'), rescale_value=True)
 		print('finished generate')
 
 		

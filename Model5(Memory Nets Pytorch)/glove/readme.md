@@ -1,1 +1,0 @@
-Put Glove 42B 300 D here

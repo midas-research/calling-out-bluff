@@ -1,0 +1,411 @@
+[INFO] (nea.utils) Arguments:
+[INFO] (nea.utils)   aggregation: mot
+[INFO] (nea.utils)   algorithm: rmsprop
+[INFO] (nea.utils)   batch_size: 16
+[INFO] (nea.utils)   cnn_dim: 0
+[INFO] (nea.utils)   cnn_window_size: 3
+[INFO] (nea.utils)   command: train_nea.py -tr data/fold_0/train.tsv -tu data/fold_0/dev.tsv -ts data/fold_0/test.tsv -p 1 -o output/prompt1_output
+[INFO] (nea.utils)   dev_path: data/fold_0/dev.tsv
+[INFO] (nea.utils)   dropout_prob: 0.5
+[INFO] (nea.utils)   emb_dim: 50
+[INFO] (nea.utils)   emb_path: None
+[INFO] (nea.utils)   epochs: 50
+[INFO] (nea.utils)   loss: mse
+[INFO] (nea.utils)   maxlen: 0
+[INFO] (nea.utils)   model_type: regp
+[INFO] (nea.utils)   out_dir_path: output/prompt1_output
+[INFO] (nea.utils)   prompt_id: 1
+[INFO] (nea.utils)   recurrent_unit: lstm
+[INFO] (nea.utils)   rnn_dim: 300
+[INFO] (nea.utils)   seed: 1234
+[INFO] (nea.utils)   skip_init_bias: False
+[INFO] (nea.utils)   test_path: data/fold_0/test.tsv
+[INFO] (nea.utils)   train_path: data/fold_0/train.tsv
+[INFO] (nea.utils)   vocab_path: None
+[INFO] (nea.utils)   vocab_size: 4000
+[INFO] (nea.asap_reader) Creating vocabulary from: data/fold_0/train.tsv
+[INFO] (nea.asap_reader)   443468 total words, 12142 unique words
+[INFO] (nea.asap_reader)   Vocab size: 4000
+[INFO] (nea.asap_reader) Reading dataset from: data/fold_0/train.tsv
+[INFO] (nea.asap_reader)   <num> hit rate: 0.00%, <unk> hit rate: 2.19%
+[INFO] (nea.asap_reader) Reading dataset from: data/fold_0/dev.tsv
+[INFO] (nea.asap_reader)   <num> hit rate: 0.00%, <unk> hit rate: 2.83%
+[INFO] (nea.asap_reader) Reading dataset from: data/fold_0/test.tsv
+[INFO] (nea.asap_reader)   <num> hit rate: 0.00%, <unk> hit rate: 2.84%
+[INFO] (__main__) Statistics:
+[INFO] (__main__)   train_x shape: (1070, 939)
+[INFO] (__main__)   dev_x shape:   (356, 886)
+[INFO] (__main__)   test_x shape:  (357, 867)
+[INFO] (__main__)   train_y shape: (1070,)
+[INFO] (__main__)   dev_y shape:   (356,)
+[INFO] (__main__)   test_y shape:  (357,)
+[INFO] (__main__)   train_y mean: 8.553271, stdev: 1.5372216, MFC: [8.0]
+[INFO] (nea.models) Building a REGRESSION model with POOLING
+[INFO] (nea.models)   Done
+[INFO] (__main__) Saving model architecture
+[INFO] (__main__)   Done
+[INFO] (__main__) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Initial Evaluation:
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0236, metric: 0.1176, mean: 8.560 (8.508), stdev: 0.010 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0237, metric: 0.1192, mean: 8.561 (8.473), stdev: 0.010 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.000, LWK: 0.000, PRS: 0.201, SPR: 0.170, Tau: 0.127 (Best @ -1: {{0.000}}, 0.000, 0.201, 0.170, 0.127)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.000, LWK: 0.000, PRS: 0.231, SPR: 0.221, Tau: 0.166 (Best @ -1: {{0.000}}, 0.000, 0.231, 0.221, 0.166)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 0, train: 253s, evaluation: 74s
+[INFO] (__main__) [Train] loss: 0.0249, metric: 0.1205
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0414, metric: 0.1688, mean: 9.948 (8.508), stdev: 0.157 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0431, metric: 0.1678, mean: 9.951 (8.473), stdev: 0.118 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.031, LWK: 0.003, PRS: 0.678, SPR: 0.807, Tau: 0.669 (Best @ 0: {{0.031}}, 0.003, 0.678, 0.807, 0.669)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.029, LWK: 0.004, PRS: 0.718, SPR: 0.789, Tau: 0.652 (Best @ 0: {{0.029}}, 0.004, 0.718, 0.789, 0.652)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 1, train: 202s, evaluation: 71s
+[INFO] (__main__) [Train] loss: 0.0236, metric: 0.1182
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0222, metric: 0.1098, mean: 8.382 (8.508), stdev: 0.093 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0219, metric: 0.1121, mean: 8.378 (8.473), stdev: 0.095 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.134, LWK: 0.090, PRS: 0.595, SPR: 0.639, Tau: 0.498 (Best @ 1: {{0.134}}, 0.090, 0.595, 0.639, 0.498)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.108, LWK: 0.074, PRS: 0.649, SPR: 0.640, Tau: 0.496 (Best @ 1: {{0.108}}, 0.074, 0.649, 0.640, 0.496)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 2, train: 201s, evaluation: 72s
+[INFO] (__main__) [Train] loss: 0.0223, metric: 0.1141
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0242, metric: 0.1234, mean: 9.410 (8.508), stdev: 0.523 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0237, metric: 0.1221, mean: 9.395 (8.473), stdev: 0.518 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.324, LWK: 0.183, PRS: 0.646, SPR: 0.714, Tau: 0.567 (Best @ 2: {{0.324}}, 0.183, 0.646, 0.714, 0.567)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.352, LWK: 0.199, PRS: 0.701, SPR: 0.706, Tau: 0.555 (Best @ 2: {{0.352}}, 0.199, 0.701, 0.706, 0.555)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 3, train: 193s, evaluation: 46s
+[INFO] (__main__) [Train] loss: 0.0186, metric: 0.1028
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0304, metric: 0.1414, mean: 9.716 (8.508), stdev: 1.156 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0283, metric: 0.1407, mean: 9.703 (8.473), stdev: 1.161 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.417, LWK: 0.256, PRS: 0.598, SPR: 0.691, Tau: 0.544 (Best @ 3: {{0.417}}, 0.256, 0.598, 0.691, 0.544)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.463, LWK: 0.252, PRS: 0.671, SPR: 0.689, Tau: 0.540 (Best @ 3: {{0.463}}, 0.252, 0.671, 0.689, 0.540)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 4, train: 154s, evaluation: 87s
+[INFO] (__main__) [Train] loss: 0.0148, metric: 0.0928
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0145, metric: 0.0911, mean: 8.485 (8.508), stdev: 0.903 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0131, metric: 0.0893, mean: 8.454 (8.473), stdev: 0.913 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.531, LWK: 0.347, PRS: 0.624, SPR: 0.665, Tau: 0.519 (Best @ 4: {{0.531}}, 0.347, 0.624, 0.665, 0.519)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.571, LWK: 0.374, PRS: 0.674, SPR: 0.666, Tau: 0.516 (Best @ 4: {{0.571}}, 0.374, 0.674, 0.666, 0.516)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 5, train: 229s, evaluation: 74s
+[INFO] (__main__) [Train] loss: 0.0139, metric: 0.0893
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0152, metric: 0.0941, mean: 8.711 (8.508), stdev: 1.075 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0135, metric: 0.0913, mean: 8.688 (8.473), stdev: 1.081 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.551, LWK: 0.372, PRS: 0.617, SPR: 0.644, Tau: 0.502 (Best @ 5: {{0.551}}, 0.372, 0.617, 0.644, 0.502)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.610, LWK: 0.410, PRS: 0.670, SPR: 0.655, Tau: 0.507 (Best @ 5: {{0.610}}, 0.410, 0.670, 0.655, 0.507)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 6, train: 204s, evaluation: 70s
+[INFO] (__main__) [Train] loss: 0.0120, metric: 0.0840
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0146, metric: 0.0909, mean: 8.562 (8.508), stdev: 0.871 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0135, metric: 0.0900, mean: 8.549 (8.473), stdev: 0.870 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.528, LWK: 0.353, PRS: 0.623, SPR: 0.635, Tau: 0.495 (Best @ 5: {{0.551}}, 0.372, 0.617, 0.644, 0.502)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.566, LWK: 0.360, PRS: 0.666, SPR: 0.654, Tau: 0.508 (Best @ 5: {{0.610}}, 0.410, 0.670, 0.655, 0.507)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 7, train: 432s, evaluation: 69s
+[INFO] (__main__) [Train] loss: 0.0114, metric: 0.0821
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0152, metric: 0.0918, mean: 8.636 (8.508), stdev: 0.787 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0139, metric: 0.0914, mean: 8.621 (8.473), stdev: 0.782 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.488, LWK: 0.329, PRS: 0.614, SPR: 0.625, Tau: 0.486 (Best @ 5: {{0.551}}, 0.372, 0.617, 0.644, 0.502)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.520, LWK: 0.325, PRS: 0.668, SPR: 0.651, Tau: 0.504 (Best @ 5: {{0.610}}, 0.410, 0.670, 0.655, 0.507)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 8, train: 1665s, evaluation: 81s
+[INFO] (__main__) [Train] loss: 0.0108, metric: 0.0792
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0151, metric: 0.0936, mean: 8.553 (8.508), stdev: 1.081 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0131, metric: 0.0901, mean: 8.537 (8.473), stdev: 1.077 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.553, LWK: 0.355, PRS: 0.611, SPR: 0.624, Tau: 0.485 (Best @ 8: {{0.553}}, 0.355, 0.611, 0.624, 0.485)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.610, LWK: 0.400, PRS: 0.671, SPR: 0.652, Tau: 0.506 (Best @ 8: {{0.610}}, 0.400, 0.671, 0.652, 0.506)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 9, train: 724s, evaluation: 83s
+[INFO] (__main__) [Train] loss: 0.0090, metric: 0.0733
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0167, metric: 0.0978, mean: 8.892 (8.508), stdev: 1.133 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0146, metric: 0.0962, mean: 8.871 (8.473), stdev: 1.127 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.546, LWK: 0.375, PRS: 0.609, SPR: 0.617, Tau: 0.479 (Best @ 8: {{0.553}}, 0.355, 0.611, 0.624, 0.485)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.596, LWK: 0.381, PRS: 0.673, SPR: 0.650, Tau: 0.503 (Best @ 8: {{0.610}}, 0.400, 0.671, 0.652, 0.506)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 10, train: 263s, evaluation: 74s
+[INFO] (__main__) [Train] loss: 0.0088, metric: 0.0716
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0167, metric: 0.0962, mean: 8.911 (8.508), stdev: 0.968 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0149, metric: 0.0967, mean: 8.896 (8.473), stdev: 0.954 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.509, LWK: 0.354, PRS: 0.604, SPR: 0.613, Tau: 0.475 (Best @ 8: {{0.553}}, 0.355, 0.611, 0.624, 0.485)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.548, LWK: 0.342, PRS: 0.669, SPR: 0.644, Tau: 0.496 (Best @ 8: {{0.610}}, 0.400, 0.671, 0.652, 0.506)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 11, train: 144s, evaluation: 47s
+[INFO] (__main__) [Train] loss: 0.0083, metric: 0.0693
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0161, metric: 0.0970, mean: 8.360 (8.508), stdev: 1.166 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0138, metric: 0.0931, mean: 8.339 (8.473), stdev: 1.151 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.563, LWK: 0.374, PRS: 0.596, SPR: 0.612, Tau: 0.475 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.627, LWK: 0.411, PRS: 0.659, SPR: 0.642, Tau: 0.494 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 12, train: 207s, evaluation: 71s
+[INFO] (__main__) [Train] loss: 0.0076, metric: 0.0676
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0175, metric: 0.1003, mean: 8.883 (8.508), stdev: 1.218 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0152, metric: 0.0988, mean: 8.870 (8.473), stdev: 1.204 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.553, LWK: 0.377, PRS: 0.598, SPR: 0.608, Tau: 0.471 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.585, LWK: 0.364, PRS: 0.661, SPR: 0.637, Tau: 0.489 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 13, train: 208s, evaluation: 72s
+[INFO] (__main__) [Train] loss: 0.0068, metric: 0.0626
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0187, metric: 0.1024, mean: 9.086 (8.508), stdev: 0.860 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0174, metric: 0.1046, mean: 9.070 (8.473), stdev: 0.840 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.451, LWK: 0.315, PRS: 0.592, SPR: 0.608, Tau: 0.470 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.475, LWK: 0.276, PRS: 0.654, SPR: 0.635, Tau: 0.488 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 14, train: 201s, evaluation: 70s
+[INFO] (__main__) [Train] loss: 0.0069, metric: 0.0634
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0158, metric: 0.0940, mean: 8.509 (8.508), stdev: 1.012 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0138, metric: 0.0923, mean: 8.489 (8.473), stdev: 0.994 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.526, LWK: 0.347, PRS: 0.583, SPR: 0.604, Tau: 0.467 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.587, LWK: 0.373, PRS: 0.647, SPR: 0.632, Tau: 0.485 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 15, train: 203s, evaluation: 52s
+[INFO] (__main__) [Train] loss: 0.0061, metric: 0.0591
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0208, metric: 0.1098, mean: 9.236 (8.508), stdev: 0.876 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0196, metric: 0.1122, mean: 9.222 (8.473), stdev: 0.848 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.422, LWK: 0.286, PRS: 0.587, SPR: 0.602, Tau: 0.465 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.445, LWK: 0.248, PRS: 0.646, SPR: 0.625, Tau: 0.478 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 16, train: 137s, evaluation: 83s
+[INFO] (__main__) [Train] loss: 0.0062, metric: 0.0605
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0163, metric: 0.0965, mean: 8.431 (8.508), stdev: 1.143 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0142, metric: 0.0946, mean: 8.404 (8.473), stdev: 1.116 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.552, LWK: 0.367, PRS: 0.583, SPR: 0.602, Tau: 0.466 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.596, LWK: 0.376, PRS: 0.641, SPR: 0.623, Tau: 0.476 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 17, train: 224s, evaluation: 75s
+[INFO] (__main__) [Train] loss: 0.0053, metric: 0.0554
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0166, metric: 0.0974, mean: 8.558 (8.508), stdev: 1.205 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0147, metric: 0.0967, mean: 8.536 (8.473), stdev: 1.167 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.548, LWK: 0.363, PRS: 0.582, SPR: 0.594, Tau: 0.460 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.592, LWK: 0.383, PRS: 0.631, SPR: 0.611, Tau: 0.465 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 18, train: 203s, evaluation: 71s
+[INFO] (__main__) [Train] loss: 0.0051, metric: 0.0544
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0207, metric: 0.1090, mean: 9.186 (8.508), stdev: 1.129 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0191, metric: 0.1121, mean: 9.163 (8.473), stdev: 1.097 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.499, LWK: 0.331, PRS: 0.585, SPR: 0.595, Tau: 0.460 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.525, LWK: 0.308, PRS: 0.632, SPR: 0.608, Tau: 0.463 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 19, train: 202s, evaluation: 70s
+[INFO] (__main__) [Train] loss: 0.0050, metric: 0.0538
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0175, metric: 0.0990, mean: 8.878 (8.508), stdev: 1.134 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0160, metric: 0.1013, mean: 8.857 (8.473), stdev: 1.101 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.523, LWK: 0.355, PRS: 0.586, SPR: 0.600, Tau: 0.464 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.559, LWK: 0.332, PRS: 0.629, SPR: 0.605, Tau: 0.461 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 20, train: 170s, evaluation: 49s
+[INFO] (__main__) [Train] loss: 0.0047, metric: 0.0531
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0190, metric: 0.1045, mean: 8.889 (8.508), stdev: 1.343 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0173, metric: 0.1063, mean: 8.867 (8.473), stdev: 1.304 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.553, LWK: 0.374, PRS: 0.585, SPR: 0.597, Tau: 0.461 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.562, LWK: 0.326, PRS: 0.622, SPR: 0.598, Tau: 0.454 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 21, train: 195s, evaluation: 69s
+[INFO] (__main__) [Train] loss: 0.0044, metric: 0.0509
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0207, metric: 0.1088, mean: 9.171 (8.508), stdev: 1.177 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0195, metric: 0.1127, mean: 9.152 (8.473), stdev: 1.140 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.491, LWK: 0.329, PRS: 0.587, SPR: 0.599, Tau: 0.464 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.526, LWK: 0.309, PRS: 0.622, SPR: 0.601, Tau: 0.456 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 22, train: 198s, evaluation: 71s
+[INFO] (__main__) [Train] loss: 0.0042, metric: 0.0496
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0182, metric: 0.1010, mean: 8.857 (8.508), stdev: 1.268 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0168, metric: 0.1043, mean: 8.850 (8.473), stdev: 1.227 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.542, LWK: 0.376, PRS: 0.584, SPR: 0.595, Tau: 0.462 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.546, LWK: 0.316, PRS: 0.618, SPR: 0.598, Tau: 0.455 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 23, train: 205s, evaluation: 73s
+[INFO] (__main__) [Train] loss: 0.0041, metric: 0.0485
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0170, metric: 0.0971, mean: 8.738 (8.508), stdev: 1.155 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0156, metric: 0.0993, mean: 8.726 (8.473), stdev: 1.113 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.535, LWK: 0.365, PRS: 0.579, SPR: 0.596, Tau: 0.462 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.577, LWK: 0.363, PRS: 0.616, SPR: 0.600, Tau: 0.455 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 24, train: 206s, evaluation: 61s
+[INFO] (__main__) [Train] loss: 0.0040, metric: 0.0487
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0176, metric: 0.0990, mean: 8.822 (8.508), stdev: 1.166 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0163, metric: 0.1022, mean: 8.810 (8.473), stdev: 1.120 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.535, LWK: 0.368, PRS: 0.577, SPR: 0.590, Tau: 0.456 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.549, LWK: 0.328, PRS: 0.610, SPR: 0.593, Tau: 0.450 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 25, train: 140s, evaluation: 58s
+[INFO] (__main__) [Train] loss: 0.0039, metric: 0.0480
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0172, metric: 0.0989, mean: 8.572 (8.508), stdev: 1.235 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0160, metric: 0.1006, mean: 8.562 (8.473), stdev: 1.198 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.541, LWK: 0.367, PRS: 0.574, SPR: 0.591, Tau: 0.457 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.577, LWK: 0.359, PRS: 0.600, SPR: 0.587, Tau: 0.445 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 26, train: 204s, evaluation: 71s
+[INFO] (__main__) [Train] loss: 0.0037, metric: 0.0461
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0170, metric: 0.0981, mean: 8.628 (8.508), stdev: 1.146 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0159, metric: 0.1003, mean: 8.616 (8.473), stdev: 1.111 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.526, LWK: 0.352, PRS: 0.565, SPR: 0.583, Tau: 0.450 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.562, LWK: 0.349, PRS: 0.595, SPR: 0.580, Tau: 0.439 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 27, train: 200s, evaluation: 70s
+[INFO] (__main__) [Train] loss: 0.0036, metric: 0.0460
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0170, metric: 0.0979, mean: 8.637 (8.508), stdev: 1.159 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0158, metric: 0.1001, mean: 8.628 (8.473), stdev: 1.119 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.535, LWK: 0.357, PRS: 0.568, SPR: 0.584, Tau: 0.452 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.571, LWK: 0.354, PRS: 0.600, SPR: 0.583, Tau: 0.442 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 28, train: 208s, evaluation: 73s
+[INFO] (__main__) [Train] loss: 0.0034, metric: 0.0447
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0189, metric: 0.1032, mean: 8.959 (8.508), stdev: 1.110 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0179, metric: 0.1070, mean: 8.941 (8.473), stdev: 1.076 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.487, LWK: 0.338, PRS: 0.561, SPR: 0.572, Tau: 0.442 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.496, LWK: 0.287, PRS: 0.591, SPR: 0.574, Tau: 0.434 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 29, train: 193s, evaluation: 52s
+[INFO] (__main__) [Train] loss: 0.0033, metric: 0.0450
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0199, metric: 0.1072, mean: 8.771 (8.508), stdev: 1.434 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0184, metric: 0.1098, mean: 8.751 (8.473), stdev: 1.404 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.544, LWK: 0.372, PRS: 0.568, SPR: 0.583, Tau: 0.451 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.562, LWK: 0.329, PRS: 0.595, SPR: 0.577, Tau: 0.436 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 30, train: 143s, evaluation: 82s
+[INFO] (__main__) [Train] loss: 0.0031, metric: 0.0427
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0197, metric: 0.1073, mean: 8.727 (8.508), stdev: 1.442 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0185, metric: 0.1102, mean: 8.707 (8.473), stdev: 1.412 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.543, LWK: 0.372, PRS: 0.568, SPR: 0.583, Tau: 0.451 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.564, LWK: 0.336, PRS: 0.590, SPR: 0.572, Tau: 0.432 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 31, train: 230s, evaluation: 75s
+[INFO] (__main__) [Train] loss: 0.0029, metric: 0.0412
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0251, metric: 0.1229, mean: 9.446 (8.508), stdev: 1.027 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0249, metric: 0.1286, mean: 9.435 (8.473), stdev: 1.002 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.404, LWK: 0.253, PRS: 0.566, SPR: 0.575, Tau: 0.444 (Best @ 11: {{0.563}}, 0.374, 0.596, 0.612, 0.475)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.417, LWK: 0.237, PRS: 0.584, SPR: 0.567, Tau: 0.427 (Best @ 11: {{0.627}}, 0.411, 0.659, 0.642, 0.494)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 32, train: 206s, evaluation: 72s
+[INFO] (__main__) [Train] loss: 0.0032, metric: 0.0442
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0181, metric: 0.1037, mean: 8.353 (8.508), stdev: 1.296 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0171, metric: 0.1043, mean: 8.334 (8.473), stdev: 1.248 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.563, LWK: 0.365, PRS: 0.566, SPR: 0.585, Tau: 0.453 (Best @ 32: {{0.563}}, 0.365, 0.566, 0.585, 0.453)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.563, LWK: 0.354, PRS: 0.582, SPR: 0.571, Tau: 0.430 (Best @ 32: {{0.563}}, 0.354, 0.582, 0.571, 0.430)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 33, train: 204s, evaluation: 71s
+[INFO] (__main__) [Train] loss: 0.0027, metric: 0.0399
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0237, metric: 0.1179, mean: 9.279 (8.508), stdev: 1.276 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0231, metric: 0.1235, mean: 9.260 (8.473), stdev: 1.236 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.477, LWK: 0.322, PRS: 0.566, SPR: 0.567, Tau: 0.438 (Best @ 32: {{0.563}}, 0.365, 0.566, 0.585, 0.453)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.490, LWK: 0.279, PRS: 0.580, SPR: 0.563, Tau: 0.425 (Best @ 32: {{0.563}}, 0.354, 0.582, 0.571, 0.430)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 34, train: 144s, evaluation: 46s
+[INFO] (__main__) [Train] loss: 0.0028, metric: 0.0406
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0188, metric: 0.1041, mean: 8.754 (8.508), stdev: 1.326 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0183, metric: 0.1084, mean: 8.744 (8.473), stdev: 1.284 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.533, LWK: 0.363, PRS: 0.566, SPR: 0.575, Tau: 0.445 (Best @ 32: {{0.563}}, 0.365, 0.566, 0.585, 0.453)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.547, LWK: 0.326, PRS: 0.572, SPR: 0.560, Tau: 0.422 (Best @ 32: {{0.563}}, 0.354, 0.582, 0.571, 0.430)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 35, train: 198s, evaluation: 73s
+[INFO] (__main__) [Train] loss: 0.0029, metric: 0.0406
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0188, metric: 0.1027, mean: 8.924 (8.508), stdev: 1.206 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0187, metric: 0.1097, mean: 8.912 (8.473), stdev: 1.167 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.515, LWK: 0.357, PRS: 0.568, SPR: 0.575, Tau: 0.445 (Best @ 32: {{0.563}}, 0.365, 0.566, 0.585, 0.453)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.503, LWK: 0.295, PRS: 0.571, SPR: 0.559, Tau: 0.420 (Best @ 32: {{0.563}}, 0.354, 0.582, 0.571, 0.430)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 36, train: 209s, evaluation: 70s
+[INFO] (__main__) [Train] loss: 0.0026, metric: 0.0402
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0183, metric: 0.1017, mean: 8.816 (8.508), stdev: 1.267 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0181, metric: 0.1079, mean: 8.808 (8.473), stdev: 1.220 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.519, LWK: 0.362, PRS: 0.574, SPR: 0.582, Tau: 0.451 (Best @ 32: {{0.563}}, 0.365, 0.566, 0.585, 0.453)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.525, LWK: 0.313, PRS: 0.574, SPR: 0.564, Tau: 0.424 (Best @ 32: {{0.563}}, 0.354, 0.582, 0.571, 0.430)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 37, train: 206s, evaluation: 72s
+[INFO] (__main__) [Train] loss: 0.0026, metric: 0.0391
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0236, metric: 0.1183, mean: 9.109 (8.508), stdev: 1.531 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0232, metric: 0.1238, mean: 9.085 (8.473), stdev: 1.490 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.525, LWK: 0.356, PRS: 0.576, SPR: 0.581, Tau: 0.449 (Best @ 32: {{0.563}}, 0.365, 0.566, 0.585, 0.453)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.500, LWK: 0.291, PRS: 0.576, SPR: 0.558, Tau: 0.420 (Best @ 32: {{0.563}}, 0.354, 0.582, 0.571, 0.430)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 38, train: 207s, evaluation: 52s
+[INFO] (__main__) [Train] loss: 0.0027, metric: 0.0399
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0187, metric: 0.1030, mean: 8.836 (8.508), stdev: 1.244 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0182, metric: 0.1082, mean: 8.812 (8.473), stdev: 1.209 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.516, LWK: 0.353, PRS: 0.564, SPR: 0.567, Tau: 0.439 (Best @ 32: {{0.563}}, 0.365, 0.566, 0.585, 0.453)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.514, LWK: 0.299, PRS: 0.570, SPR: 0.556, Tau: 0.419 (Best @ 32: {{0.563}}, 0.354, 0.582, 0.571, 0.430)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 39, train: 141s, evaluation: 79s
+[INFO] (__main__) [Train] loss: 0.0025, metric: 0.0387
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0201, metric: 0.1070, mean: 8.996 (8.508), stdev: 1.290 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0198, metric: 0.1133, mean: 8.970 (8.473), stdev: 1.253 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.522, LWK: 0.361, PRS: 0.568, SPR: 0.572, Tau: 0.443 (Best @ 32: {{0.563}}, 0.365, 0.566, 0.585, 0.453)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.525, LWK: 0.315, PRS: 0.572, SPR: 0.559, Tau: 0.422 (Best @ 32: {{0.563}}, 0.354, 0.582, 0.571, 0.430)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 40, train: 210s, evaluation: 73s
+[INFO] (__main__) [Train] loss: 0.0025, metric: 0.0394
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0188, metric: 0.1034, mean: 8.821 (8.508), stdev: 1.274 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0185, metric: 0.1087, mean: 8.800 (8.473), stdev: 1.233 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.515, LWK: 0.354, PRS: 0.564, SPR: 0.569, Tau: 0.440 (Best @ 32: {{0.563}}, 0.365, 0.566, 0.585, 0.453)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.525, LWK: 0.308, PRS: 0.566, SPR: 0.554, Tau: 0.417 (Best @ 32: {{0.563}}, 0.354, 0.582, 0.571, 0.430)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 41, train: 204s, evaluation: 72s
+[INFO] (__main__) [Train] loss: 0.0024, metric: 0.0379
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0195, metric: 0.1055, mean: 8.878 (8.508), stdev: 1.311 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0193, metric: 0.1112, mean: 8.857 (8.473), stdev: 1.273 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.513, LWK: 0.347, PRS: 0.564, SPR: 0.568, Tau: 0.440 (Best @ 32: {{0.563}}, 0.365, 0.566, 0.585, 0.453)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.523, LWK: 0.312, PRS: 0.562, SPR: 0.550, Tau: 0.413 (Best @ 32: {{0.563}}, 0.354, 0.582, 0.571, 0.430)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 42, train: 201s, evaluation: 71s
+[INFO] (__main__) [Train] loss: 0.0024, metric: 0.0384
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0183, metric: 0.1033, mean: 8.596 (8.508), stdev: 1.296 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0180, metric: 0.1063, mean: 8.581 (8.473), stdev: 1.251 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.542, LWK: 0.356, PRS: 0.558, SPR: 0.564, Tau: 0.436 (Best @ 32: {{0.563}}, 0.365, 0.566, 0.585, 0.453)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.532, LWK: 0.325, PRS: 0.558, SPR: 0.545, Tau: 0.410 (Best @ 32: {{0.563}}, 0.354, 0.582, 0.571, 0.430)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 43, train: 171s, evaluation: 53s
+[INFO] (__main__) [Train] loss: 0.0023, metric: 0.0377
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0179, metric: 0.1023, mean: 8.562 (8.508), stdev: 1.265 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0176, metric: 0.1049, mean: 8.541 (8.473), stdev: 1.226 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.539, LWK: 0.355, PRS: 0.559, SPR: 0.566, Tau: 0.438 (Best @ 32: {{0.563}}, 0.365, 0.566, 0.585, 0.453)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.539, LWK: 0.330, PRS: 0.561, SPR: 0.547, Tau: 0.411 (Best @ 32: {{0.563}}, 0.354, 0.582, 0.571, 0.430)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 44, train: 161s, evaluation: 59s
+[INFO] (__main__) [Train] loss: 0.0023, metric: 0.0363
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0223, metric: 0.1139, mean: 9.099 (8.508), stdev: 1.375 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0221, metric: 0.1199, mean: 9.081 (8.473), stdev: 1.339 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.506, LWK: 0.345, PRS: 0.562, SPR: 0.568, Tau: 0.440 (Best @ 32: {{0.563}}, 0.365, 0.566, 0.585, 0.453)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.498, LWK: 0.300, PRS: 0.562, SPR: 0.547, Tau: 0.411 (Best @ 32: {{0.563}}, 0.354, 0.582, 0.571, 0.430)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 45, train: 164s, evaluation: 60s
+[INFO] (__main__) [Train] loss: 0.0023, metric: 0.0380
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0190, metric: 0.1050, mean: 8.734 (8.508), stdev: 1.312 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0186, metric: 0.1084, mean: 8.715 (8.473), stdev: 1.278 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.517, LWK: 0.345, PRS: 0.556, SPR: 0.564, Tau: 0.436 (Best @ 32: {{0.563}}, 0.365, 0.566, 0.585, 0.453)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.530, LWK: 0.311, PRS: 0.559, SPR: 0.547, Tau: 0.411 (Best @ 32: {{0.563}}, 0.354, 0.582, 0.571, 0.430)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 46, train: 166s, evaluation: 59s
+[INFO] (__main__) [Train] loss: 0.0022, metric: 0.0362
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0186, metric: 0.1035, mean: 8.722 (8.508), stdev: 1.319 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0183, metric: 0.1076, mean: 8.708 (8.473), stdev: 1.279 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.539, LWK: 0.365, PRS: 0.566, SPR: 0.578, Tau: 0.448 (Best @ 32: {{0.563}}, 0.365, 0.566, 0.585, 0.453)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.553, LWK: 0.336, PRS: 0.565, SPR: 0.554, Tau: 0.418 (Best @ 32: {{0.563}}, 0.354, 0.582, 0.571, 0.430)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 47, train: 155s, evaluation: 47s
+[INFO] (__main__) [Train] loss: 0.0020, metric: 0.0352
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0195, metric: 0.1060, mean: 8.815 (8.508), stdev: 1.314 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0190, metric: 0.1100, mean: 8.785 (8.473), stdev: 1.273 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.526, LWK: 0.356, PRS: 0.554, SPR: 0.560, Tau: 0.432 (Best @ 32: {{0.563}}, 0.365, 0.566, 0.585, 0.453)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.528, LWK: 0.313, PRS: 0.558, SPR: 0.548, Tau: 0.412 (Best @ 32: {{0.563}}, 0.354, 0.582, 0.571, 0.430)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 48, train: 171s, evaluation: 65s
+[INFO] (__main__) [Train] loss: 0.0021, metric: 0.0353
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0192, metric: 0.1065, mean: 8.528 (8.508), stdev: 1.336 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0186, metric: 0.1085, mean: 8.509 (8.473), stdev: 1.298 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.518, LWK: 0.336, PRS: 0.543, SPR: 0.547, Tau: 0.422 (Best @ 32: {{0.563}}, 0.365, 0.566, 0.585, 0.453)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.523, LWK: 0.317, PRS: 0.548, SPR: 0.538, Tau: 0.404 (Best @ 32: {{0.563}}, 0.354, 0.582, 0.571, 0.430)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Epoch 49, train: 176s, evaluation: 59s
+[INFO] (__main__) [Train] loss: 0.0021, metric: 0.0355
+[INFO] (nea.asap_evaluator) [Dev]   loss: 0.0214, metric: 0.1116, mean: 8.996 (8.508), stdev: 1.343 (1.539)
+[INFO] (nea.asap_evaluator) [Test]  loss: 0.0211, metric: 0.1164, mean: 8.980 (8.473), stdev: 1.303 (1.538)
+[INFO] (nea.asap_evaluator) [DEV]   QWK:  0.507, LWK: 0.338, PRS: 0.549, SPR: 0.551, Tau: 0.424 (Best @ 32: {{0.563}}, 0.365, 0.566, 0.585, 0.453)
+[INFO] (nea.asap_evaluator) [TEST]  QWK:  0.496, LWK: 0.303, PRS: 0.551, SPR: 0.537, Tau: 0.404 (Best @ 32: {{0.563}}, 0.354, 0.582, 0.571, 0.430)
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (__main__) Training:   11858 seconds in total
+[INFO] (__main__) Evaluation: 3395 seconds in total
+[INFO] (nea.asap_evaluator) --------------------------------------------------------------------------------------------------------------------------
+[INFO] (nea.asap_evaluator) Missed @ Epoch 11:
+[INFO] (nea.asap_evaluator)   [TEST] QWK: 0.627
+[INFO] (nea.asap_evaluator) Best @ Epoch 32:
+[INFO] (nea.asap_evaluator)   [DEV]  QWK: 0.563, LWK: 0.365, PRS: 0.566, SPR: 0.585, Tau: 0.453
+[INFO] (nea.asap_evaluator)   [TEST] QWK: 0.563, LWK: 0.354, PRS: 0.582, SPR: 0.571, Tau: 0.430

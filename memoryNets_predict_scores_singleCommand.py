@@ -74,41 +74,11 @@ if a == True:
 #     print("Testcase: ", testcase)
     testing_path = adv_file
     apple = True
-#     if testcase == 'incorrect_1.csv':
-#         df_essay = pd.read_csv(testing_path, engine='python')
-# #         df_essay = df_essay[:0]
-#         df_score = pd.read_csv('statistics/pred_prompt1.csv')
-#         df_essay['rating'] = df_score['pred_score']
-#         df_essay['text2'] = df_essay['text']
-#         df_essay = df_essay[['text', 'rating']]
-#         print(df_essay.head())
-#     if (testcase =='test8.csv' or 'babel_prompt1.csv'):
-#         continue
-#         df_essay = pd.read_csv(testing_path, engine='python')
-#         df_essay = df_essay.iloc[:,0]
-#         print(df_essay.head())
     if apple==True:
-#         print("Before: ", df_essay)
         df_essay = pd.read_csv(testing_path, engine='python')
-#         print("Before: ", df_essay)
-#         df_essay[:-1]
-#         print("After: ", df_essay)
         print(len(df_essay))
-#         df_score = pd.read_csv('predicted_scores/org_scores/prompt2_org.csv')
-#         print(len(df_score))
-#         df_essay['rating'] = df_score['score']
-#         print(df_essay.head())
-    
-#     testing_path = 'aes_data/essay1/fold_0/test.txt'
     essay_list_test, essay_id_test = data_utils.load_testcase_data(df_essay, essay_set_id)
-    
-#     sent_size_list_test = list(map(len, [essay2 for essay2 in essay_list_test]))
-#     max_sent_size_test = max(sent_size_list_test)
-#     print("test max sent size: ", max_sent_size_test)
-#     mean_sent_size_test = int(np.mean(sent_size_list_test))
-
     E_test = data_utils.vectorize_data(essay_list_test, word_idx, max_sent_size)
-#     print(essay_list_test)
     test_batch_size = 15
 
     testE = []
@@ -116,8 +86,6 @@ if a == True:
     test_essay_id = []
     for test_index in range(len(essay_id_test)):
         testE.append(E_test[test_index])
-#         print(testE)
-#         test_scores.append(resolved_scores_test[test_index])
         test_essay_id.append(essay_id_test[test_index])
 
     trainE = []
@@ -138,10 +106,7 @@ if a == True:
         for j in range(num_samples):
             if i in train_scores:
                 score_idx = train_scores.index(i)
-    #             score = train_scores.pop(score_idx)
                 essay = trainE.pop(score_idx)
-#                 print("essay", essay)
-    #             sent_size = sent_size_list.pop(score_idx)
                 memory.append(essay)
 
     def test_step(e, m):
@@ -159,9 +124,9 @@ if a == True:
             return preds
 
     #CHANGE DIRECTORIES and rename checkpoints for each prompt
-    saver = tf.train.import_meta_graph("memory_networks/automated-essay-grading/runs/essay_set_3_cv_1_Jun_04_2020_23:32:11/checkpoints-11830.meta")  
+    saver = tf.train.import_meta_graph("Model5(MemoryNets)/runs/essay_set_3_cv_1_Jun_04_2020_23:32:11/checkpoints-11830.meta")  
     with tf.Session() as sess:
-        saver.restore(sess,"memory_networks/automated-essay-grading/runs/essay_set_3_cv_1_Jun_04_2020_23:32:11/checkpoints-11830")
+        saver.restore(sess,"Model5(MemoryNets)/runs/essay_set_3_cv_1_Jun_04_2020_23:32:11/checkpoints-11830")
         query = graph.get_tensor_by_name("input/question:0")
         memory_key = graph.get_tensor_by_name("input/memory_key:0")
         keep_prob = graph.get_tensor_by_name("input/keep_prob:0")
@@ -170,99 +135,34 @@ if a == True:
             if name2.startswith("input"): 
                 print(name2)
         output = graph.get_tensor_by_name("prediction/predict_op:0")
-#         y0 = sess.run([y_])
-    #     output=tf.get_collection('predict_op:0')
 
         test_preds = []
         for start in range(0, n_test, test_batch_size):
-#             print("E1")
             end = min(n_test, start+test_batch_size)
-#             print("Start: ", start, "End: ", end)
-#             print("Memory", memory)
             batched_memory = [memory] * (end-start)
-#             print("Batched_memory", batched_memory)
-#             print("Query: ", testE[start:end])
-#             print("E2")
-#             print(testE[start:end])
             query_list = []
             for elem2 in testE[start:end]:
-#                 print(len(elem2))
                 if (len(elem2) == max_sent_size):
                     query_list.append(elem2)
                 else:
                     elem2 = elem2[:max_sent_size]
                     query_list.append(elem2)
-#                     elem2 = [int(x) for x in elem2]
-#                     print(len(elem2))
-#                 else:
-#                     print(len(elem2))
-#                     elem2 = [int(x) for x in elem2]
-#             for ab in query_list:
-#                 print(len(ab))
-#             if (start == 15 and end == 30):
-#                 print("############################")
-#                 print(testE[15:30])
-#             for elem in batched_memory:
-#                 print(len(elem))
-#             print(batched_memory)
             preds = sess.run(output, feed_dict={query: query_list, memory_key:batched_memory, keep_prob:1})
-#             print("Preds", preds)
-#             print("type: ", type(preds))
-            
             if is_regression:
                 preds = np.clip(np.round(preds), min_score, max_score)
-#                 print(preds)
-#                 return preds
-#             else:
-#                 continue
-    #         preds = test_step(testE[start:end], batched_memory)
-    #         print("Preds", preds)
-    #         preds = preds.tolist()
             predsF = preds.astype('float32') 
             if type(predsF) is np.float32:
-#                 print("Here1")
                 test_preds = np.append(test_preds, predsF)
             else:
                 preds = preds.astype('int32')
-#                 print("Here2")
-#                 preds2 = []
-#                 for i in range(0, len(preds)):    
-#                     print(preds[i])
-#                     preds2.append(preds[i])
                 try:
                     preds2 = preds.tolist()
                 except ValueError:
                     print(adv_file, e)
                     pass
-#                     preds2 = []
-#                     for i in range(0, len(preds)):    
-#                         print(preds[i])
-#                         pred2.append(preds[i])
-#                 print("type here: ", type(preds))
                 preds2 = preds.tolist()
-#                 print("Preds2",preds2)
-#                 print("pred_list", pred_list)
                 for ite in range(len(preds2)):
-#                     print("Done")
-    #                 ite2 = ite.astype(numpy.int32)
-    #                 print("Ite", type(ite))
-    #                 print("pred ite", preds2[ite])
                     test_preds = np.append(test_preds, preds2[ite])
-    #                 np.concatenate(test_preds, preds2[ite])
-    #                 test_preds.append(preds2[ite])
-#             if not is_regression:
-    #             test_preds = np.add(test_preds, min_score)
-                #test_kappp_score = kappa(test_scores, test_preds, 'quadratic')
-    #             test_kappp_score = quadratic_weighted_kappa(test_scores, test_preds, min_score, max_score)
-    #             print(test_kappp_score)
-    #             stat_dict = {'pred_score': test_preds}
-#             stat_dict = {'essay_id': test_essay_id, 'org_score': test_scores, 'pred_score': test_preds}
             pred_dict = {'pred_score':test_preds}
-
-#         test_kappp_score = quadratic_weighted_kappa(test_scores, test_preds, min_score, max_score)
-#         print(test_kappp_score)
-#         stat_df = pd.DataFrame(stat_dict)
         pred_df = pd.DataFrame(pred_dict)
-#         print(stat_df)
-#         stat_df.to_csv('predicted_scores/prompt1/stats_'+testcase, index=None)
         pred_df.to_csv('memoryNets_pred_'+adv_file, index=None)

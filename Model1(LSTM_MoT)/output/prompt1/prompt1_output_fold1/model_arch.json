@@ -1,0 +1,93 @@
+{
+  "class_name": "Sequential",
+  "config": [
+    {
+      "class_name": "Embedding",
+      "config": {
+        "name": "embedding_1",
+        "trainable": true,
+        "batch_input_shape": [
+          null,
+          null
+        ],
+        "input_dtype": "int32",
+        "input_dim": 4000,
+        "output_dim": 50,
+        "init": "uniform",
+        "input_length": null,
+        "mask_zero": true,
+        "activity_regularizer": null,
+        "W_regularizer": null,
+        "W_constraint": null,
+        "dropout": 0.0
+      }
+    },
+    {
+      "class_name": "LSTM",
+      "config": {
+        "name": "lstm_1",
+        "trainable": true,
+        "return_sequences": true,
+        "go_backwards": false,
+        "stateful": false,
+        "unroll": false,
+        "consume_less": "cpu",
+        "input_dim": 50,
+        "input_length": null,
+        "output_dim": 300,
+        "init": "glorot_uniform",
+        "inner_init": "orthogonal",
+        "forget_bias_init": "one",
+        "activation": "tanh",
+        "inner_activation": "hard_sigmoid",
+        "W_regularizer": null,
+        "U_regularizer": null,
+        "b_regularizer": null,
+        "dropout_W": 0.5,
+        "dropout_U": 0.1
+      }
+    },
+    {
+      "class_name": "Dropout",
+      "config": {
+        "name": "dropout_1",
+        "trainable": true,
+        "p": 0.5
+      }
+    },
+    {
+      "class_name": "MeanOverTime",
+      "config": {
+        "name": "meanovertime_1",
+        "trainable": true,
+        "mask_zero": true
+      }
+    },
+    {
+      "class_name": "Dense",
+      "config": {
+        "name": "dense_1",
+        "trainable": true,
+        "output_dim": 1,
+        "init": "glorot_uniform",
+        "activation": "linear",
+        "W_regularizer": null,
+        "b_regularizer": null,
+        "activity_regularizer": null,
+        "W_constraint": null,
+        "b_constraint": null,
+        "bias": true,
+        "input_dim": null
+      }
+    },
+    {
+      "class_name": "Activation",
+      "config": {
+        "name": "activation_1",
+        "trainable": true,
+        "activation": "sigmoid"
+      }
+    }
+  ],
+  "keras_version": "1.1.0"
+}

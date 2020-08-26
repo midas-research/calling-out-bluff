@@ -36,7 +36,6 @@ print("PromptID is: ", prompt_id)
 print("Adversarial File: ", adv_file)
 
 fp1=open("/mnt/data/rajivratn/skipflow/glove.6B.300d.txt","r", encoding="utf-8")
-#RENAME THIS DIRECTORY
 glove_emb={}
 for line in fp1:
 	temp=line.split(" ")
@@ -153,13 +152,13 @@ def init(essay_type):
 	texts=[]
 	originals = []
     #RENAME THIS DIRECTORY
-	fp=open("/mnt/data/rajivratn/skipflow/data/training_set_rel3.tsv",'r', encoding="ascii", errors="ignore")
+	fp=open("Model3(Skipflow)/data/training_set_rel3.tsv",'r', encoding="ascii", errors="ignore")
 	fp.readline()
 	sentences=[]
 	doctovec=[]
 	for line in fp:
 	    temp=line.split("\t")
-	    if(temp[1]==essay_type): ## why only 4 ?? - evals in prompt specific fashion
+	    if(temp[1]==essay_type): 
 	        texts.append(temp[2])
 	        originals.append(float(temp[6]))
 	        line=temp[2].strip()
@@ -172,8 +171,6 @@ def init(essay_type):
 	else:
 		range_min = min(originals)
 		range_max = max(originals)
-# 	range_min = 0
-# 	range_max = 3
 	print("min range", range_min)
 	print("max range", range_max)
 
@@ -195,7 +192,7 @@ def init(essay_type):
 	earlystopping = EarlyStopping(monitor="val_mean_squared_error", patience=5)
 	model = SKIPFLOW(embedding_matrix, vocab_size ,lstm_dim=500, lr=2e-4, lr_decay=2e-6, k=4, eta=13, delta=50, activation="relu", seed=None)
     #RENAME THIS DIRECTORY
-	model.load_weights("/mnt/data/rajivratn/skipflow/weights_final/" + str(essay_type) + "_weights.h5")
+	model.load_weights("Model3(Skipflow)/weights_final/" + str(essay_type) + "_weights.h5")
 	print("Loaded Model from disk")
 
 	graph = tf.compat.v1.get_default_graph()
@@ -207,7 +204,7 @@ import pandas as pd
 #RENAME THIS DIRECTORY
 
 #TAKE ORG SCORES FROM INPUT FILE --orginal-file
-test_score_set = pd.read_csv('skipflow/scores_AES/test%s.csv'%(prompt_id), encoding = 'utf=8')
+test_score_set = pd.read_csv('Model3(Skipflow)/scores_AES/test%s.csv'%(prompt_id), encoding = 'utf=8')
 x_2 = test_score_set.to_numpy()
 tester_2 = x_2.tolist()
 
@@ -223,66 +220,47 @@ import pandas as pd
 import statistics 
 import csv
 
-apple = True
-a = True
-if apple == True:
-    if a == True:
-        print("HEREEEEE")
-        testcases_name = adv_file[:-4]
-        testcase_file = pd.read_csv(adv_file, encoding='latin1', engine="python")
-        x = testcase_file.to_numpy()
-        tester = x.tolist()
-        test_essaylist = []
+testcases_name = adv_file[:-4]
+testcase_file = pd.read_csv(adv_file, encoding='latin1', engine="python")
+x = testcase_file.to_numpy()
+tester = x.tolist()
+test_essaylist = []
 
-        for i in range(0, len(tester)):
-            z = tester[i]
-    #         print(z)
-            y = z[0].split(', ', 1)
-            test_essaylist.append(y[0])
+for i in range(0, len(tester)):
+    z = tester[i]
+    #print(z)
+    y = z[0].split(', ', 1)
+    test_essaylist.append(y[0])
     #     print(len(test_essaylist))
-        #Initialize prediciton list for that testcase
-        testcase_pred_list = []
-        for intext in test_essaylist:
-            texts =[]
-            labels =[]
-            sentences = []
-            texts.append(intext)
-            line=intext.strip()
-            sentences.append(nltk.tokenize.word_tokenize(line))
+#Initialize prediciton list for that testcase
+testcase_pred_list = []
+for intext in test_essaylist:
+    texts =[]
+    labels =[]
+    sentences = []
+    texts.append(intext)
+    line=intext.strip()
+    sentences.append(nltk.tokenize.word_tokenize(line))
 
-            for i in sentences:
-                temp1=np.zeros((1, EMBEDDING_DIM))
-                for w in i:
-                    if(w in glove_emb):
-                        temp1+=glove_emb[w]
-                temp1/=len(i)
-#             tokenizer=Tokenizer()
-#             tokenizer.fit_on_texts(texts)
-            sequences=tokenizer.texts_to_sequences(texts)
-            word_index=tokenizer.word_index 
+    for i in sentences:
+        temp1=np.zeros((1, EMBEDDING_DIM))
+        for w in i:
+            if(w in glove_emb):
+                temp1+=glove_emb[w]
+        temp1/=len(i)
+    sequences=tokenizer.texts_to_sequences(texts)
+    word_index=tokenizer.word_index 
 
-            data = pad_sequences(sequences, maxlen=MAX_SEQUENCE_LENGTH)
+    data = pad_sequences(sequences, maxlen=MAX_SEQUENCE_LENGTH)
 
-    #         print("Predicting: .... ")
-            y_pred=model.predict([data])
-    #         print(y_pred)
-            y_pred_fin =[(a*(range_max-range_min)+range_min) for a in y_pred.reshape(1).tolist()]
-    #         print("Prediction...", y_pred_fin)
-            testcase_pred_list.append(y_pred_fin[0])
-            #Upscale results in testcase_pred_list
-    #     print("Prediction done for testcase:", testcases)
-        #Saving testcase_pred_list as column of csv file
-        rows = zip(testcase_pred_list)
-        with open("skipflow_"+testcases_name+"_scores.csv", "w") as f:
-            writer = csv.writer(f)
-            for row in rows:
-                writer.writerow(row)
-        print("Type: ", adv_file)
-        #Calculating mean difference metric:
-#         diff_list = []
-#         for i in range(len(testcase_pred_list)):
-#             diff = test_scorelist[i] - testcase_pred_list[i]
-#             diff_list.append(diff)
-#         mean_diff = statistics.mean(diff_list)
-#         print(""+"{:.3f}".format(mean_diff))
-
+#   print("Predicting: .... ")
+    y_pred=model.predict([data])
+    y_pred_fin =[(a*(range_max-range_min)+range_min) for a in y_pred.reshape(1).tolist()]
+    testcase_pred_list.append(y_pred_fin[0])
+rows = zip(testcase_pred_list)
+with open("skipflow_"+testcases_name+"_scores.csv", "w") as f:
+    writer = csv.writer(f)
+    for row in rows:
+        writer.writerow(row)
+print("Type: ", adv_file)
+        

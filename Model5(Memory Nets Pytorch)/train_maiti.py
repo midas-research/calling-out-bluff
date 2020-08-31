@@ -9,8 +9,19 @@ import torch
 from captum.attr import IntegratedGradients
 from torch.autograd import Variable, Function
 import os 
-
+from sys import exit 
+import pickle 
 device = torch.device("cpu")
+
+
+def seed_everything():
+	np.random.seed(42)
+
+def get_random_word(word_to_index):
+	padding_wrd = np.random.choice(list(word_to_index.keys()))
+	padding_num = word_to_index[padding_wrd]
+	return padding_num, padding_wrd
+
 
 def get_attributes(contents, memory_contents, ig, model, test_score=None, save=False):
 	contents = np.array(contents, dtype=np.int64)
@@ -75,6 +86,7 @@ def main(args, set_id):
 	print("Loading Glove.....")
 	t1 = time.time()
 	word_to_index, word_to_vec, index_to_word = data.load_glove(w_vocab=all_vocab, token_num=args.token_num, dim=args.emb_size)
+	print(len(word_to_index), len(word_to_vec), len(index_to_word))
 	word_to_vec = np.array(word_to_vec, dtype=np.float32)
 	t2 = time.time()
 	print(f"Finished loading Glove!, time cost = {(t2-t1):.4f}s\n")
@@ -118,6 +130,8 @@ def main(args, set_id):
 	model = MANM(word_to_vec=word_to_vec, max_sent_size=max_sent_size, memory_num=memory_size, embedding_size=args.emb_size,
 				 feature_size=args.feature_size, score_range=len(score_range), hops=args.hops,
 				 l2_lambda=args.l2_lambda, keep_prob=args.keep_prob, device=device, mem_embedding=args.mem).to(device)
+
+	# print('Shape of word to vec weight', model.word_to_vec.size())
 
 	optimizer = optim.Adam(model.parameters(), lr=args.lr, eps=args.epsilon)
 	scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.95)
@@ -168,19 +182,22 @@ def main(args, set_id):
 			if dev_kappa_result>bkp:
 				bkp=dev_kappa_result
 				# model.save_weights(f"../checkpoints/save_one_{args.set_id}.ckpt")
-				torch.save(model.state_dict(), f"checkpoints/nltk_tokenize/save_one_{set_id}.ckpt")
+				if not os.path.isdir(f'{args.save_dir}'):
+					os.mkdir(f'{args.save_dir}')
+				# torch.save(model.state_dict(), f"{args.save_dir}/save_one_{set_id}.ckpt")
+				torch.save(model, f"{args.save_dir}/save_one_{set_id}.ckpt")
 	# torch.cuda.empty_cache()
 
-	model.load_state_dict(torch.load(f"checkpoints/nltk_tokenize/save_one_{set_id}.ckpt"))
-	ig = IntegratedGradients(model.forward_ig)
-	for start in range(n_test):
-		word_wise_attributions = get_attributes(test_contents_idx[start:start+1], [memory_contents], ig, model)
-		save_str = f"{set_id}/attributions_{set_id}_{start}_testset_on_predicted"
+	# model.load_state_dict(torch.load(f"{args.save_dir}/save_one_{set_id}.ckpt"))
+	# ig = IntegratedGradients(model.forward_ig)
+	# for start in range(n_test):
+	# 	word_wise_attributions = get_attributes(test_contents_idx[start:start+1], [memory_contents], ig, model)
+	# 	save_str = f"{set_id}/attributions_{set_id}_{start}_testset_on_predicted"
 		
-		if not os.path.isdir(f'checkpoints/nltk_tokenize/{set_id}'):
-			os.mkdir(f'checkpoints/nltk_tokenize/{set_id}')
+	# 	if not os.path.isdir(f'{args.save_dir}/{set_id}'):
+	# 		os.mkdir(f'{args.save_dir}/{set_id}')
 
-		np.save(f"checkpoints/nltk_tokenize/{save_str}", word_wise_attributions)
+	# 	np.save(f"{args.save_dir}/{save_str}", word_wise_attributions)
 
 
 
@@ -194,7 +211,7 @@ if __name__ == "__main__":
 	parser.add_argument('--epochs', type=int, default=200, help="Number of epochs to train for.")
 	parser.add_argument('--test_freq', type=int, default=20, help="Evaluate and print results every x epochs.")
 	parser.add_argument('--hops', type=int, default=3, help="Number of hops in the Memory Network.")
-	parser.add_argument('--lr', type=float, default=0.002, help="Learning rate.")
+	parser.add_argument('--lr', type=float, default=0.002, help="Learning rate.") #make learning rate 0.0001
 	parser.add_argument('--batch_size', type=int, default=32, help="Batch size for training.")
 	parser.add_argument('--l2_lambda', type=float, default=0.3, help="Lambda for l2 loss.")
 	parser.add_argument('--num_samples', type=int, default=1, help="Number of samples selected as memories for each score.")
@@ -202,11 +219,14 @@ if __name__ == "__main__":
 	parser.add_argument('--max_grad_norm', type=float, default=10.0, help="Clip gradients to this norm.")
 	parser.add_argument('--keep_prob', type=float, default=0.9, help="Keep probability for dropout.")
 	parser.add_argument('--mem', action='store_true', help='To Toggle Memory Embeddings')
+	parser.add_argument('--nzp', action='store_true', help='To use non-zero padding')
+	parser.add_argument('--save_dir', required=True, help='checkpoints directory to save the result')
+	parser.add_argument('--output_freq', default=10, help='Frequency at which to pickle the test set')
 	args = parser.parse_args()
 	# bkp=0
+	seed_everything() 
 	print(args)
-	for i in range(7,9):
-			print(f'Current Set ID: {i}')
-			main(args, i) 	
+	main(args, 1)
+	main(args, 3)
 
 	

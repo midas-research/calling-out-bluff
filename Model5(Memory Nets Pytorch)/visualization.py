@@ -8,6 +8,8 @@ import data
 from heatmap import generate 
 import time
 from datetime import datetime
+import pickle 
+from sys import exit
 
 all_vocab = None
 def load_glove(args):
@@ -23,6 +25,7 @@ def load_glove(args):
 
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser(description='visualization')
+	# parser.add_argument('--save_dir', type=str, required=True, help='directory where the results are stored')
 	parser.add_argument('--set_id', type=int, required=True, help='set id')
 	parser.add_argument('--emb_size', type=int, default=300, help="Embedding size for sentences.")
 	parser.add_argument('--token_num', type=int, default=42, help="The number of token in glove (6, 42).")
@@ -38,6 +41,7 @@ if __name__ == '__main__':
 	parser.add_argument('--max_grad_norm', type=float, default=10.0, help="Clip gradients to this norm.")
 	parser.add_argument('--keep_prob', type=float, default=0.9, help="Keep probability for dropout.")
 	parser.add_argument('--model_path', type=str, required=True, help='Path to the checkpoints directory.')
+	parser.add_argument('--rw', type=str, default=None, help='random word being used for padding')
 	args = parser.parse_args() 
 
 	checkpoints_dir = args.model_path
@@ -53,8 +57,11 @@ if __name__ == '__main__':
 	all_vocab = data.all_vocab(dev_essay_contents, train_essay_contents, test_essay_contents)
 
 	word_to_index, word_to_vec, index_to_word = load_glove(args)
+	padding_num = None
+	if args.rw is not None:
+		padding_num = word_to_index[args.rw]
 
-	test_contents_idx = data.vectorize_data(test_essay_contents, word_to_index, max_sent_size)
+	test_contents_idx = data.vectorize_data(test_essay_contents, word_to_index, max_sent_size, padding_random=padding_num)
 	attr_format = 'attributions_{}_testset_on_predicted.npy'
 	_attributes_files_ = ['1_222', '1_327', '1_203', '1_218', '1_84']
 	_attributes_files_ = [attr_format.format(x) for x in _attributes_files_]

@@ -46,6 +46,7 @@ class MANM(nn.Module):
 			self.word_to_vec = torch.nn.Embedding.from_pretrained(
 				torch.from_numpy(word_to_vec), freeze=True
 			)
+		print('Word to vec size', len(self.word_to_vec.weight))
 
 		# [embedding_size, max_sent_size]
 		self.pos_encoding = (
@@ -257,6 +258,7 @@ class MANM(nn.Module):
 
 		# [batch_size, memory_num]
 		logits, distribution = self.output_layer(u)
+		print(distribution.shape, 'distribution.shape')
 		# print(distribution)
 		# [batch_size]
 		pred_scores = torch.argmax(distribution, dim=1)

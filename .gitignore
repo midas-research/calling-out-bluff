@@ -2,3 +2,6 @@
 **.DS_Store
 **.ckpt
 **.npy
+**.csv 
+Model5(Memory Nets Pytorch)/AES_testcases/
+Model5(Memory Nets Pytorch)/logs/

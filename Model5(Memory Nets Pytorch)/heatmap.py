@@ -1,11 +1,13 @@
 #script taken from https://github.com/jiesutd/Text-Attention-Heatmap-Visualization/blob/master/text_attention.py
 import numpy as np
 
+
 latex_special_token = ["!@#$%^&*()"]
 
-def generate(text_list, attention_list, latex_file, color='red', rescale_value = False):
+def generate(text_list, attention_list, latex_file, rescale_value = False):
 	print(len(text_list), len(attention_list))
 	assert(len(text_list) == len(attention_list))
+	pivot = get_pivot(attention_list)
 	if rescale_value:
 		attention_list = rescale(attention_list)
 	word_num = len(text_list)
@@ -22,7 +24,12 @@ def generate(text_list, attention_list, latex_file, color='red', rescale_value =
 \begin{CJK*}{UTF8}{gbsn}'''+'\n')
 		string = r'''{\setlength{\fboxsep}{0pt}\colorbox{white!0}{\parbox{0.9\textwidth}{'''+"\n"
 		for idx in range(word_num):
-			string += "\\colorbox{%s!%s}{"%(color, attention_list[idx])+"\\strut " + text_list[idx]+"} "
+			color = 'red'
+			if attention_list[idx] < pivot:
+				color = 'red'
+			elif attention_list[idx] > pivot:
+				color = 'blue'
+			string += "\\colorbox{%s!%s}{"%(color, abs(attention_list[idx] - pivot))+"\\strut " + text_list[idx]+"} "
 		string += "\n}}}"
 		f.write(string+'\n')
 		f.write(r'''\end{CJK*}
@@ -35,6 +42,12 @@ def rescale(input_list):
 	rescale = (the_array - the_min)/(the_max-the_min)*100
 	return rescale.tolist()
 
+def get_pivot(input_list):
+	the_array = np.asarray(input_list)
+	the_max = np.max(the_array)
+	the_min = np.min(the_array)
+	pivot = (-the_min/(the_max-the_min))*100
+	return pivot 
 
 def clean_word(word_list):
 	new_word_list = []

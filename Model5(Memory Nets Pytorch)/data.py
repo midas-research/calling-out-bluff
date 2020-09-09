@@ -3,6 +3,10 @@ import pandas as pd
 import sys
 from nltk.tokenize import word_tokenize 
 import numpy as np 
+def load_prompts(path: str, set_id: int):
+	all_data = pd.read_csv(f"./data/{path}.tsv", sep="\t", header=0, encoding="utf-8")
+	contents = all_data[all_data["essay_set"] == set_id]["essay"]
+	return contents
 
 def load_data(path: str, set_id: int):
 	"""
